@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FlipKart</title>
+    <title>FlipKart</title> 
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -18,29 +18,29 @@
                     <span class="plus">Plus</span>
                     <img src="images/plus_aef861.png">
                 </div>
-            </div>
+            </div>    
             <div class="input-alignment">
-            <div class="input-section">
-                <input type="text" placeholder="Search for Products and more">
-                 <button><svg width="20" height="20" viewBox="0 0 17 18" class="" xmlns="http://www.w3.org/2000/svg">
-                        <g fill="#2874F1" fill-rule="evenodd">
-                            <path class="EwE-Fa"
-                                d="m11.618 9.897l4.225 4.212c.092.092.101.232.02.313l-1.465 1.46c-.081.081-.221.072-.314-.02l-4.216-4.203">
-                            </path>
-                            <path class="EwE-Fa"    
-                                d="m6.486 10.901c-2.42 0-4.381-1.956-4.381-4.368 0-2.413 1.961-4.369 4.381-4.369 2.42 0 4.381 1.956 4.381 4.369 0 2.413-1.961 4.368-4.381 4.368m0-10.835c-3.582 0-6.486 2.895-6.486 6.467 0 3.572 2.904 6.467 6.486 6.467 3.582 0 6.486-2.895 6.486-6.467 0-3.572-2.904-6.467-6.486-6.467">
-                            </path>
-                        </g>
-                    </svg></button> 
-            </div>
-            </div>
-                 
-            <div class="login">   
+                <div class="input-section">
+                    <input type="text" placeholder="Search for Products and more">
+                    <button><svg width="20" height="20" viewBox="0 0 17 18" class="" xmlns="http://www.w3.org/2000/svg">
+                            <g fill="#2874F1" fill-rule="evenodd">
+                                <path class="EwE-Fa"
+                                    d="m11.618 9.897l4.225 4.212c.092.092.101.232.02.313l-1.465 1.46c-.081.081-.221.072-.314-.02l-4.216-4.203">
+                                </path>
+                                <path class="EwE-Fa"
+                                    d="m6.486 10.901c-2.42 0-4.381-1.956-4.381-4.368 0-2.413 1.961-4.369 4.381-4.369 2.42 0 4.381 1.956 4.381 4.369 0 2.413-1.961 4.368-4.381 4.368m0-10.835c-3.582 0-6.486 2.895-6.486 6.467 0 3.572 2.904 6.467 6.486 6.467 3.582 0 6.486-2.895 6.486-6.467 0-3.572-2.904-6.467-6.486-6.467">
+                                </path>
+                            </g>
+                        </svg></button>
+                </div>
+            </div> 
+
+            <div class="login">
                 <a>Login</a>
-            </div>
+            </div> 
             <div class="seller">
                 <a href="#">Become a Seller</a>
-            </div>   
+            </div>
             <div class="more">
                 <a href="#">More</a>
                 <svg width="4.7" height="8" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" class="Wto0b0">
@@ -56,12 +56,12 @@
                 </svg>
                 <span>Cart</span>
             </div>
-        </div> 
+        </div>
         </div>
     </header>
     <nav>
-        <ul>
-            <li><a>Electornics</a><svg width="4.7" height="8" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg"
+        <ul class="ul-list">
+            <li id="electronics"><a>Electornics</a><svg width="4.7" height="8" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg"
                     class="CGMB7B">
                     <path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="gray"
                         class="CPYntE"></path>
@@ -75,30 +75,361 @@
                     class="CGMB7B">
                     <path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="gray"
                         class="CPYntE"></path>
-                </svg></li>
-            <li><a>Women</a></li>
+                </svg></li> 
+            <li ><a>Women</a></li>
+          
             <li><a>Baby & kids</a></li>
-            <li><a>Home & Furniture</a></li>
+            <li><a>Home & Furniture</a></li>  
             <li><a>Flights</a></li>
-            <li><a>Offer Zone</a></li>
-        </ul>
+            <li><a>Offer Zone</a></li>       
+        </ul>   
     </nav>
-    <main>
-      <div class="section-one">
-        <div class="Sub-section1">
-           <div class="head">    
-            <p class="filter-title">Filters</p>
-           </div>      
-        </div>
-        <div class="Sub-section1">
-          <p class="categories">Categories</p>
-          <div class="mobile">
-            <svg width="10" height="10" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" class="IZmjtf"><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#fff" class="P3pAQJ"></path></svg>
-            <a>MObile & Accessories                                                                                                                                                                                     </a>
+      <div id="sub-elements" style="display: none;">
+          <div class="elmenent-one">
+              <a>mobiles</a>
+              <a>mi</a>
+              <a>realme</a>
+              <a>samsung</a>
           </div>
-        </div> 
-      </div> 
+          <div class="element-two">
+
+          </div>
+          <div class="element-three">
+
+          </div>
+      </div>
+    <main>
+        <div class="sections">
+            <div class="section-one">
+                <div class="Sub-section1">
+                    <div class="head">
+                        <p class="filter-title">Filters</p>
+                    </div>
+                </div>
+                <div class="Sub-section1">
+                    <p class="categories">Categories</p>
+                    <div class="mobile">
+                        <svg width="10" height="10" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg"
+                            class="IZmjtf">
+                            <path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="gray"
+                                class="P3pAQJ"></path>
+                        </svg>
+                        <a>Mobile & Accessories </a>
+                    </div>
+                    <div class="device">
+                        <p>Mobile</p>
+                    </div>
+                </div>
+                <div class="Sub-section1">
+                    <div class="price">
+                        <p>Price</p>
+                    </div>
+                    <div class="veriation">
+                        <div class="price-veriation"></div>
+                        <div class="price-veriation"></div>
+                        <div class="price-veriation"></div>
+                        <div class="price-veriation"></div>
+                    </div>
+                    <div class="line">
+                        <div class="circle-one"></div>
+                        <div class="circle-two"> </div>
+                        <div class="thin-line"></div>
+                        <div class="thick-line"></div>
+                    </div>
+                    <div class="price-range">
+                        <div class="select">
+                            <select>
+                                <option>
+                                    MIn
+                                </option>
+                                <option>
+                                    &#8377;10000
+                                </option>
+                                <option>
+                                    &#8377;15000
+                                </option>
+                                <option>
+                                    &#8377;20000
+                                </option>
+                                <option>
+                                    &#8377;30000
+                                </option>
+                            </select>
+
+                        </div>
+                        <p class="two">to</p>
+                        <div class="select">
+                            <select>
+                                <option>
+                                    &#8377;10000
+                                </option>
+                                <option>
+                                    &#8377;15000
+                                </option>
+                                <option>
+                                    &#8377;20000
+                                </option>
+                                <option>
+                                    &#8377;30000+
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="Sub-section1">
+                    <div class="brand-section">
+                        <p class="brand">Brand</p>
+                        <svg width="6" height="11" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg"
+                            class="ukzDZP">
+                            <path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#878787"
+                                class="SV+H35"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="Sub-section1">
+                    <div class="assured">
+                        <div class="assured-icon">
+                            <input type="checkbox">
+                            <img src="images/fa_9e47c1.png" height="21">
+                        </div>
+                        <div class="assured-mark">
+                            <div class="mark">
+                                <p class="question">?</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="Sub-section1">
+                    <div class="rating">
+                        <p>Customer Rating</p>
+                        <svg width="6" height="11" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg"
+                            class="ukzDZP">
+                            <path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#878787"
+                                class="SV+H35"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="Sub-section1">
+                    <div class="gst">
+                        <p>Gst invoice available</p>
+                        <svg width="6" height="11" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg"
+                            class="ukzDZP">
+                            <path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#878787"
+                                class="SV+H35"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="Sub-section1">
+                    <div class="ram">
+                        <p>ram</p>
+                        <svg width="6" height="11" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg"
+                            class="ukzDZP">
+                            <path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#878787"
+                                class="SV+H35"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="Sub-section1">
+                    <div class="internal-storage">
+                        <p>internal storage</p>
+                        <svg width="6" height="11" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg"
+                            class="ukzDZP">
+                            <path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#878787"
+                                class="SV+H35"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="Sub-section1">
+                    <div class="battery">
+                        <p>Battery capacity</p>
+                        <svg width="6" height="11" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg"
+                            class="ukzDZP">
+                            <path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#878787"
+                                class="SV+H35"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="Sub-section1">
+                    <div class="screen">
+                        <p>screen size</p>
+                        <svg width="6" height="11" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg"
+                            class="ukzDZP">
+                            <path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#878787"
+                                class="SV+H35"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="Sub-section1">
+                    <div class="primary">
+                        <p>primary camera</p>
+                        <svg width="6" height="11" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg"
+                            class="ukzDZP">
+                            <path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#878787"
+                                class="SV+H35"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="Sub-section1">
+                    <div class="secondary">
+                        <p>secondary camera</p>
+                        <svg width="6" height="11" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg"
+                            class="ukzDZP">
+                            <path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#878787"
+                                class="SV+H35"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="Sub-section1">
+                    <div class="speciality">
+                        <p>Speciality</p>
+                        <svg width="6" height="11" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg"
+                            class="ukzDZP">
+                            <path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#878787"
+                                class="SV+H35"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="Sub-section1">
+                    <div class="resolution">
+                        <p>Resolution Type</p>
+                        <svg width="6" height="11" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg"
+                            class="ukzDZP">
+                            <path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#878787"
+                                class="SV+H35"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="Sub-section1">
+                    <div class="operating">
+                        <p>operating system</p>
+                        <svg width="6" height="11" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg"
+                            class="ukzDZP">
+                            <path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#878787"
+                                class="SV+H35"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="Sub-section1">
+                    <div class="network">
+                        <p>Network type</p>
+                        <svg width="6" height="11" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg"
+                            class="ukzDZP">
+                            <path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#878787"
+                                class="SV+H35"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="Sub-section1">
+                    <div class="sim">
+                        <p>Sim type</p>
+                        <svg width="6" height="11" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg"
+                            class="ukzDZP">
+                            <path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#878787"
+                                class="SV+H35"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="Sub-section1">
+                    <div class="offers">
+                        <p>offers</p>
+                        <svg width="6" height="11" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg"
+                            class="ukzDZP">
+                            <path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#878787"
+                                class="SV+H35"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="Sub-section1">
+                    <div class="features">
+                        <p>features</p>
+                        <svg width="6" height="11" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg"
+                            class="ukzDZP">
+                            <path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#878787"
+                                class="SV+H35"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="Sub-section1">
+                    <div class="types">
+                        <p>types</p>
+                        <svg width="6" height="11" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg"
+                            class="ukzDZP">
+                            <path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#878787"
+                                class="SV+H35"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="Sub-section1">
+                    <div class="cores">
+                        <p>number of cores</p>
+                        <svg width="6" height="11" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg"
+                            class="ukzDZP">
+                            <path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#878787"
+                                class="SV+H35"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="Sub-section1">
+                    <div class="availability">
+                        <p>Availablity</p>
+                        <svg width="6" height="11" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg"
+                            class="ukzDZP">
+                            <path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#878787"
+                                class="SV+H35"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="Sub-section1">
+                    <div class="discount">
+                        <p>Discount</p>
+                        <svg width="6" height="11" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg"
+                            class="ukzDZP">
+                            <path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#878787"
+                                class="SV+H35"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="Sub-section1">
+                    <div class="os">
+                        <p>Operating system version name</p>
+                        <svg width="6" height="11" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg"
+                            class="ukzDZP">
+                            <path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#878787"
+                                class="SV+H35"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="Sub-section1">
+                    <div class="clockspeed">
+                        <p>clock speed</p>
+                        <svg width="6" height="11" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg"
+                            class="ukzDZP">
+                            <path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#878787"
+                                class="SV+H35"></path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="Sub-section2">
+                <a href="#">
+                    <a href="#" class="need">Need Help?</a>
+                    <div class="help">
+                        <p>Help me decide</p>
+                        <svg width="16" height="27" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg"
+                            class="VQiHOk">
+                            <path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#2874f0 "
+                                class="jVpjWi"></path>
+                     </svg>
+                    </div>
+                    <div class="help-desk-img">
+                        <img class="img" src="images/buying-guide-illustration_4dd325.png">
+
+                    </div>
+                </a>
+            </div>
+        </div>
     </main>
-    </body>  
-    </html>                           
-    
+   <script src="script.js"></script>
+</body>
+
+</html>
