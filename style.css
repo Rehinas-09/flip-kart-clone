@@ -1,5 +1,5 @@
 @font-face {
-    font-family:"inter-Regualr" ;
+    font-family:"inter-Regular" ;
     src: url('fonts/Inter-Regular.woff2') format("woff2")
 }
 @font-face {
@@ -42,13 +42,14 @@ header{
     max-width: 1248px;
     margin: 0 auto;      
 }           
-.flipkart-icon{   
+.flipkart-icon{       
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: center;
     max-width: 137px;  
 }
 .flipkart-icon img{
+    display: blcok;
     width: 75px;  
      
 }      
@@ -56,7 +57,7 @@ header{
     display: flex;   
     flex-direction: row;     
     font-size: 11px;     
-    align-items: center;    
+    align-items: center;        
     font-style: italic;
     margin-top: -1px;
 }
@@ -65,20 +66,21 @@ header{
     height: 10px; 
 } 
 .icons .explore{ 
-    color: #fff;
-    margin: 0;
+    color: rgb(240,240,240); 
+    line-height: 15.4px;  
     font-size: 11px;
     font-family: "roboto-regular";
 } 
-.icons .plus{    
-    color: #ffe500;
-    margin: 0;
-    margin-right: 2px;
+.icons .plus{      
+    color: #ffe500;        
+   font-weight: 500;
+    margin-left: 2px; 
     font-size: 11px;
+    font-style: italic;
 }  
 .input-alignment{
     width: 100%;
-    max-width: 600px;  
+    max-width: 563px;    
 }
 .input-section{
     width: 100% ;
@@ -98,10 +100,11 @@ header{
     padding: 0 16px;
     width: 1600px;
     border-radius: 2px;      
-   
+      
 }
 input::placeholder{   
-     font-size:14px;    
+     font-size:14px;  
+     font-family: "inter-Regular";  
      font-family: Arial;       
 }  
 .input-section button{
@@ -110,13 +113,14 @@ input::placeholder{
     padding:4px 12px 1px 8px;   
 }
 .login{ 
-    margin: 0 20px;
+    margin-left: 50px;
+    margin-right: 40px;
     display: flex;
     align-items: center;
     cursor: pointer; 
     font-size: 16px;
     letter-spacing: .1px;     
-    font-weight: 500;
+    font-weight: 500; 
     color:#2874f0;
     background-color: #fff;    
     border-radius: 2px;
@@ -137,9 +141,56 @@ input::placeholder{
     font-family: "inter-SemiBold";
     
 }
+.about{
+    position:absolute;
+    top:50px; 
+    min-width: 240px; 
+     border-color: #f0f0f0;
+     text-align: left;
+     right: 18%;
+    transition: opacity .3s ease-in-out;
+      border-radius: 3px;
+      background: #fff;
+      box-shadow: 0 4px 16px 0 rgba(0,0,0,.2);
+      margin-top: 6px;
+}
+.about span{
+     color: #212121;
+     margin-left: 12px;
+     font-size: 14px;
+    font-weight: 400;
+    font-family: "inter-Regular";
+}
+.about ul li{
+    padding: 16px 12px;
+    border-bottom: 1px solid #f0f0f0;
+}
+.about ul{ 
+    text-align: left; 
+}   
+.about ul a{
+   list-style-type: none;
+   display: flex;
+}
+.about ul li a{
+   text-decoration: none;
+}
+.design{
+    left: 50%;
+    transform: translateX(-10px);
+    bottom: 100%;
+    border-bottom-color: #f0f0f0;
+    border-width: 10px;
+    position: absolute; 
+    top:20px;
+}  
+.design::after{
+    border: solid transparent;
+}
+
 .more {
     color: #fff; 
-    margin:0 20px;
+    margin:0 30px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -160,7 +211,7 @@ input::placeholder{
     height: 8;
 }
 .cart{
-    margin-right: 440px;
+   
      display: flex;     
     flex-direction: row;  
     align-items:center;
@@ -213,28 +264,31 @@ nav ul li svg{
     transform: rotate(270deg);
 }
 main{
+    display: flex;
+    flex-direction: column;
+    margin-top: 55px;
+    padding: 8px;
+    width: 100%;
    }   
 .entire-container{
-    max-width: 1680px;
-    margin: 0 auto;   
-     padding: 8px;  
+    max-width: 1700px; 
+    margin: 0 auto;    
     display: flex;
-    flex-direction: row;
+    flex-direction:row;  
     position: relative;
-    top:55px
 } 
-.section-one{
+.section-one{ 
     display: flex; 
     flex:0 0 280px;
     flex-direction: column;
     padding:0px 10px 0px 0px;
     background-color: #fff;
     color: black;
-    margin-right: 10px;
+    margin-right: 10px;  
 
 }  
 .section-two{
-    display:flex;
+    display:flex;  
     flex-grow: 1;
     flex-direction: column;
     position: relative;
@@ -243,7 +297,7 @@ main{
 }
 .Sub-section1{
   padding: 16px;
-  padding-bottom: 12px;
+  padding-bottom: 12px;        
   border-bottom: 1px solid #f0f0f0;
 }      
 .filter-title{
@@ -355,7 +409,7 @@ main{
 } 
 .two{
     display: inline-block;
-    margin: 0 9px;
+    margin: 0 9px; 
     font-size: 14px;
     color: #878787;
     line-height: 1;
@@ -413,7 +467,7 @@ main{
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between;  
 }
 .rating p{
   font-size: 13px;
@@ -587,6 +641,11 @@ main{
 }
 .speciality svg{
     transform: rotate(-90deg);
+}
+.flipkart{
+    display: flex;
+    min-width: 137px;
+    justify-content: flex-end;
 }
 .resolution{
     display: flex;
@@ -1217,7 +1276,7 @@ main{
 }
 #ram-check p{
     padding-left: 11px;
-    color: #212121;
+    color: #212121;   
     font-size: 14px;
     white-space: nowrap;
     cursor: pointer;
@@ -1534,4 +1593,188 @@ main{
     white-space: nowrap;
     cursor: pointer;
     font-family: "inter-Regular";
+}
+footer{
+    background-color:#172337;
+    border: 1px solid #ddd;
+    margin-top: 25px;
+    width: 100%;
+    text-align: left ;
+}
+#inside-div{
+    padding-top: 40px;
+    margin-left: 65px;
+    display: flex;
+}
+.f1{
+       flex: 1;
+       flex-direction: column;
+}
+.f1 p{
+    color: #878787;
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    font-family: "inter-Regular";
+}          
+ .f1 a{
+    display: flex;
+    line-height: 2;
+    color: #fff;
+    display: block;
+    font-weight: 400;
+    font-size: 12px;
+    text-decoration: none;
+    font-family: "inter-Regular";
+}   
+ .f1-sub{
+    border-left: 1px solid #5fd827;
+    padding: 0 25px;
+}   
+.f1 .p-sub{
+   text-transform: none;
+}  
+.footer-description{  
+     font-size: normal;
+     color: #fff;
+     margin-bottom: 16px;
+}  
+.f1 .address{
+    color: #fff;
+    line-height: 1;
+    font-size: 12px; 
+    font-weight: 400;
+    font-family: "inter-Regular";
+    text-transform: none;
+}    
+.social{
+    color:#878787;
+    font-size: 12px;
+    font-weight: 400;
+    margin-bottom: 8px;
+    font-family: "inter-Regular";
+}
+.link-icon{
+    display: flex;
+    height: 24px;
+    width: 24px;
+    align-items: center;    
+}
+.link-icon span{
+    padding: 2px;
+    color: #fff;
+    margin-right: 16px;
+}
+.address .phone-number{
+    color: #2874f0;
+    font-weight: 500;
+    display: inline-block;
+    font-size: 12px    ;
+}
+.number{
+    display: flex;     
+    
+}
+footer .f2{
+    border-top: 1px solid #454d5e;
+    padding: 25px 0;
+    margin-top: 40px;
+    width: 100%;
+    display: flex;
+    align-items: center; 
+    justify-content: space-evenly;      
+}
+.sub-f2 a{
+    color: #fff;
+    text-decoration: none;
+    margin-left: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.4;
+    font-family: "inter-Regular";
+}    
+.f2 p{
+    font-family: "inter-Regular";
+    font-size: 14px;
+    font-weight: 400;    
+    color: #fff;
+    line-height: 1.4px;
+}
+.page-showing{
+    background-color: #fff;
+    border-top: 1px solid #e0e0e0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    line-height: 32px;
+    
+}
+.page-showing p{
+    font-size: 14px;
+    font-weight: 400;
+    color: #212121;
+    font-family: "inter-Regular";
+     
+}
+.page-showing .link a:nth-child(1){
+    background-color: #2874f0;
+    color: #fff;
+    display: inline-block; 
+    padding: 0 8px;
+    cursor: pointer; 
+    line-height: 32px;
+    height: 32px;
+    width: 32px;
+    border-radius: 50%; 
+    text-decoration: none;
+    text-align: center;
+  
+}
+.page-showing .link{
+     width: 60%;
+}
+.page-showing .link a{
+  color: black;   
+  text-decoration: none;
+  font-family: "inter-Regular";
+  
+}
+.page-showing .link .next{
+    display: inline-block;
+    line-height: 32px;  
+    color: #2874f0; 
+    padding:0 25px;
+    justify-content: center;
+    text-transform: uppercase;
+    font-family: "inter-Regular";
+    font-size: 14px;
+}
+.question{ 
+    margin-top: 10px;
+    background-color: #fff;
+    font-size: 14px;
+    padding: 16px; 
+    display: flex;  
+}
+.question p{  
+    font-weight: 500;
+    font-size: 16px;
+    font-family: "inter-Semibold";
+    color: #212121;  
+}
+.question .button{
+    display: inline-block;
+    margin-left: 24px;
+    font-size: 16px;
+}
+.question .button button{
+    border-radius: 2px;
+    border: 1px solid #d7d7d7;
+    padding: 6px 28px;
+    margin-right: 8px;
+    font-weight: 500;
+    background-color: #fff;
 }

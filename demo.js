@@ -27,7 +27,7 @@ const cardData = [
     title: "Headphones",
     desc: "Noise-cancelling over-ear headphones"
   },
-  {
+  { 
     img: "https://via.placeholder.com/200x120?text=Tablet",
     title: "Tablet",
     desc: "10-inch Android tablet"

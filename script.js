@@ -99,19 +99,17 @@ os.addEventListener("click", () => {
     if (os_one.style.display == "none") {   
         os_one.style.display = "block"
         os.style.borderBottom="none"
-        svg13.style.transform="rotate(90deg)"
     }
     else { 
         os_one.style.display = "none"
           resolution.style.borderBottom="1px solid #f0f0f0"
-        svg13.style.transform="rotate(-90deg)"
     }
 })
 const network = document.getElementById("network-section")   
 const network_sub = document.getElementById("network") 
 network.addEventListener("click", () => { 
                                                                                                                                                           
-    if (network_sub.style.display == "none") {  
+    if (network_sub.style.display == "none") {          
         network_sub.style.display = "block"
     }
     else { 
@@ -125,19 +123,19 @@ sim.addEventListener("click", () => {
         sim_sub.style.display = "block"
     }
     else { 
-        sim_sub.style.display = "none"
+        sim_sub.style.display = "none" 
     }   
 })
 const offer = document.getElementById("offer-section")   
 const offer_sub = document.getElementById("offers") 
-offer.addEventListener("click", () => {
-    if (offer_sub.style.display == "none") {  
-        offer_sub.style.display = "block"
-    }
-    else { 
-        offer_sub.style.display = "none"
-    }
-})
+// offer.addEventListener("click", () => {
+//     if (offer_sub.style.display == "none") {  
+//         offer_sub.style.display = "block"
+//     }    
+//     else { 
+//         offer_sub.style.display = "none"
+//     }
+// })
 const  screen= document.getElementById("screen-section")   
 const screen_sub = document.getElementById("screen") 
 const svg7=document.getElementById("svg6")
@@ -622,6 +620,5 @@ mobileDetails.forEach(data=>{
      price.appendChild(offer_img)
      offer_img.innerHTML=`   
       <img  height="21" src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/fa_9e47c1.png">
-     ` 
-             
-})       
+     `          
+})           
