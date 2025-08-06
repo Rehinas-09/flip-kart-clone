@@ -18,122 +18,165 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+  
 }
 body{
     width: 100%;
-    background-color:#f1f3f6;
+    background-color:#f1f3f6; 
     font-family:"inter-Regualr"
 }
-header{
-   position: fixed;
+header{  
+   position: fixed;   
    display: flex;
    width: 100%;
-   height:56px; 
+   height:56px;     
    background-color: #2874f0;
    color: #f0f0f0;       
    flex-direction: row;  
-  z-index: 999;
+    z-index: 999; 
+    flex-direction: row;           
 }  
-     
+.demo{
+    min-width: 124px;
+}    
 .margin{     
-    display: flex;
-    flex-direction: row;  
+    display: flex;  
+    flex-direction: row;       
     align-items: center;
     max-width: 1248px;
     margin: 0 auto;      
-}           
+} 
+.flipkart{     
+    display: flex;
+    min-width: 137px;    
+    justify-content: flex-end;
+}          
 .flipkart-icon{       
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: center;   
+    align-items: center; 
     max-width: 137px;  
 }
 .flipkart-icon img{
-    display: blcok;
-    width: 75px;  
-     
+    width: 75px;   
+        
 }      
 .icons{
+    margin-top:-1px;
     display: flex;   
-    flex-direction: row;     
-    font-size: 11px;     
+    font-weight: 400;
+    line-height: 1.4;
+    flex-direction: row;      
+    font-size: 11px;       
     align-items: center;        
     font-style: italic;
-    margin-top: -1px;
-}
+
+}  
+.icons:hover{      
+    text-decoration: underline;
+}  
 .icons img{
-    width: 10px;    
+    width: 10px;      
     height: 10px; 
-} 
-.icons .explore{ 
-    color: rgb(240,240,240); 
-    line-height: 15.4px;  
-    font-size: 11px;
-    font-family: "roboto-regular";
+    line-height: 1.4;
+}         
+.icons .explore{   
+    color: #f0f0f0;        
+    font-size: 11px;     
+    font-family: "Roboto-Regular";
 } 
 .icons .plus{      
-    color: #ffe500;        
-   font-weight: 500;
-    margin-left: 2px; 
-    font-size: 11px;
+    color: #fde50c;         
+   font-weight:500;  
+    margin-right: 2px; 
+    margin-left: 1px;
+    font-size: 11px;  
     font-style: italic;
-}  
-.input-alignment{
+    font-family: "inter-Regular";
+} 
+.outer-input{
     width: 100%;
-    max-width: 563px;    
-}
-.input-section{
-    width: 100% ;
-    margin-left: 12px;
-    background-color: #fff;  
     display: flex;
-    align-items: center;
     justify-content: flex-start;
-    box-shadow: 0 2px 4px 0 rgba(0,0,0,.23);
-    height: 36px; 
-    position:relative;  
+    height: 100%;
+    margin-left: 12px; 
+    align-items: center;     
+    min-width: 304px;
+    width: calc(100% - 540px);    
+}    
+form{  
+  display: inline-block;  
+  box-shadow: 0 2px 4px 0 rgb(0,0,0,.23);
+  width: 100%;
+  height: 36px;
+  background-color: #ffff;    
+  position: relative;      
+}    
+.input-alignment{         
+   display: flex;
+   justify-content: space-between;
+   align-items: center;           
+   height: 100%; 
+   background-color: #fff;      
+   width: 100%;       
+}  
+.input-section{        
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
                   
-}         
+}               
 .input-section input{
-    outline: none;   
-    border: none;   
-    padding: 0 16px;
-    width: 1600px;
-    border-radius: 2px;      
-      
+    outline: none;     
+    border: none;     
+    width: 100%;  
+    padding: 0 16px;    
+    border-radius: 2px;             
+}
+button{
+  border:1px solid white;
+  background-color: white;
+  width: 44px;  
+  padding: 4px 12px 0 8px;
 }
 input::placeholder{   
-     font-size:14px;  
+     font-size:12px;  
      font-family: "inter-Regular";  
-     font-family: Arial;       
+     font-weight: 400;
+     letter-spacing: 3; 
+    
 }  
-.input-section button{
+.input-section button{ 
     border: none; 
     background-color: #fff; 
     padding:4px 12px 1px 8px;   
 }
-.login{ 
-    margin-left: 50px;
-    margin-right: 40px;
-    display: flex;
+.login{  
+    margin: 0 20px;     
+    display: flex;  
     align-items: center;
     cursor: pointer; 
     font-size: 16px;
-    letter-spacing: .1px;     
-    font-weight: 500; 
+    letter-spacing: .1px;      
+    font-weight: 500;  
     color:#2874f0;
     background-color: #fff;    
     border-radius: 2px;
     border: 1px solid #dbdbdb;
     padding: 5px 40px;
     font-family: "inter-SemiBold";
-} 
-.seller a,span{   
+}      
+.seller{    
+    margin: 0 20px;
+}
+.seller a,span{       
     text-decoration: none;    
     color: #fff;
     font-size: 16px; 
     letter-spacing: .1px;                                                                                                                                                        
-    font-weight: 500;
+    font-weight: 500; 
     display: flex;  
     flex-direction: row;
     align-items: center;
@@ -141,13 +184,33 @@ input::placeholder{
     font-family: "inter-SemiBold";
     
 }
+#login-menu{
+   position: absolute;
+   top: 50px;
+   right: 35%;  
+}
+.about .customer{
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    text-align: center;
+    justify-content: space-between;
+}
+
+#login-menu li:nth-child(1){
+    display: flex;
+    justify-content: space-between;
+}
+#login li a .customer{
+    font-size: 14px;
+    color: #212121;
+    cursor: pointer;
+    font-weight: 500;
+}
 .about{
-    position:absolute;
-    top:50px; 
     min-width: 240px; 
      border-color: #f0f0f0;
-     text-align: left;
-     right: 18%;
+     text-align: left; 
     transition: opacity .3s ease-in-out;
       border-radius: 3px;
       background: #fff;
@@ -160,10 +223,26 @@ input::placeholder{
      font-size: 14px;
     font-weight: 400;
     font-family: "inter-Regular";
+}  
+.customer{
+    border-bottom: 1px solid #f0f0f0;
 }
+.customer span{
+    margin: 0;
+}      
 .about ul li{
     padding: 16px 12px;
     border-bottom: 1px solid #f0f0f0;
+}
+.customer .new-customer{
+    font-weight: 500;
+    font-family: "inter-Semibold";
+    font-size: 14px;
+}
+.customer .sign{
+    color: #2874f0;
+    font-weight: 500;
+    font-family: "inter-Semibold";    
 }
 .about ul{ 
     text-align: left; 
@@ -172,7 +251,7 @@ input::placeholder{
    list-style-type: none;
    display: flex;
 }
-.about ul li a{
+.about ul li a{  
    text-decoration: none;
 }
 .design{
@@ -190,12 +269,12 @@ input::placeholder{
 
 .more {
     color: #fff; 
-    margin:0 30px;
+    margin:0 20px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center; 
-    font-weight: 500;
+    font-weight: 500; 
     font-size: 16px; 
     font-family: "inter-SemiBold";           
       
@@ -211,9 +290,9 @@ input::placeholder{
     height: 8;
 }
 .cart{
-   
+     margin: 0 20px;
      display: flex;     
-    flex-direction: row;  
+    flex-direction: row;   margin-top: -1;
     align-items:center;
     
 }
@@ -227,65 +306,64 @@ input::placeholder{
     font-weight: 500;
      font-family: "inter-SemiBold";
 } 
-nav{
-    position: relative;
-    top: 56px;
-    min-height: 40px;
+nav{  
+    width: 100%;  
+    position: relative; 
+    top: 56px; 
     color: #000;
-    width: 100%; 
-    z-index:5;
+    z-index:5;          
     box-shadow: 0 1px 1px 0 rgba(0,0,0,.16);  
     background-color: #fff;
 } 
-nav .ul-list{
+nav .ul-list{  
     display: flex;
-    max-width:1248px;
-    margin: auto;
-    height: 100%;
+    max-width:1248px; 
+    height: 40px;
+    margin: auto;                 
     justify-content: space-between;
-    align-items: center; 
+    align-items: center;  
 }    
-nav ul li{  
-    list-style-type: none;
-    display: flex;
-    align-items: center;     
-    color: black;
-    cursor: pointer;
-     flex-grow: 1;                                                                                                                       
+nav ul li{        
+    list-style-type: none;   
+     display: flex;
+     justify-content: center;
+     color: black;
+     height: 100%;
+     cursor: pointer;
+     flex-grow: 1;                                                                                                                          
      font-weight: 500;
      align-items: center;
-     font-family: "roboto-regular";
-     font-size: 14px;
-}
+     font-family: "inter-Semibold";
+     font-size: 13px;  
+}  
 nav ul li svg{   
-    fill:#878787;
-    opacity: .5;
+    fill:#878787; 
+    opacity: .5;  
     margin-left: 8px;
     transform: rotate(270deg);
-}
-main{
-    display: flex;
-    flex-direction: column;
+} 
+main{  
+    max-width:1680; 
+    margin: 0 auto;
     margin-top: 55px;
-    padding: 8px;
-    width: 100%;
-   }   
+    padding: 8.5px;       
+}   
 .entire-container{
-    max-width: 1700px; 
-    margin: 0 auto;    
+    max-width: 1680px; 
+    margin: 0 auto;      
     display: flex;
     flex-direction:row;  
-    position: relative;
+      
 } 
 .section-one{ 
     display: flex; 
-    flex:0 0 280px;
+    flex:0 0 270px;
+    max-width: 280px;
     flex-direction: column;
     padding:0px 10px 0px 0px;
     background-color: #fff;
     color: black;
-    margin-right: 10px;  
-
+    margin-right: 10px;     
 }  
 .section-two{
     display:flex;  
@@ -294,7 +372,7 @@ main{
     position: relative;
     background-color: #fff;     
     box-shadow: 0 1px 8px 0 rgba(0,0,0,.06);
-}
+} 
 .Sub-section1{
   padding: 16px;
   padding-bottom: 12px;        
@@ -305,8 +383,9 @@ main{
     text-transform: capitalize;
     width: 67%;
     color: black;
-    font-family: "inter-bold";
-
+    font-size: 18px;        
+    font-weight: 500;
+    font-family: "inter-Semibold";
 }
 .categories{
      font-size: 12px;
@@ -342,19 +421,20 @@ main{
     text-transform: uppercase;
     font-family: 'inter-SemiBold';
     letter-spacing: .3px;
-    display: inline-block;
+    display: flex;
 }
-.veriation{
+.veriation{    
     height: 25px;
     position: relative;
-    bottom: -12px;
-    width: 100%;
- 
+    bottom: -6px;
+    width: 100%; 
+    display: flex;
+     
 }
-.price-veriation{
-      height: 16.66px;
-      width: 47.362px;
-      display: inline-block; 
+.price-veriation{  
+      height: 25px;
+      width: 47.362px; 
+      display: inline-block;  
       background-color: #e0e0e0;
 }
 .line{
@@ -364,7 +444,7 @@ main{
 .line .circle-one{
     width:13px; 
     height:13px;
-    left:-12px;
+    left:-12px; 
     position: absolute;
     cursor: pointer;
     border-radius: 50%;
@@ -393,8 +473,9 @@ main{
     position: absolute;
     width: 100%;
     background-color: #2874f0;
-    top: 4px;
+    top: 4px;  
 }
+
 .price-range{
     margin-top: 25px;
     display: flex;
@@ -438,8 +519,9 @@ main{
     display: flex;
     flex-direction: row; 
     justify-content: space-between;
+    align-items: center;
 }     
-.assured-icon{
+.assured-icon{         
     display: flex;
     flex-direction: row;
 }
@@ -449,14 +531,14 @@ main{
 .assured-mark mark{
     position: relative;
 }
-.assured-mark .question{
+.assured-mark .question-mark{ 
     color: #878787;
     background-color: #fff;
     font-weight: 500;
     border-radius: 50%;
     width: 16px;
-    height: 16px;
-    font-size: 11px;
+    height: 16px;  
+    font-size: 11px; 
     text-align: center;
     cursor: pointer;
     border: 1px solid #e0e0e0; 
@@ -464,7 +546,7 @@ main{
     box-shadow: 0 0 1px 0 rgba(0,0,0,.2);
 }
 .rating{
-    display: flex;
+    display: flex;    
     flex-direction: row;
     align-items: center;
     justify-content: space-between;  
@@ -472,7 +554,7 @@ main{
 .rating p{
   font-size: 13px;
     font-weight: 500;
-    text-transform: uppercase;
+    text-transform: uppercase; 
     letter-spacing: .3px;
     display: inline-block;
     font-family: 'inter-bold';   
@@ -549,7 +631,7 @@ main{
     display: inline-block;
     font-family: 'inter-bold';   
 }
-.battery svg{
+.battery svg{ 
     transform: rotate(-90deg);
 
 }
@@ -632,7 +714,7 @@ main{
     justify-content: space-between;
 }
 .speciality p{
-  font-size: 13px;
+  font-size: 13px;  
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: .3px;
@@ -642,11 +724,7 @@ main{
 .speciality svg{
     transform: rotate(-90deg);
 }
-.flipkart{
-    display: flex;
-    min-width: 137px;
-    justify-content: flex-end;
-}
+
 .resolution{
     display: flex;
     flex-direction: row;
@@ -917,14 +995,16 @@ main{
     min-height: 72px;             
 }
 .sub-sc-one{
-    font-size: 12px;
+    font-size: 11px;
     display: inline-block;
-    white-space: nowrap;
+    white-space: nowrap; 
+    font-family: "inter-Regular";
 }
 .sub-sc-one a{
     text-decoration: none;
     border: none;
     color: #878787;
+    font-family: "inter-Regular";
 }
 .sub-sc-one svg{
     transform: rotate(180deg);
@@ -1244,7 +1324,6 @@ main{
     width: 100%;
     background-color: #fff;
     border-bottom: 1px solid #f0f0f0;
-    padding: 24px 0 30px 24px;
     position: relative; 
 
 }
@@ -1283,10 +1362,13 @@ main{
     font-family: "inter-Regular";
 }
 #electronic-slide{
-    width: 100%;
-    display: flex;
+    width: 75%; 
+    display: flex; 
     justify-content: space-around; 
-    top:60px;
+    margin:0 auto;
+    position: absolute;
+    left: 200px;
+    top:40px;
     background-color: #fff;
     border-bottom-left-radius: 3px;  
     border-bottom-right-radius: 3px;
@@ -1296,7 +1378,7 @@ main{
 #electronic-slide .heading{
     margin-top: 5px;
     padding:8px 0;
-    font-weight: 500;
+    font-weight: 500;   
     font-size: 13px;
     cursor: pointer;
     font-family: "inter-Semibold"; 
@@ -1342,7 +1424,7 @@ main{
 }
 .mb{
     font-weight: 500;
-    font-size: 16px;
+    font-size: 16px;      
     margin-top: 8px;
     display: inline-block;
     line-height: 1.4;
@@ -1353,11 +1435,11 @@ main{
     display: inline-block;
     margin-left: 10px;
     color: #878787;
-    font-size: 12px;
+    font-size: 11px;
     font-family: 'inter-Regular';
     font-weight: 400;
     line-height: 1.4;
-    margin-top: 8px;
+    margin-top: 8px; 
 }
 .sub-sc-three{
     display: flex;
@@ -1368,40 +1450,44 @@ main{
     display: inline-block;
     font-weight: 500;
     padding: 8px 10px 4px 0;
-    font-family: "inter-bold";
-    font-size: 14px;
+    font-family: "inter-Semibold";
+    font-size: 13px;
     color: #121212;
-    line-height: 1.4;
+    line-height: 1.4;  
 }
 .pop{
-    padding: 8px 0 4px;
+    padding: 8px 0 4px;   
     margin: 0 10px;
     cursor: pointer;
     border-bottom:2px solid transparent;
     display: inline-block;
-    font-size: 14px;
-    font-weight: 400;
+    font-size: 13px;
+    font-weight: 400;  
     color: #212121;
     line-height: 1.4;
     font-family: "inter-Regular";
 }
-.align{
- display: flex;
- align-items: stretch;
- background-color: #fff;
- border-bottom: 1px solid #f0f0f0;
- padding: 24px 0 30px 24px;
- line-height: 1;
- position: relative;
-}
+.align{    
+   display: flex;
+   align-items: stretch;
+   background: #fff;
+   width:100%;
+   padding:24px 0 30px 24px;
+   position: relative;
+   border-bottom: 1px solid #f0f0f0;
+ 
+}      
 .total-container{
-    display: flex;
-    position: relative;
-    text-decoration: none;
+   display: flex;
+   position: relative;
+   flex-grow: 1;
 } 
+.img-div{
+    width: 200px;    
+}
 .picture{
     position: relative;
-    height: 200px;
+    height: 200px;   
     width: 200px;
 }
 .addC{
@@ -1411,13 +1497,13 @@ main{
 .love_icon{   
     position: absolute;
     display: inline-block;
-    top: 2px;   
+    top: 2px;    
     left:185px;
     cursor: pointer;
 }
 .mobile-image{
     position: absolute;
-    bottom: 0;
+    bottom: 0;          
     left: 0;
     right: 0;           
     margin: auto;
@@ -1496,7 +1582,6 @@ main{
     display: table-cell;
 }
 .price{
-    margin-left: 25px;
     width: 41.66%;
     display: inline-block;
 }   
@@ -1505,10 +1590,10 @@ main{
   padding-right: 10px;
   display: inline-block;
   cursor: pointer;
-}
+}   
 .content-div{
     display: flex; 
-    justify-content: space-between; 
+    flex-grow: 1;
 }
 .discount-price{  
     font-size: 25px;
@@ -1596,17 +1681,17 @@ main{
 }
 footer{
     background-color:#172337;
-    border: 1px solid #ddd;
     margin-top: 25px;
-    width: 100%;
-    text-align: left ;
+    min-width: 978px;   
 }
 #inside-div{
+    width: 100%;
     padding-top: 40px;
     margin-left: 65px;
     display: flex;
-}
-.f1{
+    width:90% !important;  
+}    
+.f1{  
        flex: 1;
        flex-direction: column;
 }
@@ -1614,12 +1699,12 @@ footer{
     color: #878787;
     font-size: 12px;
     font-weight: 500;
-    margin-bottom: 8px;
+    margin-bottom: 8px;  
     text-transform: uppercase;
     font-family: "inter-Regular";
 }          
  .f1 a{
-    display: flex;
+    display: flex;        
     line-height: 2;
     color: #fff;
     display: block;
@@ -1673,11 +1758,12 @@ footer{
     font-size: 12px    ;
 }
 .number{
-    display: flex;     
+    display: flex;                                                                                                                                               
     
 }
 footer .f2{
     border-top: 1px solid #454d5e;
+    width: 100%;
     padding: 25px 0;
     margin-top: 40px;
     width: 100%;

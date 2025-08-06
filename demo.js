@@ -72,7 +72,7 @@ cardData.forEach(data => {
     rating_section.className="rating-section"
     details.appendChild(rating_section)
     const rating_icon=document.createElement("p")
-    rating_icon.className="rating-icon"
+    rating_icon.className="rating-icon"   
     rating_section.appendChild(rating_icon)
     rating_icon.innerHTML=`
     ${data.rating}
@@ -81,10 +81,10 @@ cardData.forEach(data => {
     </svg>
   
 `
-    const rating_count=document.createElement("p")
+    const rating_count=document.createElement("p")                                                                                                                                                                                                                                                                         
     rating_count.className="rating-count"
     rating_section.appendChild(rating_count)
     rating_count.innerHTML=`
      ${data.rating_count} Ratings & ${data.rating_count} Reviews
-    `          
- 
+    `
+                                                                                                                                                                       

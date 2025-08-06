@@ -8,98 +8,177 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body>  
     <header>
+        <div class="demo"></div>
         <div class="margin">
             <div class="flipkart">
-            <div class="flipkart-icon">
-                <img src="images/flipkart-plus_8d85f4.png">
-                <div class="icons">
-                    <span class="explore">Explore</span>
-                    <span class="plus">Plus</span>
-                    <img src="images/plus_aef861.png">
-                </div>
-            </div>   
-          </div>  
-            <div class="input-alignment">
-                <div class="input-section">
-                    <input type="text" placeholder="Search for products, brands and more">
-                    <button><svg width="20" height="20" viewBox="0 0 17 18" class="" xmlns="http://www.w3.org/2000/svg">
-                            <g fill="#2874F1" fill-rule="evenodd">
-                                <path class="EwE-Fa"
-                                    d="m11.618 9.897l4.225 4.212c.092.092.101.232.02.313l-1.465 1.46c-.081.081-.221.072-.314-.02l-4.216-4.203">
-                                </path>
-                                <path class="EwE-Fa"
-                                    d="m6.486 10.901c-2.42 0-4.381-1.956-4.381-4.368 0-2.413 1.961-4.369 4.381-4.369 2.42 0 4.381 1.956 4.381 4.369 0 2.413-1.961 4.368-4.381 4.368m0-10.835c-3.582 0-6.486 2.895-6.486 6.467 0 3.572 2.904 6.467 6.486 6.467 3.582 0 6.486-2.895 6.486-6.467 0-3.572-2.904-6.467-6.486-6.467">
-                                </path>
-                            </g>
-                        </svg></button>
+                <div class="flipkart-icon">
+                    <img src="images/flipkart-plus_8d85f4.png">
+                    <a class="icons">
+                        <span class="explore">Explore</span>
+                        <span class="plus">Plus</span>
+                        <sub><img src="images/plus_aef861.png"></sub>
+                    </a>
                 </div>
             </div>
+            <div class="outer-input">    
+                <form>
+                    <div class="input-alignment">
+                        <div class="input-section">
+                            <input type="text" placeholder="Search for products, brands and more">
+                        </div>
+                        <button><svg width="20" height="20" viewBox="0 0 17 18" class=""
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g fill="#2874F1" fill-rule="evenodd">
+                                    <path class="EwE-Fa"
+                                        d="m11.618 9.897l4.225 4.212c.092.092.101.232.02.313l-1.465 1.46c-.081.081-.221.072-.314-.02l-4.216-4.203">
+                                    </path>
+                                    <path class="EwE-Fa"
+                                        d="m6.486 10.901c-2.42 0-4.381-1.956-4.381-4.368 0-2.413 1.961-4.369 4.381-4.369 2.42 0 4.381 1.956 4.381 4.369 0 2.413-1.961 4.368-4.381 4.368m0-10.835c-3.582 0-6.486 2.895-6.486 6.467 0 3.572 2.904 6.467 6.486 6.467 3.582 0 6.486-2.895 6.486-6.467 0-3.572-2.904-6.467-6.486-6.467">
+                                    </path>
+                                </g>
+                            </svg></button>
+                        <!-- </div> -->
+                    </div>
+                </form>
+              </div>
+                <div class="login" onmouseover="mouseOver()">
+                    <a>Login</a>
+                </div>
+                <div class="about"  id="login-menu" style="display: none;">
+                    <id class="design"></id>
+                    <div class="padding">
+                        <ul>
+                            <div class="customer"><span class="new-customer">New Costomer?</span>
+                            <span class="sign" class="sign-up">Sign Up</span></div>
+                            <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="" viewBox="0 0 16 14"><path fill="#2874F1" fill-rule="nonzero" d="M7 .333A6.67 6.67 0 0 0 .333 7 6.67 6.67 0 0 0 7 13.667 6.67 6.67 0 0 0 13.667 7 6.67 6.67 0 0 0 7 .333zm0 2c1.107 0 2 .894 2 2 0 1.107-.893 2-2 2s-2-.893-2-2c0-1.106.893-2 2-2zM7 11.8a4.8 4.8 0 0 1-4-2.147C3.02 8.327 5.667 7.6 7 7.6c1.327 0 3.98.727 4 2.053A4.8 4.8 0 0 1 7 11.8z"></path></svg>
+                                <span>My Profile</span></a></li>
+                            <li><a href="#"><svg width="16" height="16" class="" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><g id="Desktop_VIP" stroke="none" stroke-width="1" fill-rule="evenodd"><g transform="translate(7.873 .143)"><path d="M6.484 4.94s2.476 1.227 3.698 1.748c1.188.506 1.323 2.4.016 3.04-1.307.64-1.67.744-1.67.744s.208-.53.178-1.044c-.085-.914-2.787-1.656-4.576-2.094 0 0-1.375-4.311-1.995-5.512C1.509.612.242.11.242.11l2.995.04s1.03-.05 1.488 1.055c.456 1.106 1.76 3.734 1.76 3.734" fill="#2873F0" mask="url(#b)"></path></g><g transform="translate(8.635 8.27)"><path d="M5.547 6.265S4.334 8.713 3.8 9.965c-.507 1.187-2.44 1.322-3.079.015C.081 8.673.015 8.44.015 8.44s.387.076 1 .048c.915-.084 1.7-2.786 2.138-4.575 0 0 4.311-1.377 5.513-1.997 1.21-.624 1.71-1.892 1.71-1.892l-.04 3.44s.05.587-1.055 1.044c-1.105.455-3.734 1.757-3.734 1.757" 
+                                fill="#2873F0" mask="url(#d)"></path></g><g transform="translate(0 8.778)"><path d="M4.655 5.573S2.193 4.353.956 3.826C-.232 3.32-.367 1.423.94.786 2.248.145 2.774.026 2.774.026s-.34.545-.255 1.157C2.606 2.1 5.22 2.74 7.008 3.179c0 0 1.427 4.287 1.997 5.513.695 1.493 1.848 1.72 1.848 1.72l-3.396-.05s-.585.05-1.042-1.055c-.458-1.106-1.76-3.734-1.76-3.734" fill="#2873F0" mask="url(#f)"></path></g><g transform="translate(0 .143)"><path d="M4.857 4.754s1.219-2.46 1.747-3.699c.506-1.188 2.4-1.321 3.04-.016.64 1.308.701 1.544.701 1.544s-.482.007-.993.035c-.916.087-1.663 2.702-2.101 4.49 0 0-4.296 1.405-5.513 1.996C.066 9.916 0 10.957 0 10.957l.068-3.4s-.05-.586 1.055-1.043c1.105-.457 3.734-1.76 3.734-1.76" fill="#2873F0" mask="url(#h)"></path></g></g></svg>
+                                    <span>Flipkart Plus Zone</span></a></li>
+                            <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="12" class="" viewBox="0 0 16 12"><g fill="none"
+                                 fill-rule="evenodd"><path fill="#2874F1" d="M6.038 11.682h8.407c.565 0 1.018-.38 1.13-.855V.847H.426v9.98c0 .475.452.855 1.017.855h2.232v-2.98H1.94L4.776 6l2.996 2.703H6.038v2.98z"></path></g></svg>
+                            <span>Orders</span></a></li>
+                             <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" class="" width="16" height="14" viewBox="0 0 20 16"><path d="M8.695 16.682C4.06 12.382 1 9.536 1 6.065 1 3.219 3.178 1 5.95 1c1.566 0 3.069.746 4.05 1.915C10.981 1.745 12.484 1 14.05 1 16.822 1 19 3.22 19 6.065c0 3.471-3.06 6.316-7.695 10.617L10 17.897l-1.305-1.215z" fill="#2874F0" class="" stroke="#FFF" fill-rule="evenodd" opacity=".9"></path></svg>
+                                <span>Wishlist</span></a></li>
+                            <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="12" class="" viewBox="0 0 16 16"><g fill="none" fill-rule="evenodd"><path fill="#FFF" d="M0 0h16v16H0z"></path><path fill="#2874F0" d="M16 9.25v2.5c0 .69-.597 1.25-1.333 1.25H1.333C.597 13 0 12.44 0 11.75v-2.5c.736 0 1.333-.56 1.333-1.25S.736 6.75 0 6.75v-2.5C0 3.56.597 3 1.333 3h13.334C15.403 3 16 3.56 16 4.25v2.5c-.736 0-1.333.56-1.333 1.25S15.264 9.25 16 9.25zM4.4 3.625v1.25h.533v-1.25H4.4zm0 2.5v1.25h.533v-1.25H4.4zm0 2.5v1.25h.533v-1.25H4.4zm0 2.5v1.25h.533v-1.25H4.4z"></path></g></svg>
+                                    <span>Rewards</span></a></li>
+                            <li><a href="#"><svg width="16" height="16" class="" viewBox="0 0 23 22" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd" transform="translate(-9.694 -9)"><ellipse cx="20.557" cy="20" rx="20.557" ry="20"></ellipse><path d="M7 6h28v28H7z"></path><path fill="#2874F0" fill-rule="nonzero" d="M31.5 27v1.167a2.34 2.34 0 0 1-2.333 2.333H12.833a2.333 2.333 0 0 1-2.333-2.333V11.833A2.333 2.333 0 0 1 12.833 9.5h16.334a2.34 2.34 0 0 1 2.333 2.333V13H21a2.333 2.333 0 0 0-2.333 2.333v9.334A2.333 2.333 0 0 0 21 27h10.5zM21 24.667h11.667v-9.334H21v9.334zm4.667-2.917c-.97 0-1.75-.782-1.75-1.75s.78-1.75 1.75-1.75c.968 0 1.75.782 1.75 1.75s-.782 1.75-1.75 1.75z"></path></g></svg>
+                            <span>Gift Cards</span></a></li>
+                        </ul>
+                    </div>   
+                </div>       
+                <div class="seller">
+                    <a href="#">Become a Seller</a>
+                </div>
+                <div class="more" id="more">
+                    <a href="#">More</a>
+                    <svg width="4.7" height="8" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" class="Wto0b0">
+                        <path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#fff"
+                            class="-dC5Le"></path>
+                    </svg>
+                </div>
+                <div class="about" style="display:none;" id="about">
+                    <id class="design"></id>
+                    <div class="padding">
+                        <ul>
+                            <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="14" class=""
+                                        viewBox="0 0 12 14">
+                                        <g fill="none" fill-rule="evenodd">
+                                            <path d="M-4-3h20v20H-4z"></path>
+                                            <path fill="#2874F1"
+                                                d="M6.17 13.61c-1.183 0-1.922-.723-1.922-1.88H8.09c0 1.157-.74 1.88-1.92 1.88zm4.222-5.028l1.465 1.104v1.07H0v-1.07l1.464-1.104v-2.31h.004c.035-2.54 1.33-4.248 3.447-4.652V.992C4.915.446 5.37 0 5.928 0c.558 0 1.014.446 1.014.992v.628c2.118.404 3.412 2.112 3.446 4.65h.004v2.312z">
+                                            </path>
+                                        </g>
+                                    </svg><span>Notification preferences</span></a></li>
+                            <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class=""
+                                        viewBox="0 0 14 17">
+                                        <g fill="none" fill-rule="evenodd">
+                                            <path fill="#2874F0" fill-rule="nonzero"
+                                                d="M12.25.542H1.75c-.833 0-1.5.675-1.5 1.5v10.5c0 .825.667 1.5 1.5 1.5h3L7 16.292l2.25-2.25h3c.825 0 1.5-.675 1.5-1.5v-10.5c0-.825-.675-1.5-1.5-1.5zm-4.5 12h-1.5v-1.5h1.5v1.5zM9.303 6.73l-.676.69c-.54.547-.877.997-.877 2.122h-1.5v-.375c0-.825.338-1.575.877-2.123l.93-.945c.278-.27.443-.646.443-1.058 0-.825-.675-1.5-1.5-1.5s-1.5.675-1.5 1.5H4c0-1.658 1.342-3 3-3s3 1.342 3 3c0 .66-.27 1.26-.697 1.687z">
+                                            </path>
+                                        </g>
+                                    </svg><span>24*7 Customer Care</span></a></li>
+                            <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="14" class=""
+                                        viewBox="0 0 18 10">
+                                        <g fill="none" fill-rule="evenodd">
+                                            <path fill="#2874F0" fill-rule="nonzero"
+                                                d="M12.333 0l1.91 1.908-4.068 4.067-3.333-3.333L.667 8.825 1.842 10l5-5 3.333 3.333 5.25-5.24L17.333 5V0">
+                                            </path>
+                                        </g>
+                                    </svg>
+                                    <span>Advertise</span></a></li>
+                            <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="14" class=""
+                                        viewBox="0 0 12 14">
+                                        <g fill="none" fill-rule="evenodd">
+                                            <path d="M-4-3h20v20H-4z"></path>
+                                            <path fill="#2874F0" fill-rule="nonzero"
+                                                d="M12 4.94H8.57V0H3.43v4.94H0l6 5.766 6-5.765zM0 12.354V14h12v-1.647H0z">
+                                            </path>
+                                        </g>
+                                    </svg>
+                                    <span>Download App</span></a></li>
+                        </ul>
+                    </div>
 
-            <div class="login">
-                <a>Login</a>       
-            </div>
-            <div class="seller">
-                <a href="#">Become a Seller</a>
-            </div>
-            <div class="more" id="more">
-                <a href="#">More</a>
-                <svg width="4.7" height="8" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" class="Wto0b0">
-                    <path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#fff"
-                        class="-dC5Le"></path>
-                </svg>
-            </div>
-            <div class="about" style="display: none;" id="about"> 
-                <id class="design"></id>
-                <div class="padding">                                              
-                    <ul>
-                        <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="14" class="" viewBox="0 0 12 14"><g fill="none" fill-rule="evenodd"><path d="M-4-3h20v20H-4z"></path><path fill="#2874F1" d="M6.17 13.61c-1.183 0-1.922-.723-1.922-1.88H8.09c0 1.157-.74 1.88-1.92 1.88zm4.222-5.028l1.465 1.104v1.07H0v-1.07l1.464-1.104v-2.31h.004c.035-2.54 1.33-4.248 3.447-4.652V.992C4.915.446 5.37 0 5.928 0c.558 0 1.014.446 1.014.992v.628c2.118.404 3.412 2.112 3.446 4.65h.004v2.312z"></path></g></svg><span>Notification preferences</span></a></li>
-                          <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="" viewBox="0 0 14 17"><g fill="none" fill-rule="evenodd"><path fill="#2874F0" fill-rule="nonzero" d="M12.25.542H1.75c-.833 0-1.5.675-1.5 1.5v10.5c0 .825.667 1.5 1.5 1.5h3L7 16.292l2.25-2.25h3c.825 0 1.5-.675 1.5-1.5v-10.5c0-.825-.675-1.5-1.5-1.5zm-4.5 12h-1.5v-1.5h1.5v1.5zM9.303 6.73l-.676.69c-.54.547-.877.997-.877 2.122h-1.5v-.375c0-.825.338-1.575.877-2.123l.93-.945c.278-.27.443-.646.443-1.058 0-.825-.675-1.5-1.5-1.5s-1.5.675-1.5 1.5H4c0-1.658 1.342-3 3-3s3 1.342 3 3c0 .66-.27 1.26-.697 1.687z"></path></g></svg><span>24*7 Customer Care</span></a></li>
-                          <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="14" class="" viewBox="0 0 18 10"><g fill="none" fill-rule="evenodd"><path fill="#2874F0" fill-rule="nonzero" d="M12.333 0l1.91 1.908-4.068 4.067-3.333-3.333L.667 8.825 1.842 10l5-5 3.333 3.333 5.25-5.24L17.333 5V0"></path></g></svg>
-                          <span>Advertise</span></a></li>
-                          <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="14" class="" viewBox="0 0 12 14"><g fill="none" fill-rule="evenodd"><path d="M-4-3h20v20H-4z"></path><path fill="#2874F0" fill-rule="nonzero" d="M12 4.94H8.57V0H3.43v4.94H0l6 5.766 6-5.765zM0 12.354V14h12v-1.647H0z"></path></g></svg>
-                        <span>Download App</span></a></li>
-                    </ul>   
-                </div>   
-
-            </div>
-            <div class="cart">
-                <svg class="GAbRIN" width="14" height="14" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-                    <path class="cziJ98"
-                        d="M15.32 2.405H4.887C3 2.405 2.46.805 2.46.805L2.257.21C2.208.085 2.083 0 1.946 0H.336C.1 0-.064.24.024.46l.644 1.945L3.11 9.767c.047.137.175.23.32.23h8.418l-.493 1.958H3.768l.002.003c-.017 0-.033-.003-.05-.003-1.06 0-1.92.86-1.92 1.92s.86 1.92 1.92 1.92c.99 0 1.805-.75 1.91-1.712l5.55.076c.12.922.91 1.636 1.867 1.636 1.04 0 1.885-.844 1.885-1.885 0-.866-.584-1.593-1.38-1.814l2.423-8.832c.12-.433-.206-.86-.655-.86"
-                        fill="#fff"></path>
-                </svg>
-                <span>Cart</span>
+                </div>
+                <div class="cart">
+                    <svg class="GAbRIN" width="14" height="14" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                        <path class="cziJ98"
+                            d="M15.32 2.405H4.887C3 2.405 2.46.805 2.46.805L2.257.21C2.208.085 2.083 0 1.946 0H.336C.1 0-.064.24.024.46l.644 1.945L3.11 9.767c.047.137.175.23.32.23h8.418l-.493 1.958H3.768l.002.003c-.017 0-.033-.003-.05-.003-1.06 0-1.92.86-1.92 1.92s.86 1.92 1.92 1.92c.99 0 1.805-.75 1.91-1.712l5.55.076c.12.922.91 1.636 1.867 1.636 1.04 0 1.885-.844 1.885-1.885 0-.866-.584-1.593-1.38-1.814l2.423-8.832c.12-.433-.206-.86-.655-.86"
+                            fill="#fff"></path>
+                    </svg>
+                    <span>Cart</span>
+                </div>
             </div>
         </div>
-        </div>
-    </header>
+        <div class="demo"></div>
+    </header>     
     <nav>
         <ul class="ul-list">
-            <li id="electronics"><a>Electornics</a><svg width="4.7" height="8" viewBox="0 0 16 27"
+            <li id="electronics"><a>Electronics<svg width="4.7" height="8" viewBox="0 0 16 27"
                     xmlns="http://www.w3.org/2000/svg" class="CGMB7B">
                     <path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="gray"
                         class="CPYntE"></path>
-                </svg></li>
-            <li id="tv"><a>Tvs & Applience</a><svg width="4.7" height="8" viewBox="0 0 16 27"
+                </svg></a></li>  
+            <li id="tv"><a>TVs & Appliances<svg width="4.7" height="8" viewBox="0 0 16 27"
                     xmlns="http://www.w3.org/2000/svg" class="CGMB7B">
                     <path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="gray"
                         class="CPYntE"></path>
-                </svg></li>
-            <li id="men"><a>Men</a><svg width="4.7" height="8" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg"
+                </svg></a></li>
+            <li id="men"><a>Men<svg width="4.7" height="8" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg"
                     class="CGMB7B">
                     <path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="gray"
                         class="CPYntE"></path>
-                </svg></li>
-            <li><a>Women</a></li>
-
-            <li><a>Baby & kids</a></li>
-            <li><a>Home & Furniture</a></li>
+                </svg></a></li>
+            <li><a>Women
+            <svg width="4.7" height="8" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg"
+                    class="CGMB7B">
+                    <path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="gray"
+                        class="CPYntE"></path>
+                </svg></a></li>
+            <li><a>Baby & Kids
+            <svg width="4.7" height="8" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg"
+                    class="CGMB7B">
+                       <path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="gray"
+                        class="CPYntE"></path>
+                </svg></a></li>
+            <li><a>Home & Furniture
+            <svg width="4.7" height="8" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg"
+                    class="CGMB7B">
+                    <path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="gray"
+                        class="CPYntE"></path>
+                </svg></a></li>
+             <li><a>Sports, Books & More
+            <svg width="4.7" height="8" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg"
+                    class="CGMB7B">
+                    <path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="gray"
+                        class="CPYntE"></path>
+                </svg></a></li>       
             <li><a>Flights</a></li>
-            <li><a>Offer Zone</a></li>
-        </ul>
-        <div id="electronic-slide" style="display: none;">
+            <li><a>Offer Zone</a></li>  
+            <div id="electronic-slide" style="display: none;">
             <div class="s1">
                 <ul>
                     <li class="heading"><a>Mobile</a></li>
@@ -210,7 +289,120 @@
                     <li class="sub-link"><a>Nike</a></li>
                 </ul>
             </div>
-        </div>
+            </div>
+        </ul>
+        <!-- <div id="electronic-slide" style="display: none;">
+            <div class="s1">
+                <ul>
+                    <li class="heading"><a>Mobile</a></li>
+                    <li class="heading-icon"></li>
+                    <li class="sub-link"><a>Mi</a></li>
+                    <li class="sub-link"><a>Real Me</a></li>
+                    <li class="sub-link"><a>Samsung</a></li>
+                    <li class="sub-link"><a>infinix</a></li>
+                    <li class="sub-link"><a>OPPO</a> </li>
+                    <li class="sub-link"><a>Apple</a></li>
+                    <li class="sub-link"><a>Vivo</a></li>
+                    <li class="sub-link"><a>Hon0r</a></li>
+                    <li class="sub-link"><a>Azus</a></li>
+                    <li class="sub-link"><a>Poco X2</a></li>
+                    <li class="sub-link"><a>realme narzo 10</a></li>
+                    <li class="sub-link"><a>Infinix Hot 9</a></li>
+                    <li class="sub-link"><a>IQ003</a></li>
+                    <li class="sub-link"><a>iPhone SE</a></li>
+                    <li class="sub-link"><a>Motrola razr</a></li>
+                    <li class="sub-link"><a>realme Narzo 10A</a></li>
+                    <li class="sub-link"><a>Motrola g8 power lite</a></li>
+                </ul>
+            </div>
+            <div class="s2">
+                <ul>
+                    <li class="heading"><a>Mobile Accessories</a></li>
+                    <li class="sub-link"><a>Mobile Cases</a></li>
+                    <li class="sub-link"><a>HeadPhones & Headsets</a></li>
+                    <li class="sub-link"><a>Power Banks</a></li>
+                    <li class="sub-link"><a>Screenguards</a></li>
+                    <li class="sub-link"><a>Memory Cards</a> </li>
+                    <li class="sub-link"><a>Smart HeadPhones</a></li>
+                    <li class="sub-link"><a>Mobile Cable</a></li>
+                    <li class="sub-link"><a>Mobile Cable</a></li>
+                    <li class="sub-link"><a>Mobile Chargers</a></li>
+                    <li class="sub-link"><a>Mobile Holders</a></li>
+                    <li class="heading"><a>Smart Werable Tech</a></li>
+                    <li class="sub-link"><a>Smart Watches</a></li>
+                    <li class="sub-link"><a>Smart Glasses (VR)</a></li>
+                    <li class="sub-link"><a>Smart Bands</a></li>
+                    <li class="heading"><a>Health Care Applience</a></li>
+                    <li class="sub-link"><a>Bp Monitors</a></li>
+                    <li class="sub-link"><a>Weghing Scale</a></li>
+
+                </ul>
+            </div>
+            <div class="s1">
+                <ul>
+                    <li class="heading"><a>Laptops</a></li>
+                    <li class="heading-icon"></li>
+                    <li class="sub-link"><a>Gaming Laptops</a></li>
+                    <li class="heading"><a>Desktop Pcs</a></li>
+                    <li class="heading"><a>Gaming & Accessories</a></li>
+                    <li class="heading"><a>Computer Accessories</a></li>
+                    <li class="sub-link"><a>External Hard Disks</a> </li>
+                    <li class="sub-link"><a>Pendrices</a></li>
+                    <li class="sub-link"><a>Laptop Skins & Decals</a></li>
+                    <li class="sub-link"><a>laptop Bags</a></li>
+                    <li class="sub-link"><a>Mouse</a></li>
+                    <li class="heading"><a>Computer Peripherals</a></li>
+                    <li class="sub-link"><a>Printers & ink Cartridge</a></li>
+                    <li class="sub-link"><a>Monitors</a></li>
+                    <li class="heading"><a>Tablets</a></li>
+                    <li class="sub-link"><a>Apple iPads</a></li>
+                </ul>
+            </div>
+            <div class="s2">
+                <ul>
+                    <li class="sub-link"><a>Television</a></li>
+                    <li class="heading"><a>Speakers</a></li>
+                    <li class="sub-link"><a>Home Audio Speakers</a></li>
+                    <li class="sub-link"><a>Home Theatres</a></li>
+                    <li class="sub-link"><a>Soundbars</a></li>
+                    <li class="sub-link"><a>Bluetooth Speakers</a> </li>
+                    <li class="sub-link"><a>DTH Set Top Box</a></li>
+                    <li class="heading"><a>Smart Home Automation</a></li>
+                    <li class="sub-link"><a>Google Nest</a></li>
+                    <li class="heading"><a>Camera</a></li>
+                    <li class="sub-link"><a>DSLR & Mirrorless</a></li>
+                    <li class="heading"><a>Compact & Bridge</a></li>
+                    <li class="sub-link"><a>Cameras</a></li>
+                    <li class="sub-link"><a>Sports & Action</a></li>
+                    <li class="heading"><a>Camera Accessories</a></li>
+                    <li class="sub-link"><a>Lens</a></li>
+                    <li class="sub-link"><a>Tripods</a></li>
+                    <li class="heading"><a>Network Components</a></li>
+                    <li class="sub-link"><a>Routers</a></li>
+                </ul>      
+            </div>
+            <div class="s1">
+                <ul>
+                    <li class="heading"><a>Smart Waches</a></li>
+                    <li class="heading-icon"></li>
+                    <li class="heading"><a>Smart Brands/a></li>
+                    <li class="heading"><a>Personal Care Appliance</a></li>
+                    <li class="sub-link"><a>Trimmers</a></li>
+                    <li class="sub-link"><a>Shavers</a></li>
+                    <li class="sub-link"><a>Grooming Kits</a> </li>
+                    <li class="heading"><a>Featured</a></li>
+                    <li class="sub-link"><a>Watches Store</a></li>
+                    <li class="sub-link"><a>Footwer Club</a></li>
+                    <li class="sub-link"><a>Bags & Wallet</a></li>
+                    <li class="sub-link"><a>T-Shirt Store</a></li>
+                    <li class="sub-link"><a>Addidas</a></li>
+                    <li class="sub-link"><a>Beardo</a></li>
+                    <li class="sub-link"><a>Reebok</a></li>
+                    <li class="sub-link"><a>Skechers</a></li>
+                    <li class="sub-link"><a>Nike</a></li>
+                </ul>
+            </div>
+        </div> -->
         <div id="tv-Slide" style="display: none;">
             <div class="s1">
                 <ul>
@@ -328,7 +520,7 @@
     </nav>
     <main>
         <div class="entire-container">
-            <div class="sections">      
+            <div class="sections">
                 <div class="section-one">
                     <div class="Sub-section1">
                         <div class="head">
@@ -349,7 +541,7 @@
                             <p>Mobile</p>
                         </div>
                     </div>
-                    <div class="Sub-section1">
+                    <div class="Sub-section1"> 
                         <div class="price">
                             <p>Price</p>
                         </div>
@@ -358,12 +550,19 @@
                             <div class="price-veriation"></div>
                             <div class="price-veriation"></div>
                             <div class="price-veriation"></div>
+                            <div class="price-veriation"></div>
+                            
                         </div>
-                        <div class="line">
+                        <div class="line-dot">
+                            <div class="line">
                             <div class="circle-one"></div>
                             <div class="circle-two"> </div>
                             <div class="thin-line"></div>
                             <div class="thick-line"></div>
+                          </div>
+                          <div class="dot">
+
+                          </div>
                         </div>
                         <div class="price-range">
                             <div class="select">
@@ -391,8 +590,7 @@
                                 <select>
                                     <option>
                                         &#8377;10000
-                                    </option>
-                                    <option>
+                                    </option>                               <option>
                                         &#8377;15000
                                     </option>
                                     <option>
@@ -451,7 +649,7 @@
                                 <input type="checkbox">
                                 <p>Google pixel</p>
                             </div>
-                            <div id="band-more">
+                            <div id="band-more"> 
                                 <input type="checkbox">
                                 <p>realme</p>
                                 <p>
@@ -461,7 +659,7 @@
                                 <p>POCO</p>
                             </div>
                         </div>
-                    </div>
+                    </div>   
                     <div class="Sub-section1">
                         <div class="assured">
                             <div class="assured-icon">
@@ -470,7 +668,7 @@
                             </div>
                             <div class="assured-mark">
                                 <div class="mark">
-                                    <p class="question">?</p>
+                                    <p class="question-mark">?</p>
                                 </div>
                             </div>
                         </div>
@@ -632,7 +830,7 @@
                         <div id="primary-one">
                             <input type="checkbox">
                             <p>32 - 47.9 MP</p>
-                        </div>  
+                        </div>
                         <div id="primary-one">
                             <input type="checkbox">
                             <p>48 - 63 MP</p>
@@ -788,7 +986,7 @@
                             </div>
                             <div id="network-one">
                                 <input type="checkbox">
-                                <p>5G</p>  
+                                <p>5G</p>
                             </div>
                         </div>
                     </div>
@@ -830,314 +1028,310 @@
                             <p>No Cost, EMI</p>
                         </div>
                     </div>
-                <div class="Sub-section1" id="feature-section">
-                    <div class="features">
-                        <p>features</p>
-                        <svg id="svg16" width="6" height="11" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg"
-                            class="ukzDZP">
-                            <path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#878787"
-                                class="SV+H35"></path>
-                        </svg>
-                    </div>
-                    <div id="features" style="display: none;">
-                        <div id="feature-one">
-                            <input type="checkbox">
-                            <p>HD Recording</p>
+                    <div class="Sub-section1" id="feature-section">
+                        <div class="features">
+                            <p>features</p>
+                            <svg id="svg16" width="6" height="11" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg"
+                                class="ukzDZP">
+                                <path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z"
+                                    fill="#878787" class="SV+H35"></path>
+                            </svg>
                         </div>
-                        <div id="feature-one">
-                            <input type="checkbox">
-                            <p>WiFi</p>
-                        </div>
-                        <div id="feature-one">
-                            <input type="checkbox">
-                            <p>FM Player</p>
-                        </div>
-                        <div id="feature-one">
-                            <input type="checkbox">
-                            <p>NFC</p>
-                        </div>
-                        <div id="feature-one">
-                            <input type="checkbox">
-                            <p>Musical Player</p>
-                        </div>
-                        <div id="feature-one">
-                            <input type="checkbox">
-                            <p>Bluetooth</p>
-                        </div>
-                        <div id="feature-one">
-                            <input type="checkbox">
-                            <p>USB</p>
-                        </div>
+                        <div id="features" style="display: none;">
+                            <div id="feature-one">
+                                <input type="checkbox">
+                                <p>HD Recording</p>
+                            </div>
+                            <div id="feature-one">
+                                <input type="checkbox">
+                                <p>WiFi</p>
+                            </div>
+                            <div id="feature-one">
+                                <input type="checkbox">
+                                <p>FM Player</p>
+                            </div>
+                            font-family: Arial; <div id="feature-one">
+                                <input type="checkbox">
+                                <p>NFC</p>
+                            </div>
+                            <div id="feature-one">
+                                <input type="checkbox">
+                                <p>Musical Player</p>
+                            </div>
+                            <div id="feature-one">
+                                <input type="checkbox">
+                                <p>Bluetooth</p>
+                            </div>
+                            <div id="feature-one">
+                                <input type="checkbox">
+                                <p>USB</p>
+                            </div>
 
-                    </div>
-                </div>
-                <div class="Sub-section1" id="type-section">
-                    <div class="types">
-                        <p>types</p>
-                        <svg id="svg17" width="6" height="11" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg"
-                            class="ukzDZP">
-                            <path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#878787"
-                                class="SV+H35"></path>
-                        </svg>
-                    </div>
-                    <div id="types" style="display: none;">
-                        <div id="type-one">
-                            <input type="checkbox">
-                            <p>Smartphones</p>
                         </div>
-                        <div id="type-one">
-                            <input type="checkbox">
-                            <p>Feature Phones</p>
+                    </div>
+                    <div class="Sub-section1" id="type-section">
+                        <div class="types">
+                            <p>types</p>
+                            <svg id="svg17" width="6" height="11" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg"
+                                class="ukzDZP">
+                                <path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z"
+                                    fill="#878787" class="SV+H35"></path>
+                            </svg>
                         </div>
+                        <div id="types" style="display: none;">
+                            <div id="type-one">
+                                <input type="checkbox">
+                                <p>Smartphones</p>
+                            </div>
+                            <div id="type-one">
+                                <input type="checkbox">
+                                <p>Feature Phones</p>
+                            </div>
 
+                        </div>
                     </div>
+                    <div class="Sub-section1" id="core-section">
+                        <div class="cores">
+                            <p>number of cores</p>
+                            <svg width="6" height="11" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg"
+                                class="ukzDZP">
+                                <path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z"
+                                    fill="#878787" class="SV+H35"></path>
+                            </svg>
+                        </div>
+                        <div id="core" style="display: none;">
+                            <div id="core-one">
+                                <input type="checkbox">
+                                <p>Dual Core</p>
+                            </div>
+                            <div id="core-one">
+                                <input type="checkbox">
+                                <p>Octa Core</p>
+                            </div>
+                            <div id="core-one">
+                                <input type="checkbox">
+                                <p>Single Core</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="Sub-section1" id="availability-section">
+                        <div class="availability">
+                            <p>Availablity</p>
+                            <svg width="6" height="11" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg"
+                                class="ukzDZP">
+                                <path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z"
+                                    fill="#878787" class="SV+H35"></path>
+                            </svg>
+                        </div>
+                        <div id="availability" style="display: none;">
+                            <div id="availability-one">
+                                <input type="checkbox">
+                                <p>50% or more</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="Sub-section1" id="discount-section">
+                        <div class="discount">
+                            <p>Discount</p>
+                            <svg width="6" height="11" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg"
+                                class="ukzDZP">
+                                <path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z"
+                                    fill="#878787" class="SV+H35"></path>
+                            </svg>
+                        </div>
+                        <div id="discount" style="display: none;">
+                            <div id="discount-one">
+                                <input type="checkbox">
+                                <p>50% or more</p>
+                            </div>
+                            <div id="discount-one">
+                                <input type="checkbox">
+                                <p>40% or more</p>
+                            </div>
+                            <div id="discount-one">
+                                <input type="checkbox">
+                                <p>30% or more</p>
+                            </div>
+                            <div id="discount-one">
+                                <input type="checkbox">
+                                <p>20% or more</p>
+                            </div>
+                            <div id="discount-one">
+                                <input type="checkbox">
+                                <p>10% or more</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="Sub-section1" id="os-main">
+                        <div class="os">
+                            <p>Operating system version name</p>
+                            <svg width="6" height="11" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg"
+                                class="ukzDZP">
+                                <path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z"
+                                    fill="#878787" class="SV+H35"></path>
+                            </svg>
+                        </div>
+                        <div id="os-sub" style="display:none;">
+                            <div id="clockspeed-one">
+                                <input type="checkbox">
+                                <p>Android Q</p>
+                            </div>
+                            <div id="clockspeed-one">
+                                <input type="checkbox">
+                                <p>Anna</p>
+                            </div>
+                            <div id="clockspeed-one">
+                                <input type="checkbox">
+                                <p>Belle</p>
+                            </div>
+                            <div id="clockspeed-one">
+                                <input type="checkbox">
+                                <p>Eclair</p>
+                            </div>
+                            <div id="clockspeed-one">
+                                <input type="checkbox">
+                                <p>Froyo</p>
+                            </div>
+                            <div id="clockspeed-one">
+                                <input type="checkbox">
+                                <p>Gingerbread</p>
+                            </div>
+                            <p>3 More</p>
+                            <div id="clockspeed-one">
+                                <input type="checkbox">
+                                <p>Ice Cream Sandwich</p>
+                            </div>
+                            <div id="clockspeed-one">
+                                <input type="checkbox">
+                                <p>Jelly Bean</p>
+                            </div>
+                            <div id="clockspeed-one">
+                                <input type="checkbox">
+                                <p>KitKat</p>
+                            </div>
+                            <p>Show Less</p>
+                        </div>
+                    </div>
+                    <div class="Sub-section1" id="clockspeed1">
+                        <div class="clockspeed">
+                            <p>clock speed</p>
+                            <svg width="6" height="11" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg"
+                                class="ukzDZP">
+                                <path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z"
+                                    fill="#878787" class="SV+H35"></path>
+                            </svg>
+                        </div>
+                        <div id="clockspeed" style="display: none;">
+                            <div id="clockspeed-one">
+                                <input type="checkbox">
+                                <p>1.5-1.9 GHz</p>
+                            </div>
+                            <div id="clockspeed-one">
+                                <input type="checkbox">
+                                <p>2-2.1 GHz</p>
+                            </div>
+                            <div id="clockspeed-one">
+                                <input type="checkbox">
+                                <p>2-2.5 GHz</p>
+                            </div>
+                            <div id="clockspeed-one">
+                                <input type="checkbox">
+                                <p>2.2-2.4 GHz</p>
+                            </div>
+                            <div id="clockspeed-one">
+                                <input type="checkbox">
+                                <p>2.5 & Above GHz</p>
+                            </div>
+                            <div id="clockspeed-one">
+                                <input type="checkbox">
+                                <p>2.5 GHz Above</p>
+                            </div>
+                            <div id="clockspeed-one">
+                                <input type="checkbox">
+                                <p>Below 1.5 GHz</p>
+                            </div>
+                            <div id="clockspeed-one">
+                                <input type="checkbox">
+                                <p>Less than 900 MHz</p>
+                            </div>
+                        </div>
+                    </div> 
                 </div>
-                <div class="Sub-section1" id="core-section">
-                    <div class="cores">
-                        <p>number of cores</p>
-                        <svg width="6" height="11" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg"
-                            class="ukzDZP">
-                            <path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#878787"
-                                class="SV+H35"></path>
-                        </svg>
-                    </div>
-                    <div id="core" style="display: none;">
-                        <div id="core-one">
-                            <input type="checkbox">
-                            <p>Dual Core</p>
+                <div class="Sub-section2">
+                    <a href="#">
+                        <a href="#" class="need">Need Help?</a>
+                        <div class="help">
+                            <p>Help me decide</p>
+                            <svg width="16" height="27" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg"
+                                class="VQiHOk">
+                                <path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z"
+                                    fill="#2874f0 " class="jVpjWi"></path>
+                            </svg>
                         </div>
-                        <div id="core-one">
-                            <input type="checkbox">
-                            <p>Octa Core</p>
+                        <div class="help-desk-img">
+                            <img class="img" src="images/buying-guide-illustration_4dd325.png">
                         </div>
-                        <div id="core-one">
-                            <input type="checkbox">
-                            <p>Single Core</p>
-                        </div>
-                    </div>
+                    </a>
                 </div>
-                <div class="Sub-section1" id="availability-section">
-                    <div class="availability">
-                        <p>Availablity</p>
-                        <svg width="6" height="11" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg"
-                            class="ukzDZP">
-                            <path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#878787"
-                                class="SV+H35"></path>
-                        </svg>
-                    </div>
-                    <div id="availability" style="display: none;">
-                        <div id="availability-one">
-                            <input type="checkbox">
-                            <p>50% or more</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="Sub-section1" id="discount-section">
-                    <div class="discount">
-                        <p>Discount</p>
-                        <svg width="6" height="11" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg"
-                            class="ukzDZP">
-                            <path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#878787"
-                                class="SV+H35"></path>
-                        </svg>
-                    </div>
-                    <div id="discount" style="display: none;">
-                        <div id="discount-one">
-                            <input type="checkbox">
-                            <p>50% or more</p>
-                        </div>
-                        <div id="discount-one">
-                            <input type="checkbox">
-                            <p>40% or more</p>
-                        </div>
-                        <div id="discount-one">
-                            <input type="checkbox">
-                            <p>30% or more</p>
-                        </div>
-                        <div id="discount-one">
-                            <input type="checkbox">
-                            <p>20% or more</p>
-                        </div>
-                        <div id="discount-one">
-                            <input type="checkbox">
-                            <p>10% or more</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="Sub-section1" id="os-main">
-                    <div class="os">
-                        <p>Operating system version name</p>
-                        <svg width="6" height="11" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg"
-                            class="ukzDZP">
-                            <path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#878787"
-                                class="SV+H35"></path>
-                        </svg>
-                    </div>
-                    <div id="os-sub" style="display:none;">
-                        <div id="clockspeed-one">
-                            <input type="checkbox">
-                            <p>Android Q</p>
-                        </div>
-                        <div id="clockspeed-one">
-                            <input type="checkbox">
-                            <p>Anna</p>
-                        </div>
-                        <div id="clockspeed-one">
-                            <input type="checkbox">
-                            <p>Belle</p>
-                        </div>
-                        <div id="clockspeed-one">
-                            <input type="checkbox">
-                            <p>Eclair</p>
-                        </div>
-                        <div id="clockspeed-one">
-                            <input type="checkbox">
-                            <p>Froyo</p>
-                        </div>
-                        <div id="clockspeed-one">
-                            <input type="checkbox">
-                            <p>Gingerbread</p>
-                        </div>
-                        <p>3 More</p>
-                        <div id="clockspeed-one">
-                            <input type="checkbox">
-                            <p>Ice Cream Sandwich</p>
-                        </div>
-                        <div id="clockspeed-one">
-                            <input type="checkbox">
-                            <p>Jelly Bean</p>
-                        </div>
-                        <div id="clockspeed-one">
-                            <input type="checkbox">
-                            <p>KitKat</p>
-                        </div>
-                        <p>Show Less</p>
-                    </div>
-                </div>
-                <div class="Sub-section1" id="clockspeed1">
-                    <div class="clockspeed">
-                        <p>clock speed</p>
-                        <svg width="6" height="11" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg"
-                            class="ukzDZP">
-                            <path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#878787"
-                                class="SV+H35"></path>
-                        </svg>
-                    </div>
-                    <div id="clockspeed" style="display: none;">
-                        <div id="clockspeed-one">
-                            <input type="checkbox">
-                            <p>1.5-1.9 GHz</p>
-                        </div>
-                        <div id="clockspeed-one">
-                            <input type="checkbox">
-                            <p>2-2.1 GHz</p>
-                        </div>
-                        <div id="clockspeed-one">
-                            <input type="checkbox">
-                            <p>2-2.5 GHz</p>
-                        </div>
-                        <div id="clockspeed-one">
-                            <input type="checkbox">
-                            <p>2.2-2.4 GHz</p>
-                        </div>
-                        <div id="clockspeed-one">
-                            <input type="checkbox">
-                            <p>2.5 & Above GHz</p>
-                        </div>
-                        <div id="clockspeed-one">
-                            <input type="checkbox">
-                            <p>2.5 GHz Above</p>
-                        </div>
-                        <div id="clockspeed-one">
-                            <input type="checkbox">
-                            <p>Below 1.5 GHz</p>
-                        </div>
-                        <div id="clockspeed-one">
-                            <input type="checkbox">
-                            <p>Less than 900 MHz</p>
-                        </div>
-                    </div>
-                </div>
-            </div>    
-            <div class="Sub-section2">
-                <a href="#">
-                    <a href="#" class="need">Need Help?</a>
-                    <div class="help">
-                        <p>Help me decide</p>
-                       <svg width="16" height="27" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg"
-                            class="VQiHOk">
-                            <path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#2874f0 "
-                              class="jVpjWi"></path>
-                        </svg>
-                    </div>
-                    <div class="help-desk-img">
-                        <img class="img" src="images/buying-guide-illustration_4dd325.png">
-                    </div>
-                </a>
             </div>
-        </div>     
-        <div class="second-section">
-            <div class="sc-one">
-                <div class="sub-sc-one">
-                    <a href="#">Home</a>
-                    <svg width="20" height="7" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" class="sfneHK">
-                        <path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#878787"
-                            class="wMLTcO"></path>
-                    </svg>
+            <div class="second-section"> 
+                <div class="sc-one">
+                    <div class="sub-sc-one">
+                        <a href="#">Home</a>
+                        <svg width="20" height="7" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg"
+                            class="sfneHK">
+                            <path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#878787"
+                                class="wMLTcO"></path>
+                        </svg>
+                    </div>
+                    <div class="sub-sc-one">
+                        <a href="#">Mobiles & A...</a>
+                        <svg width="20" height="7" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg"
+                            class="sfneHK">
+                            <path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#878787"
+                                class="wMLTcO"></path>
+                        </svg>
+                    </div>  
+                    <div class="sub-sc-one">
+                        <a href="#">Mobiles</a>
+                    </div>
+                    <div class="sub-sc-two">
+                        <h1 class="mb">Mobiles</h1>
+                        <p class="span">(Showing 1 - 24 products of 67 products)</p>
+                    </div>
+                    <div class="sub-sc-three"> 
+                        <p class="sort">Sort By</p>
+                        <div class="pop">Popularity</div>
+                        <div class="pop">Price -- Low to High</div>
+                        <div class="pop">Price -- High to Low</div>
+                        <div class="pop">Newest First</div>
+                    </div>     
                 </div>
-                <div class="sub-sc-one">
-                    <a href="#">Mobiles & Accessories</a>
-                    <svg width="20" height="7" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" class="sfneHK">
-                        <path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#878787"
-                            class="wMLTcO"></path>
-                    </svg>
+                <div class="mobile-container">
                 </div>
-                <div class="sub-sc-one">
-                    <a href="#">Mobiles</a>
-                    <svg width="20" height="7" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" class="sfneHK">
-                        <path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#878787">
-                        </path>
-                    </svg>
+                <div class="page-showing">
+                    <p>Page 1 of 3</p>
+                    <div class="link">
+                        <a href="#">1</a>
+                        <a href="#">2</a>
+                        <a href="#">3</a>
+                        <a href="#" class="next">NEXT</a>
+                    </div>
                 </div>
-                <div class="sub-sc-two">
-                    <h1 class="mb">Mobile</h1>
-                    <p class="span">(Showing 1 - 24 products of 67 products)</p>
+                <div class="question">
+                    <p>Did you find what you were looking for?</p>
+                    <div class="button">
+                        <button>Yes</button>
+                        <button>No</button>
+                    </div>
                 </div>
-                <div class="sub-sc-three">
-
-                    <p class="sort">Sort By</p>
-                    <div class="pop">Popularity</div>
-                    <div class="pop">Price -- Low to High</div>
-                    <div class="pop">Price -- High to Low</div>
-                    <div class="pop">Newest First</div>
-                </div>  
             </div>
-            <div class="mobile-container">
-            </div>
-            <div class="page-showing">
-                 <p>Page 1 of 3</p>  
-            <div class="link">
-                 <a href="#">1</a>
-                  <a href="#">2</a>
-                   <a href="#">3</a>
-                 <a href="#" class="next">NEXT</a>
-             </div>
-            </div> 
-            <div class="question">
-              <p>Did you find what you were looking for?</p>
-              <div class="button">
-                <button>Yes</button>
-                <button>No</button>
-              </div>
-            </div>   
-
-
-        </div>
-        </div>
-      <footer>
-        <div id="inside-div">
+        </div>  
+    </main>
+    <footer>
+        <div id="inside-div"> 
             <div class="f1">
-                <p>About</p> 
+                <p>About</p>
                 <a href="#">Contact Us</a>
                 <a href="#">About Us</a>
                 <a href="#">Careers</a>
@@ -1150,12 +1344,12 @@
                 <a href="#">Myntra</a>
                 <a href="#">Cleartrip</a>
                 <a href="#">Shopsy </a>
-            </div>  
+            </div>
             <div class="f1">
                 <p>Help</p>
-                <a href="#">Payments</a>  
+                <a href="#">Payments</a>
                 <a href="#">Shipping</a>
-                <a href="#">Cancellation & Returns</a>   
+                <a href="#">Cancellation & Returns</a>
                 <a href="#">FAQ
             </div>
             <div class="f1">
@@ -1167,43 +1361,43 @@
                 <a href="#">Sitemap</a>
                 <a href="#">Grievance Redressal</a>
                 <a href="#">EPR Compliance</a>
-            </div>  
+            </div>
             <div class="f1">
                 <div class="f1-sub">
-                  <p class="p-sub">Mail Us</p>
-                
-                   <div class="footer-description"> 
-                    <p class="address">Flipkart Internet Private Limited,</p>
-                    <p class="address">Building Alyssa, Begonia &</p>
-                    <p class="address">Clove Embassy Tech Village</p>
-                    <P class="address">Outer Ring Road, Devarabeesanahalli village,</P>
-                    <p class="address">Bengaluru, 56103</p>
-                    <P class="address">Karnataka, India</P>  
-                    </div>  
+                    <p class="p-sub">Mail Us</p>
+
+                    <div class="footer-description">
+                        <p class="address">Flipkart Internet Private Limited,</p>
+                        <p class="address">Building Alyssa, Begonia &</p>
+                        <p class="address">Clove Embassy Tech Village</p>
+                        <P class="address">Outer Ring Road, Devarabeesanahalli village,</P>
+                        <p class="address">Bengaluru, 56103</p>
+                        <P class="address">Karnataka, India</P>
+                    </div>
                     <div class="social">Social</div>
                     <div class="link-icon">
                         <span class="social-media">
                             <a href="https://www.youtube.com/flipkart">
-                            <img src="images/download.svg" height="24" width="24">
+                                <img src="images/download.svg" height="24" width="24">
                             </a>
                         </span>
-                           <span class="social-media">
+                        <span class="social-media">
                             <a href="https://www.youtube.com/flipkart">
-                            <img src="images/download -1.svg" height="24" width="24">
+                                <img src="images/download -1.svg" height="24" width="24">
                             </a>
                         </span>
-                           <span class="social-media">
+                        <span class="social-media">
                             <a href="https://www.youtube.com/flipkart">
-                            <img src="images/YoutubeLogo_958b78.svg" height="24" width="24">
+                                <img src="images/YoutubeLogo_958b78.svg" height="24" width="24">
                             </a>
                         </span>
-                           <span class="social-media">
+                        <span class="social-media">
                             <a href="https://www.youtube.com/flipkart">
-                        <img src="images/InstagramLogo_854a2c.svg" height="24" width="24">
+                                <img src="images/InstagramLogo_854a2c.svg" height="24" width="24">
                             </a>
                         </span>
                     </div>
-                </div>   
+                </div>
             </div>
             <div class="f1">
                 <P class="p-sub">Registered Office Address</P>
@@ -1211,41 +1405,39 @@
                 <p class="address">Clove Embassy Tech Village,</p>
                 <p class="address">Outer Ring Road, Devarabeesanahalli Village</p>
                 <p class="address">Bangaluru, 560103,</p>
-                <p class="address">Karnataka, India</p> 
+                <p class="address">Karnataka, India</p>
                 <p class="address">CIN : U51109KA2012PTC066107</p>
                 <div class="number">
-                <p class="address" style="display: inline-block;">
-                Telephone:<span class="phone-number">0044-45614700/044-67415800</span></p>
+                    <p class="address" style="display: inline-block;">
+                        Telephone:<span class="phone-number">0044-45614700/044-67415800</span></p>
                 </div>
             </div>
-        </div> 
-       <div class="f2">
+        </div>
+        <div class="f2">
             <div class="sub-f2">
-              <img src="images/one.svg">
-              <a href="#">Become a Seller</a>
+                <img src="images/one.svg">
+                <a href="#">Become a Seller</a>
             </div>
-             <div class="sub-f2">
+            <div class="sub-f2">
                 <img src="images/two.svg">
                 <a href="#">Advertise</a>
             </div>
-             <div class="sub-f2">
+            <div class="sub-f2">
                 <img src="images/3.svg">
                 <a href="#">Gift Cards</a>
-            </div>  
-             <div class="sub-f2">
+            </div>
+            <div class="sub-f2">
                 <img src="images/4.svg">
-               <a href="#">Help Center</a>
+                <a href="#">Help Center</a>
             </div>
             <p>
-              © 2007-2025 FlipKart.come
+                © 2007-2025 FlipKart.come
             </p>
-            <img src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/payment-method_69e7ec.svg">
-             
-       </div>
-      </footer>   
-    </main> 
-    <script src="script.js"></script> 
- 
+            <img
+                src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/payment-method_69e7ec.svg">
+        </div>
+    </footer>
+    <script src="script.js"></script>
 </body>
-  
-</html>      
+
+</html>
