@@ -21,14 +21,14 @@ discount.addEventListener("click", () => {
         discount_1.style.display = "block"
     }
     else {
-        discount_1.style.display = "none"
+        discount_1.style.display = "none" 
     }
 })
 const availability = document.getElementById("availability-section")
 console.log(availability)
 const availability_1 = document.getElementById("availability")
 console.log(availability_1)
-availability.addEventListener("click", () => {
+availability.addEventListener("click", () => { 
     if (availability_1.style.display == "none") {
         availability_1.style.display = "block"
     }
@@ -41,7 +41,7 @@ const features_1 = document.getElementById("features")
 feature.addEventListener("click", () => {
     if (features_1.style.display == "none") {
         features_1.style.display = "block"
-    }
+    }      
     else {
         features_1.style.display = "none"
     }
@@ -309,7 +309,7 @@ const electronics = document.getElementById("electronics")
 const electronic_slide = document.getElementById("electronic-slide")
 electronics.addEventListener("mouseenter",()=>{
     electronic_slide.style.display="flex"    
-    })
+    }) 
     electronics.addEventListener("mouseleave",()=>{ 
         electronic_slide.style.display="none"
     })
@@ -326,14 +326,14 @@ const tv = document.getElementById("tv")
 console.log(tv)
 const tv_slide = document.getElementById("tv-Slide")
 console.log(tv_slide)
-tv.addEventListener("mouseenter",()=>{
+tv.addEventListener("mouseenter",()=>{  
     tv_slide.style.display="flex"
     tv_slide.addEventListener("mouseenter",()=>{
-        tv_slide.style.display='flex'
+        tv_slide.style.display='flex' 
     })
     tv_slide.addEventListener("mouseleave",()=>{
-        tv_slide.style.display="none"
-    })
+        tv_slide.style.display="none" 
+    }) 
 })
 
 const men = document.getElementById("men")
@@ -367,7 +367,8 @@ const mobileDetails=[
         review_count:"121",
         discount_price:"14,999",  
         actual_price:"18,999",
-        offer:"21%"
+        offer:"21%",
+        exchange:10300,
 
     },
       {
@@ -384,7 +385,8 @@ const mobileDetails=[
         review_count:"1,171",
         discount_price:"8,699",
         actual_price:"13,999", 
-        offer:"37%"   
+        offer:"37%",
+        exchange:11750,
     },
           {   
         img:"https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/6/b/c/-original-imahcjrax7j8fyuf.jpeg?q=70",
@@ -401,7 +403,8 @@ const mobileDetails=[
         review_count:"2,356",
         discount_price:"22,999",
         actual_price:"25,999",
-        offer:"11%"     
+        offer:"11%",
+        exchange:12500,    
     },
           {
         img:"https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/n/l/u/-original-imah2fjd7wfd9ksh.jpeg?q=70",
@@ -417,7 +420,8 @@ const mobileDetails=[
         review_count:"11,150", 
         discount_price:"15,999",
         actual_price:"20,999",
-        offer:"23%"   
+        offer:"23%",
+        exchange:12500,  
     },      {
         img:"https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/r/k/a/-original-imah4jyfyrpxfhtk.jpeg?q=70",
         mobile_name:"Apple iPhone 16 (teal,128 GB)",
@@ -431,7 +435,8 @@ const mobileDetails=[
         review_count:"793", 
         discount_price:"69,999",
         actual_price:"79,900",
-        offer:"12%"     
+        offer:"12%",  
+        exchange:13500, 
     },
           {
         img:"https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/l/2/y/-original-imaggswcffkgcupp.jpeg?q=70",
@@ -447,7 +452,8 @@ const mobileDetails=[
         review_count:"1,171",
         discount_price:"8,699",
         actual_price:"13,999",
-        offer:"37%"   
+        offer:"37%" ,
+        exchange:12500 
     },
           {
         img:"https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/i/p/l/-original-imah2fjcxjdjykpc.jpeg?q=70",
@@ -460,10 +466,11 @@ const mobileDetails=[
         warrenty:"1 Year on Handset and 6 Months on Accessories",
         rating:4.3,
         rating_count:"19,293",
-        review_count:"2,111",
+        review_count:2111,
         discount_price:"29,999",
         actual_price:"59,999",
-        offer:"50%"   
+        offer:"50%",  
+        exchange:7150,
     },
           {
         img:"https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/r/i/c/-original-imahbfmdzukyctut.jpeg?q=70",
@@ -480,7 +487,8 @@ const mobileDetails=[
         review_count:"2,359",
         discount_price:"22,999",
         actual_price:"25,999",
-        offer:"11%"  
+        offer:"11%",
+        exchange:14780
     },
           {
         img:"	https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/j/n/1/-original-imah9gtmya9qhqse.jpeg?q=70",
@@ -496,7 +504,8 @@ const mobileDetails=[
         review_count:"883",
         discount_price:"12,999",
         actual_price:"16,999",
-        offer:"23%"  
+        offer:"23%",  
+        exchange:14500,
     },
           {
         img:"https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/u/c/i/-original-imahawgayvnqkzaz.jpeg?q=70",
@@ -512,16 +521,16 @@ const mobileDetails=[
         review_count:"883",
         discount_price:"12,999",
         actual_price:"16,999",
-        offer:"23%"     
-        }      
-
+        offer:"23%", 
+        exchange: 14300   
+     } 
 ]     
 mobileDetails.forEach(data=>{
     const align_item=document.createElement("div")
     align_item.className="align"
     mobile_container.appendChild(align_item)
     const tag_a=document.createElement("a")
-    tag_a.className="total-container"
+    tag_a.className="total-container"    
     align_item.appendChild(tag_a) 
     const img_div=document.createElement("div")
     img_div.className="img-div"
@@ -566,16 +575,16 @@ mobileDetails.forEach(data=>{
       
     const rating_section=document.createElement("div")
     rating_section.className="rating-section"
-    details.appendChild(rating_section)
+    details.appendChild(rating_section) 
     const rating_icon=document.createElement("p")
     rating_icon.className="rating-icon"
-    rating_section.appendChild(rating_icon)
+    rating_section.appendChild(rating_icon) 
     rating_icon.innerHTML=`
     ${data.rating}
    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="24" fill="#fff" viewBox="0 0 24 24">
   <path d="M12 .587l3.668 7.431L24 9.753l-6 5.847 1.417 8.267L12 18.896l-7.417 4.971L6 15.6 0 9.753l8.332-1.735z"/>
     </svg>                  
-`
+`  
     const rating_count=document.createElement("p")
     rating_count.className="rating-count"
     rating_section.appendChild(rating_count)
@@ -611,13 +620,18 @@ mobileDetails.forEach(data=>{
     amount.appendChild(actual_price)
     actual_price.innerHTML=`
         <span>&#8377;${data.actual_price}</span>
-    `
+    `  
     const offer=document.createElement("div")
      offer.className="offer"
-    amount.appendChild(offer)
-    offer.innerHTML=`
-       ${data.offer} off     
+    amount.appendChild(offer)  
+    offer.innerHTML=`  
+       ${data.offer} off 
     `
+    const exchange=document.createElement('div')
+     exchange.className="exchange"   
+     amount.appendChild(exchange)
+      exchange.innerHTML=`
+      Upto &#8377; <span class="exchange-price">${data.exchange}</span> Off on Exchange`
      const offer_img=document.createElement("div")
      offer_img.className="offer-img"
      price.appendChild(offer_img)
@@ -636,22 +650,7 @@ more.addEventListener("mouseover",()=>{
   }
 })        
 
-about.onmouseover? about.style.display=="block":about.onmouseout?about.style.display=="none":about.style.display=="block"
-const alignment=document.getElementsByClassName("align")
-console.log(alignment)
- const login_menu=document.getElementById("login-menu")
- console.log(login_menu) 
- const login=document.getElementsByClassName("login")
- console.log(login)                 
- 
-function mouseOver(){
-    if(login_menu.style.display=="none"){
-        login_menu.style.display=="block"
-    }
-    else{
-        login_menu.style.display=="none"
-    }
-}
+
 const popularity=document.getElementById("popularity")
 popularity.style.color="#2874f0"
 popularity.style.fontWeight=500;
@@ -668,5 +667,77 @@ click_content.forEach(item=>{
       item.style.borderBottom="2px solid #2874f0"
       item.style.fontWeight=500;
    })   
+})   
+   
+const login=document.getElementById("login")
+const login_menu=document.getElementById("login-menu")
+login.addEventListener("mouseover",()=>{
+    login_menu.style.display="block"      
 })
-        
+login.addEventListener("mouseout",()=>{
+    login_menu.style.display="none"  
+})
+// const total_container=document.querySelectorAll(".total-container")
+// const phone_name=document.querySelectorAll(".phone-name")
+// total_container.forEach(item=>{   
+//     item.addEventListener("mouseover",()=>{
+//          total_container.forEach(item=>{
+//             item.phone_name.style.color=""
+//          })
+//          item.phone_name.style.color="red"                
+//     })
+// })   
+// const phone_section=document.querySelectorAll(".align")
+// const brand_checkbox=document.querySelectorAll(".brand_checkbox")
+// function displayBrand(filteredPhones){
+//     filteredPhones.forEach(phone => { 
+//        phone
+//   });
+// }
+// displayBrand(mobileDetails)
+// brand_checkbox.forEach(checkbox=>{
+//     checkbox.addEventListener("change",()=>{
+//         const selectedPhone=Array.from(brand_checkbox)
+//         .filter(phone=>phone.checked).map(phone=>phone.value)
+//         if(selectedPhone===0){
+//             displayBrand(phone_section)
+//         }
+//         else{
+//             const filtered=mobileDetails.filter(phone=>{
+//                 selectedPhone.includes(phone.mobile_name)
+//             })
+//             displayBrand(filtered)
+//       }         
+//     })   
+// })  
+const search=document.getElementById("search")
+const brand_name=document.querySelectorAll("#band-more")
+console.log(search)   
+console.log(brand_name)
+search.addEventListener("input",()=>{
+   const searchValue=search.value.toLowerCase()
+   brand_name.forEach(text=>{
+     const label=text.textContent.toLocaleLowerCase()
+     if(label.includes(searchValue)){
+        text.style.display="block"            
+     }
+     else{
+        text.style.display="none"        
+     }
+          
+   })  
+               
+})  
+// const product_list=document.getElementsByClassName("mobile-container")
+// function display(){
+
+// }
+// function filter(){
+//    const filters={
+//      brand,
+//      rating,
+//      ram,
+//      battery
+//    }      
+// } 
+ 
