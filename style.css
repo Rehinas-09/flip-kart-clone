@@ -1911,4 +1911,7 @@ footer .f2{
     font-style: normal;
     font-weight: 700;
 }
-    
+.brand-name input[type="checkbox"]{
+  padding: 0 16px 12px 16px;
+}
+       
