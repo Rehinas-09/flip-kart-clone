@@ -26,5 +26,50 @@
     "brand": "Apple",
     "price": 59999,
     "image": "https://via.placeholder.com/150x150?text=iPhone+13"
+  },
+  {
+    "id":5,
+    "name":"apple iphone 13",
+    "brand":"Apple",
+    "price":59999,
+    "image": "https://via.placeholder.com/150x150?text=iPhone+13"
+  },
+  {
+    "id":6,
+    "name":"apple iphone 14",
+    "brand":"Apple",
+    "price":45777,
+    "image":"https://via.placeholder.com/150x150?text=iPhone+13"
+  },
+  {
+    "id":7,
+    "name":"Oppo",
+    "brand":"Oppo",
+    "price":6534,
+    "image":"https://via.placeholder.com/150x150?text=Galaxy+S23"
+  },
+  {
+    "id":8,
+    "name":"OnePlus 11",
+  "brand":"onePlus",
+"image":"https://via.placeholder.com/150x150?text=Galaxy+S23"  
+  },
+  {
+    "id":9,
+    "name":"Samsung Galaxy S23",
+    "brand":"Samsung",
+    "image":"https://via.placeholder.com/150x150?text=OnePlus+11"
+  },
+  {
+    "id":10,
+    "name":"apple iphone 15",
+    "brand":"Apple",
+    "image":"https://via.placeholder.com/150x150?text=Galaxy+S23"
+  },{
+    "id":11,
+    "name":"apple iphone 16",
+    "brand":"Apple",
+    "image":"https://via.placeholder.com/150x150?text=Galaxy+S23"
   }
+   
 ]

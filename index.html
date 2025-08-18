@@ -39,7 +39,6 @@
                                     </path>
                                 </g>
                             </svg></button>
-                        <!-- </div> -->
                     </div>
                 </form>
             </div>
@@ -229,7 +228,7 @@
                         <path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="gray"
                             class="CPYntE"></path>
                     </svg></a></li>
-            <li><a>Flights</a></li>
+            <li><a>Flights</a></li> 
             <li><a>Offer Zone</a></li>
             <div id="electronic-slide" style="display: none;">
                 <div class="s1">
@@ -570,13 +569,40 @@
                 </ul>
             </div>
         </div>
-    </nav>
+    </nav> k
     <main>
         <div class="entire-container">
             <div class="section-one">
                 <div class="Sub-section1">
-                    <div class="head">
-                        <p class="filter-title">Filters</p>
+                    <div id="clear-section">
+                        <div class="filter" id="filter">
+                            <div class="head">
+                                <p class="filter-title">Filters</p>
+                            </div>
+                            <div id="clear" style="display: none;">
+                                <span>Clear all</span>
+                            </div>
+                        </div>
+                        <div id="brandClear">
+                            <div id="brandClear-sub"> 
+
+                            </div>  
+                        </div>
+                        <div id="RatingClear">
+                            <div id="RatingClear-sub">
+             
+                            </div>
+                        </div>
+                           <div id="assuredClear">
+                            <div id="assuredClear-sub">
+
+                            </div>
+                        </div>
+                        <div id="ramClear">
+                            <div id="ramClear-sub">
+
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="Sub-section1">
@@ -616,9 +642,9 @@
                         </div>
                     </div>
                     <div class="price-range">
-                        <div class="select">
+                        <div class="select" id="minimum_price">
                             <select>
-                                <option>
+                                <option>  
                                     MIn
                                 </option>
                                 <option>
@@ -637,11 +663,11 @@
 
                         </div>
                         <p class="two">to</p>
-                        <div class="select">
+                        <div class="select" id="maximum_price">
                             <select>
                                 <option>
                                     &#8377;10000
-                                </option>
+                                </option> 
                                 <option>
                                     &#8377;15000
                                 </option>
@@ -655,55 +681,67 @@
                         </div>
                     </div>
                 </div>
-                <div class="Sub-section1" id="brand-section">
+                <div class="Sub-section1" id="brand-section"> 
                     <div class="brand-section">
-                        <p class="brand">Brand</p> 
+                        <p class="brand">Brand</p>
                         <svg id="sidebar-svg" width="6" height="11" viewBox="0 0 16 27"
                             xmlns="http://www.w3.org/2000/svg" class="ukzDZP">
                             <path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#878787"
                                 class="SV+H35"></path>
                         </svg>
-                    </div>  
-                 </div>   
-                    <div id="brand-sub">
-                        <div id="brand-search">
-                            <svg width="20" height="20" viewBox="0 0 17 18" class="zmbstL"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <g fill="#878787" fill-rule="evenodd">
-                                    <path class="JVQyl9"
-                                        d="m11.618 9.897l4.225 4.212c.092.092.101.232.02.313l-1.465 1.46c-.081.081-.221.072-.314-.02l-4.216-4.203">
-                                    </path>
-                                    <path class="fill"
-                                        d="m6.486 10.901c-2.42 0-4.381-1.956-4.381-4.368 0-2.413 1.961-4.369 4.381-4.369 2.42 0 4.381 1.956 4.381 4.369 0 2.413-1.961 4.368-4.381 4.368m0-10.835c-3.582 0-6.486 2.895-6.486 6.467 0 3.572 2.904 6.467 6.486 6.467 3.582 0 6.486-2.895 6.486-6.467 0-3.572-2.904-6.467-6.486-6.467">
-                                    </path>
-                                </g>
-                            </svg>
-                            <input type="text" placeholder="Search Brand" id="search">
-                        </div>
-                        <div id="brand-name">
-
-                           <div id="band-more"></div> <label><input type="checkbox" class="brand-checkbox" style="padding-right: 11px;"
-                                    value="Techno">Techno</label></div>
-                            <div id="band-more"><label><input type="checkbox" class="brand-checkbox" style="padding-right: 11px;"
-                                    value="Samsung">Samsung</label></div>
-                            <div id="band-more"><label><input type="checkbox" class="brand-checkbox" style="padding-right: 11px;"
-                                    value="Motrola">Motrola</label></div>
-                            <div id="band-more"><label><input type="checkbox" class="brand-checkbox" style="padding-right: 11px;"
-                                    value="Apple">Apple</label></div>
-                            <div id="band-more"><label><input type="checkbox" class="brand-checkbox" style="padding-right: 11px;"
-                                    value="Google pixel">Google pixel</label></div>
-                            <div id="band-more"><label><input type="checkbox" class="brand-checkbox" style="padding-right: 11px;"
-                                    value="realme">realme</label></div>
-                            <div<label><input type="checkbox" class="brand-checkbox" style="padding-right: 11px;"
-                                    value="POCO">POCO</label>
-
-                        </div>
                     </div>
+                </div>
+                <div id="brand-sub">
+                    <div class="clear-all" id="clearAll" style="display:none;">
+                        <div class="X">x</div>
+                        <div class="clearAll"> 
+                            <span>Clear all</span>
+                        </div> 
+                    </div>  
+
+                    <div id="brand-search">
+                        <svg width="20" height="20" viewBox="0 0 17 18" class="zmbstL"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <g fill="#878787" fill-rule="evenodd">
+                                <path class="JVQyl9"
+                                    d="m11.618 9.897l4.225 4.212c.092.092.101.232.02.313l-1.465 1.46c-.081.081-.221.072-.314-.02l-4.216-4.203">
+                                </path>
+                                <path class="fill"
+                                    d="m6.486 10.901c-2.42 0-4.381-1.956-4.381-4.368 0-2.413 1.961-4.369 4.381-4.369 2.42 0 4.381 1.956 4.381 4.369 0 2.413-1.961 4.368-4.381 4.368m0-10.835c-3.582 0-6.486 2.895-6.486 6.467 0 3.572 2.904 6.467 6.486 6.467 3.582 0 6.486-2.895 6.486-6.467 0-3.572-2.904-6.467-6.486-6.467">
+                                </path>
+                            </g>
+                        </svg>
+                        <input type="text" placeholder="Search Brand" id="search">
+                    </div>
+                    <div id="brand-name">
+                        <label><input type="checkbox" class="brand-checkbox" value="Techno">
+                            <p>Techno</p>
+                        </label>
+                        <label><input type="checkbox" class="brand-checkbox" value="Samsung">
+                            <p>Samsung</p>    
+                        </label>
+                        <label><input type="checkbox" class="brand-checkbox" value="Motrola">
+                            <p>Motrola</p>
+                        </label>
+                        <label><input type="checkbox" class="brand-checkbox" value="Apple">
+                            <p>Apple</p>
+                        </label>
+                        <label><input type="checkbox" class="brand-checkbox" value="Google pixel">
+                            <p>Google pixel</p>
+                        </label>
+                        <label><input type="checkbox" class="brand-checkbox" value="realme">
+                            <p>realme</p>
+                        </label>
+                        <label><input type="checkbox" class="brand-checkbox" value="POCO">
+                            <p>POCO</p>
+                        </label>
+                    </div>
+                </div>
                 <div class="Sub-section1">
                     <div class="assured">
                         <div class="assured-icon">
-                            <input type="checkbox">
-                            <img src="images/fa_9e47c1.png" height="21">
+                            <label><input type="checkbox" id="assured-filter" value="F-assured"><img src="images/fa_9e47c1.png"
+                                    height="21"></label>
                         </div>
                         <div class="assured-mark">
                             <div class="mark">
@@ -723,14 +761,18 @@
                     </div>
                 </div>
                 <div id="rating-chart" style="display: none;">
-                    <div id="rating-check">
-                        <input type="checkbox" class="rating-check">
+                    <div class="clear_all" id="clear_all" style="display: none;"> 
+                        <div class="X">x</div>
+                        <div class="clearAll">
+                            <span>Clear all</span>
+                        </div>
+                    </div>
+                    <label><input type="checkbox" class="rating-check" value="4★ & above">
                         <p>4★ &amp; above</p>
-                    </div>
-                    <div id="rating-check" class="rating-check">
-                        <input type="checkbox">
-                        <p>3★ &amp; above</p>
-                    </div>
+                    </label>
+                    <label><input type="checkbox" class="rating-check" value="3★ & above">
+                        <p>3★ & above</p>
+                    </label>
                 </div>
                 <div class="Sub-section1" id="gst">
                     <div class="gst">
@@ -751,7 +793,7 @@
                 <div class="Sub-section1" id="ram">
                     <div class="ram">
                         <p>ram</p>
-                        <svg id="sidebar3-svg" width="6" height="11" viewBox="0 0 16 27"
+                        <svg id="sidebar3-svg" width="6" height="11" viewBox="0 0 16 27" h
                             xmlns="http://www.w3.org/2000/svg" class="ukzDZP">
                             <path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#878787"
                                 class="SV+H35"></path>
@@ -759,24 +801,29 @@
                     </div>
                 </div>
                 <div id="ram-child" style="display: none;">
+                    <div class="clearAll" id="clearRam">
+                        <div class="X">x</div>
+                        <div class="clear-heading" id="clear-ram"> 
+                            <span>Clear all</span>
+                        </div> 
+                    </div> 
                     <div id="ram-check">
-                        <input type="checkbox">
+                        <input type="checkbox" value="4 GB">
                         <p>4 GB</p>
                     </div>
                     <div id="ram-check">
-                        <input type="checkbox">
+                        <input type="checkbox" value="3 GB">
                         <p>3 GB</p>
                     </div>
                     <div id="ram-check">
-                        <input type="checkbox">
+                        <input type="checkbox" value="6 GB">
                         <p>6 GB</p>
                     </div>
                     <div id="ram-check">
-                        <input type="checkbox">
+                        <input type="checkbox" value="8 GB and above">
                         <p>8 GB and above</p>
                     </div>
                 </div>
-
                 <div class="Sub-section1" id="internal-section">
                     <div class="internal-storage">
                         <p>internal storage</p>
@@ -801,7 +848,6 @@
                         <p>32 - 63.9 GB</p>
                     </div>
                 </div>
-
                 <div class="Sub-section1" id="battery-section">
                     <div class="battery">
                         <p>Battery capacity</p>
@@ -1002,7 +1048,7 @@
                                     fill="#878787" class="SV+H35"></path>
                             </svg>
                         </div>
-                        <div id="network" style="display: none;">
+                        <div id="network" style="display: none;">  
                             <div id="network-one">
                                 <input type="checkbox">
                                 <p>2G</p>
@@ -1163,7 +1209,7 @@
                                 <p>50% or more</p>
                             </div>
                         </div>
-                    </div>
+                    </div> 
                     <div class="Sub-section1" id="discount-section">
                         <div class="discount">
                             <p>Discount</p>
@@ -1176,8 +1222,8 @@
                         <div id="discount" style="display: none;">
                             <div id="discount-one">
                                 <input type="checkbox">
-                                <p>50% or more</p>
-                            </div>
+                                <p>50% or more</p> 
+                            </div> 
                             <div id="discount-one">
                                 <input type="checkbox">
                                 <p>40% or more</p>

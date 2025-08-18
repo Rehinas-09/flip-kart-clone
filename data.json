@@ -3,20 +3,24 @@
         "img":"https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/b/v/v/-original-imahe8nfmrhvqx6a.jpeg?q=70",
         "mobile_name":"Tecno Pova 7 5G (Oasis Green, 128 GB)",
         "brand":"Techno",
-        "am":"8 GB RAM | 128 GB ROM ",
+        "ram":"8 GB RAM | 128 GB ROM ",
         "mb":"17.22 cm (6.78 inch) Full HD+ Display",
         "camera":"50MP + AI | 13MP Front Camera",
         "battery":"6000 mAh Battery",
         "processor":"Dimensity 7300 Ultimate Processor",
         "warrenty":"1 Year Manufacturer Warranty for Phone",
-        "rating":4.5,
+        "rating":"4",
+        "rating_check":"4★ & above",
         "rating_count":1298,  
         "review_count":121,   
         "discount_price":"14,999",  
         "actual_price":"18,999",
-        "offer":"21%",      
-        "exchange":10300
-
+        "offer":"21%",    
+        "ram_check":"8 GB and above",  
+        "exchange":10300,
+        "assuered":"F-assured",
+        "image_assured":"https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/fa_9e47c1.png"
+    
     },
       {
         "img":"https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/2/u/t/-original-imahbk7pnjgxudgz.jpeg?q=70",
@@ -29,12 +33,16 @@
         "processor":"Dimensity 6300 Processor",
         "warrenty":"1 Year Warranty for Device and 6 Months for In-Box Accessories",
         "rating":4.1,
+        "rating_check":"4★ & above",
         "rating_count":"16,864",
         "review_count":"1,171",
         "discount_price":"8,699",
         "actual_price":"13,999", 
         "offer":"37%",
-        "exchange":11750
+        "ram_check":"4 GB",
+        "assuered":"F-assured",
+        "exchange":11750,
+        "image_assured":"https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/fa_9e47c1.png"
     },
           {   
         "img":"https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/6/b/c/-original-imahcjrax7j8fyuf.jpeg?q=70",
@@ -48,12 +56,16 @@
         "charger":"68W Charger",
         "warrenty":"1 Year Warranty on Handset and 6 Months Warranty on Accessories",
         "rating":4.5,
+        "rating_check":"4★ & above",
         "rating_count":"41,179",
         "review_count":"2,356",
         "discount_price":"22,999",
         "actual_price":"25,999", 
         "offer":"11%",
-        "exchange":12500   
+        "ram_check":"8 GB and above",
+        "assuered":"F-assured",
+        "exchange":12500,
+        "image_assured":"https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/fa_9e47c1.png"
     },
           {
         "img":"https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/n/l/u/-original-imah2fjd7wfd9ksh.jpeg?q=70",
@@ -66,12 +78,16 @@
         "processor":"Dimensit",
         "warrenty":"1 Year Warranty for Device and 6 Months for In-Box Accessories",
         "rating":4.4,
+        "rating_check":"4★ & above",
         "rating_count":"2,16,993",
         "review_count":"11,150", 
         "discount_price":"15,999",
         "actual_price":"20,999",
         "offer":"23%",
-        "exchange":12500
+        "ram_check":"8 GB and above",
+        "exchange":12500,
+        "assured":"F-assured",
+        "image_assured":"https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/fa_9e47c1.png"
     },      {
         "img":"https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/r/k/a/-original-imah4jyfyrpxfhtk.jpeg?q=70",
         "mobile_name":"Apple iPhone 16 (teal,128 GB)",
@@ -82,17 +98,21 @@
         "processor":"A18 Chip, 6 Core Processor Processor",
         "warrenty":"1 Year Warranty for Phone and 1 year warranty for in Box Accessories",
         "rating":4.6,
+        "rating_check":"4★ & above",
         "rating_count":"19,106",
         "review_count":"793", 
         "discount_price":"69,999",
         "actual_price":"79,900",
         "offer":"12%",  
-        "exchange":13500
+        "exchange":13500,
+        "ram_check":"not defined",
+        "assured":"F-assured",
+        "image_assured":"https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/fa_9e47c1.png"
     },
           {
         "img":"https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/l/2/y/-original-imaggswcffkgcupp.jpeg?q=70",
         "mobile_name":"Google Pixel 7 (Lemongrass 128 GB)",
-        "ram":"* GB RAM | 128 GB ROM",
+        "ram":"4 GB RAM | 128 GB ROM",
         "brand":"Google pixel",
         "mb":"16.0 cm (6.3 inch) Full HD+ Display",
         "camera":"50MP + 2MP | 8MP Front Camera",
@@ -100,12 +120,16 @@
         "processor":"Dimensity 6300 Processor",
         "warrenty":"1 Year Warranty for Device and 6 Months for In-Box Accessories",
         "rating":4.1,
+        "rating_check":"4★ & above",
         "rating_count":"16,864",
         "review_count":"1,171",
         "discount_price":"8,699",
         "actual_price":"13,999",
-        "offer":"37%" ,
-        "exchange":12500 
+        "offer":"37%", 
+        "exchange":12500,
+        "ram_check":"4 GB",
+        "assured":"F-assured",
+        "image_assured":"https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/fa_9e47c1.png"
     },
           {
         "img":"https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/i/p/l/-original-imah2fjcxjdjykpc.jpeg?q=70",
@@ -118,12 +142,16 @@
         "processor":"6s Gen 3 Processor",
         "warrenty":"1 Year on Handset and 6 Months on Accessories",
         "rating":4.3,
+        "rating_check":"4★ & above",
         "rating_count":"19,293",
         "review_count":2111,
         "discount_price":"29,999",
         "actual_price":"59,999",
         "offer":"50%",  
-       "exchange":7150
+       "exchange":7150,
+       "ram_check":"8 GB and above",
+       "assured":"F-assured",
+       "image_assured":"https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/fa_9e47c1.png"
     },
       {
         "img":"https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/r/i/c/-original-imahbfmdzukyctut.jpeg?q=70",
@@ -137,12 +165,16 @@
         "charger":"68 Charger",
         "warrenty":"1 Year Warranty on Handset and 6 Months Warranty on Accessories",
         "rating":4.5,
+        "rating_check":"4★ & above",
         "rating_count":"41,179",
         "review_count":"2,359",
         "discount_price":"22,999",
-        "actual_price":"25,999",
+        "actual_price":"25,999",  
         "offer":"11%",
-        "exchange":14780
+        "ram_check":"8 GB and above",
+        "exchange":14780,
+        "assured":"F-assured",
+        "image_assured":"https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/fa_9e47c1.png"
     },
         {
         "img":"https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/j/n/1/-original-imah9gtmya9qhqse.jpeg?q=70",
@@ -155,12 +187,16 @@
         "processor":"Dimensity 6400 Processor",
         "warrenty":"1 Year Manufacturer Warranty for Device and 6 Months Manufacturer Warrenty for Inbox Accessories",
         "rating":4.4,
+        "rating_check":"4★ & above",
         "rating_count":"25,286",    
         "review_count":"883",
         "discount_price":"12,999",
         "actual_price":"16,999",
         "offer":"23%", 
-        "exchange":14500 
+        "exchange":14500,
+        "ram_check":"6 GB",
+        "assured":"F-assured",
+        "image_assured":"https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/fa_9e47c1.png"
     },
           {
         "img":"https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/u/c/i/-original-imahawgayvnqkzaz.jpeg?q=70",
@@ -172,12 +208,15 @@
         "battery":"5200 mAh Battery",
         "processor":"Unisoc T7250 Max clock speed: 2 x A75@1.8GHz 6 * A55@1.6GHz Processor ",
         "warrenty":"1 Year Manufacturer Warranty Phone and 6 Months  Warrenty In the Box Accessories",
-        "rating":4.4,
+        "rating":3.5,
+        "rating_check":"3★ & above",
         "rating_count":"25,286",
-        "review_count":"883",
+        "review_count":"883", 
         "discount_price":12999,
         "actual_price":"16,999",
         "offer":"23%", 
-        "exchange": 14300
+        "ram_check":"6 GB",
+        "exchange": 14300,
+        "image_assured":"none" 
      }
-]  
+]    
