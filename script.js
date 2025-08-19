@@ -362,7 +362,7 @@ click_content.forEach(item => {
     item.addEventListener("click", () => {
         click_content.forEach(item => {
             item.style = ""
-        })
+        }) 
         item.style.color = "#2874f0";
         item.style.cursor = "default";
         item.style.borderBottom = "2px solid #2874f0"
@@ -377,39 +377,22 @@ login.addEventListener("mouseover", () => {
 })
 login.addEventListener("mouseout", () => { 
     login_menu.style.display = "none" 
-})
+}) 
 
-const search = document.getElementById("search")
-const category=document.querySelectorAll("#brand-name ")
-console.log(category)
-search.addEventListener("input", () => {
-    const searchValue = search.value.toLowerCase()
-    category.forEach(text => {  
-        const label = text.textContent.toLocaleLowerCase() 
-        if (label.includes(searchValue)) {
-            text.style.display = "block"
-        }    
-        else {        
-            text.style.display = "none"  
-        } 
-    }   )    
-})   
-search.addEventListener("click",()=>{
-
-    search.style.borderBottom="2px solid #2874f0"
-})
 
 const ratingCheck=document.querySelectorAll(".ratingCheck")
 
 let allCat=[]    
-let allProducts=[]   
+let allProducts=[]
+  
 fetch("data.json")      
 .then(res=>res.json()) 
-.then(data=>{   
+.then(data=>{ 
     allProducts=data;
     displayProduct(allProducts)
+   
 })
-function displayProduct(products){ 
+function displayProduct(products){   
        mobile_container.innerHTML="";
        if(products.length==0){
         mobile_container.innerHTML="<p>No Products found </p>"
@@ -611,7 +594,7 @@ ratingCheckbox.forEach(checkbox=>{
  
       ratingClear_sub.innerHTML=`   
       ${selectedRating}`  
-      ratingClear_sub.style.cursor="pointer";
+      ratingClear_sub.style.cursor="pointer";  
       ratingClear_sub.style.fontSize="12px";
       ratingClear_sub.style.backgroundColor="#e0e0e0";
       ratingClear_sub.style.boxShadow="0 2px 4px 0 hsla(0,0%,100%,.5)";
@@ -669,15 +652,17 @@ assuredCheckbox.forEach(cb=>{
 }) 
 const ramCheckbox=document.querySelectorAll("#ram-child input[type=checkbox]")
 const ramClear_sub=document.getElementById("ramClear-sub")
-
+const ramClear=document.getElementById("clearRam") 
 console.log(ramCheckbox)
 console.log(ramCheckbox) 
 let selectedRam;
 ramCheckbox.forEach(checkbox=>{ 
-    checkbox.addEventListener("change",()=>{  
+    checkbox.addEventListener("change",()=>{   
          selectedRam=Array.from(ramCheckbox)
         .filter(cb=>cb.checked)    
         .map(cb=>cb.value) 
+            filterClear.style.display=selectedRam?"block":"none"
+            ramClear.style.display=selectedRam?"block":"none"
             console.log(selectedRam)
              const span = document.createElement("span");
             ramClear_sub.style.display="inline-block"
@@ -686,34 +671,189 @@ ramCheckbox.forEach(checkbox=>{
             ramClear_sub.style.backgroundColor="#e0e0e0";
             span.style.boxShadow="0 2px 4px 0 hsla(0,0%,100%,.5)";
             span.style.borderRadius="3px";   
-            span.style.margin="2px 4px";
+            ramClear_sub.style.margin="2px 4px";
             span.style.transition="background-color .1s";
             span.style.maxWidth="200px",
             span.style.padding="8px"   
            ramClear_sub.appendChild(span);  
             console.log(selectedRam)
-        
             ramClear_sub.innerText=`
             ${String(selectedRam)}  ` 
         }) 
       
 })
+ramClear.addEventListener("click",()=>{
+   ramCheckbox.forEach(checkbox=>checkbox.checked=false)
+   displayProduct(allProducts)
+   filterClear.style.display="none"     
+    ramClear.style.display="none";
+    ramClear_sub.style.display="none"
+    
+
+})
+
+  const internal_checkbox=document.querySelectorAll("#internal input[type='checkbox']")
+  const internalClear_sub=document.getElementById("internalClear-sub")
+  const clearInternal=document.getElementById("clearInternal")
+  console.log(internal_checkbox)
+  internal_checkbox.forEach(checkbox=>{
+    checkbox.addEventListener("change",()=>{
+        const  internalStorage=Array.from(internal_checkbox)
+        .filter(cb=>cb.checked)
+        .map(cb=>cb.value)
+        filterClear.style.display=internalStorage?"block":"none"
+        clearInternal.style.display=internalStorage?"block":"none"
+         internalStorage.forEach(values=>{
+            internalClear_sub.innerHTML=`
+            ${values}`
+         })
+        console.log(internalStorage)  
+        if(internalStorage.length==0){  
+            displayProduct(allProducts) 
+        }
+        else{
+            const filtered=allProducts.filter(p=>internalStorage.includes(p.internal_storage))
+            displayProduct(filtered)  
+            window.scroll(
+                {
+                    top:0,
+                    behavior:"smooth" 
+                }     
+            )  
+        }  
+              
+       })
+  })
+  clearInternal.addEventListener("click",()=>{
+    internal_checkbox.forEach(checkbox=>checkbox.checked=false)
+    displayProduct(allProducts)
+     filterClear.style.display="none"
+    internalClear_sub.style.display="none"
+    clearInternal.style.display="none"
+    window.scroll({      
+        top:0,  
+        behavior:"smooth"
+
+    })
+  })
+ const battery_checkbox=document.querySelectorAll("#battery input[type=checkbox") 
+ console.log(battery_checkbox)
+  battery_checkbox.forEach(checkbox=>{
+    checkbox.addEventListener("change",()=>{
+        const  selectedBattery=Array.from(internal_checkbox)
+        .filter(cb=>cb.checked)
+        .map(cb=>cb.value)
+        filterClear.style.display=selectedBattery?"block":"none"
+        // clearInternal.style.display=internalStorage?"block":"none"
+        
+        if(selectedBattery.length==0){  
+            displayProduct(allProducts) 
+        }
+        else{
+            const filtered=allProducts.filter(p=>selectedBattery.includes(p.battery_capacity))
+            displayProduct(filtered)  
+            window.scroll(
+                {
+                    top:0,
+                    behavior:"smooth" 
+                }     
+            )  
+        }   
+              
+       })
+  })
+  const screenClear_sub=document.getElementById("screenClear-sub")
+  const screen_checkbox=document.querySelectorAll("#screen input[type='checkbox']")
+  const screenClear=document.getElementById("screenClear-icon")
+  console.log(screenClear)
+   screen_checkbox.forEach(checkbox=>{ 
+    checkbox.addEventListener("change",()=>{   
+         selectedScreen=Array.from(screen_checkbox)
+        .filter(cb=>cb.checked)    
+        .map(cb=>cb.value) 
+            filterClear.style.display=selectedScreen?"block":"none"
+            screenClear.style.display=selectedScreen?"block":"none"
+            screenClear_sub.style.display=selectedScreen?"block":"none"
+              const span = document.createElement("span");
+            span.style.display="inline-block"
+            span.style.cursor="pointer";
+            span.style.fontSize="12px";
+            span.style.backgroundColor="#e0e0e0";
+            span.style.boxShadow="0 2px 4px 0 hsla(0,0%,100%,.5)";
+            span.style.borderRadius="3px";   
+            span.style.margin="2px 4px";
+            span.style.transition="background-color .1s";
+            span.style.maxWidth="200px",
+            span.style.padding="8px"   
+           screenClear_sub.appendChild(span);  
+            console.log(selectedScreen)
+            screenClear_sub.innerText=`
+            ${selectedScreen}  ` 
+            if(selectedScreen.length==0){
+             displayProduct(allProducts)
+            }
+            else{
+                const filtered=allProducts.filter(checkbox=>selectedScreen.includes(checkbox.screen_size))
+                displayProduct(filtered) 
+                window.scroll({
+                    top:0,
+                    behavior:"smooth"
+                })
+            }
+        }) 
+      
+})
+screenClear.addEventListener("click",()=>{
+   screen_checkbox.forEach(checkbox=>checkbox.checked=false)
+   displayProduct(allProducts)
+   filterClear.style.display="none"     
+   screenClear.style.display="none";
+   screenClear_sub.style.display="none"
+   window.scroll({
+    top:0,
+    behavior:"smooth"
+   })    
+   
+ 
+})       
 
 
-   filterClear.addEventListener("click",()=>{
-    checkboxes.forEach(cb=>cb.checked=false);
-    ratingCheckbox.forEach(cb=>cb.checked=false);
-    assuredCheckbox.forEach(cb=>cb.checked=false);
-    ramCheckbox.forEach(cb=>cb.checked=false); 
-    displayProduct(allProducts) 
-    filterClear.style.display="none" 
-    clear_all.style.display="none"  
-    brandClear.style.display="none"
+    filterClear.addEventListener("click",()=>{
+        window.location.reload()
+    clear_all.style.display="none"   
+    brandClear.style.display="none" 
     ratingClear_sub.style.display="none"
     assuredClear_sub.style.display="none"
-
+    ramClear_sub.style.display="none"  
+    internalClear_sub.style.display="none" 
   })
-
+  
+ popularity.addEventListener("click",()=>{
+    displayProduct(allProducts)
+ })
  
-  
-  
+const price_low=document.getElementById("price-low")
+console.log(price_low)
+price_low.addEventListener("click", () => {
+    const sortedPrice = [...allProducts].sort((a, b) => a.d_price - b.d_price);
+    displayProduct(sortedPrice)  
+});
+const price_high=document.getElementById("price-high")
+console.log(price_high)
+const popularityClick=document.getElementById("popularity")
+popularityClick.addEventListener("clcik",()=>{
+     window.location.reload()
+})
+price_high.addEventListener("click",()=>{
+    const sortedPrice=[...allProducts].sort((a, b) => b.d_price - a.d_price)
+    displayProduct(sortedPrice)
+})
+ const newest=document.getElementById("newest")
+ console.log(newest)
+ newest.addEventListener("click",()=>{
+    const sortedById=[...allProducts].sort((a,b) => a.id - b.id)
+    displayProduct(sortedById)
+ })
+ 
+ 
+   

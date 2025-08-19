@@ -228,7 +228,7 @@
                         <path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="gray"
                             class="CPYntE"></path>
                     </svg></a></li>
-            <li><a>Flights</a></li> 
+            <li><a>Flights</a></li>
             <li><a>Offer Zone</a></li>
             <div id="electronic-slide" style="display: none;">
                 <div class="s1">
@@ -573,6 +573,7 @@
     <main>
         <div class="entire-container">
             <div class="section-one">
+             <div class="section_partition">   
                 <div class="Sub-section1">
                     <div id="clear-section">
                         <div class="filter" id="filter">
@@ -584,16 +585,16 @@
                             </div>
                         </div>
                         <div id="brandClear">
-                            <div id="brandClear-sub"> 
+                            <div id="brandClear-sub">
 
-                            </div>  
+                            </div>
                         </div>
                         <div id="RatingClear">
                             <div id="RatingClear-sub">
-             
+
                             </div>
                         </div>
-                           <div id="assuredClear">
+                        <div id="assuredClear">
                             <div id="assuredClear-sub">
 
                             </div>
@@ -602,6 +603,13 @@
                             <div id="ramClear-sub">
 
                             </div>
+                        </div>
+                        <div id="internalClear">
+                            <div id="internalClear-sub"></div>
+                        </div>
+                        <div id="screenClear">
+                            <div id="screenClear-sub"></div>
+
                         </div>
                     </div>
                 </div>
@@ -644,7 +652,7 @@
                     <div class="price-range">
                         <div class="select" id="minimum_price">
                             <select>
-                                <option>  
+                                <option>
                                     MIn
                                 </option>
                                 <option>
@@ -667,7 +675,7 @@
                             <select>
                                 <option>
                                     &#8377;10000
-                                </option> 
+                                </option>
                                 <option>
                                     &#8377;15000
                                 </option>
@@ -681,7 +689,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="Sub-section1" id="brand-section"> 
+                <div class="Sub-section1" id="brand-section">
                     <div class="brand-section">
                         <p class="brand">Brand</p>
                         <svg id="sidebar-svg" width="6" height="11" viewBox="0 0 16 27"
@@ -694,31 +702,16 @@
                 <div id="brand-sub">
                     <div class="clear-all" id="clearAll" style="display:none;">
                         <div class="X">x</div>
-                        <div class="clearAll"> 
+                        <div class="clearAll">
                             <span>Clear all</span>
-                        </div> 
-                    </div>  
-
-                    <div id="brand-search">
-                        <svg width="20" height="20" viewBox="0 0 17 18" class="zmbstL"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <g fill="#878787" fill-rule="evenodd">
-                                <path class="JVQyl9"
-                                    d="m11.618 9.897l4.225 4.212c.092.092.101.232.02.313l-1.465 1.46c-.081.081-.221.072-.314-.02l-4.216-4.203">
-                                </path>
-                                <path class="fill"
-                                    d="m6.486 10.901c-2.42 0-4.381-1.956-4.381-4.368 0-2.413 1.961-4.369 4.381-4.369 2.42 0 4.381 1.956 4.381 4.369 0 2.413-1.961 4.368-4.381 4.368m0-10.835c-3.582 0-6.486 2.895-6.486 6.467 0 3.572 2.904 6.467 6.486 6.467 3.582 0 6.486-2.895 6.486-6.467 0-3.572-2.904-6.467-6.486-6.467">
-                                </path>
-                            </g>
-                        </svg>
-                        <input type="text" placeholder="Search Brand" id="search">
+                        </div>
                     </div>
                     <div id="brand-name">
                         <label><input type="checkbox" class="brand-checkbox" value="Techno">
                             <p>Techno</p>
                         </label>
                         <label><input type="checkbox" class="brand-checkbox" value="Samsung">
-                            <p>Samsung</p>    
+                            <p>Samsung</p>
                         </label>
                         <label><input type="checkbox" class="brand-checkbox" value="Motrola">
                             <p>Motrola</p>
@@ -740,8 +733,8 @@
                 <div class="Sub-section1">
                     <div class="assured">
                         <div class="assured-icon">
-                            <label><input type="checkbox" id="assured-filter" value="F-assured"><img src="images/fa_9e47c1.png"
-                                    height="21"></label>
+                            <label><input type="checkbox" id="assured-filter" value="F-assured"><img
+                                    src="images/fa_9e47c1.png" height="21"></label>
                         </div>
                         <div class="assured-mark">
                             <div class="mark">
@@ -761,7 +754,7 @@
                     </div>
                 </div>
                 <div id="rating-chart" style="display: none;">
-                    <div class="clear_all" id="clear_all" style="display: none;"> 
+                    <div class="clear_all" id="clear_all" style="display: none;">
                         <div class="X">x</div>
                         <div class="clearAll">
                             <span>Clear all</span>
@@ -801,12 +794,12 @@
                     </div>
                 </div>
                 <div id="ram-child" style="display: none;">
-                    <div class="clearAll" id="clearRam">
+                    <div class="clearAll" id="clearRam" style="display:none;">
                         <div class="X">x</div>
-                        <div class="clear-heading" id="clear-ram"> 
+                        <div class="clear-heading" id="clear-ram">
                             <span>Clear all</span>
-                        </div> 
-                    </div> 
+                        </div>
+                    </div>
                     <div id="ram-check">
                         <input type="checkbox" value="4 GB">
                         <p>4 GB</p>
@@ -835,16 +828,22 @@
                     </div>
                 </div>
                 <div id="internal" style="display: none;">
+                    <div class="clearAll" id="clearInternal">
+                        <div class="X">x</div>
+                        <div class="clear-heading" id="clear-internal">
+                            <span>Clear all</span>
+                        </div>
+                    </div>
                     <div id="internal-one">
-                        <input type="checkbox">
+                        <input type="checkbox" value="128-255.9 GB">
                         <p>128 - 255.9 GB</p>
                     </div>
                     <div id="internal-one">
-                        <input type="checkbox">
+                        <input type="checkbox" value="64-127.9 GB">
                         <p>64 - 127.9 GB</p>
                     </div>
                     <div id="internal-one">
-                        <input type="checkbox">
+                        <input type="checkbox" value="32-63.9 GB">
                         <p>32 - 63.9 GB</p>
                     </div>
                 </div>
@@ -859,16 +858,22 @@
                     </div>
                 </div>
                 <div id="battery" style="display: none;">
+                    <div class="clearAll" id="clearRam">
+                        <div class="X">x</div>
+                        <div class="clear-heading" id="clear-ram">
+                            <span>Clear all</span>
+                        </div>
+                    </div>
                     <div id="battery-one">
-                        <input type="checkbox">
+                        <input type="checkbox" value="4000-4999">
                         <p>4000 - 4999 mAh</p>
                     </div>
                     <div id="battery-one">
-                        <input type="checkbox">
+                        <input type="checkbox" value="5000-5999">
                         <p>5000 - 5999 mAh</p>
                     </div>
                     <div id="battery-one">
-                        <input type="checkbox">
+                        <input type="checkbox" value="6000 mAh and above">
                         <p>6000 mAh & Above</p>
                     </div>
                 </div>
@@ -884,12 +889,18 @@
                     </div>
                 </div>
                 <div id="screen" style="display: none;">
+                    <div class="clear-all" id="screenClear-icon" style="display:none;">
+                        <div class="X">x</div>
+                        <div class="clearAll" id="screenClearHeading">
+                            <span>Clear all</span>
+                        </div>
+                    </div>
                     <div id="screen-one">
-                        <input type="checkbox">
+                        <input type="checkbox" value="6.4 inch above">
                         <p>6.4 inch & Above</p>
                     </div>
                     <div id="screen-one">
-                        <input type="checkbox">
+                        <input type="checkbox" value="6-6.3 inch">
                         <p>6 - 6.3 inch</p>
                     </div>
                 </div>
@@ -930,11 +941,12 @@
                                 class="SV+H35"></path>
                         </svg>
                     </div>
-                </div>
+                </div> 
                 <div id="secondary" style="display: none;">
                     <div id="secondary-one">
                         <input type="checkbox">
                         <p>16 - 20.9 MP</p>
+                        </div>
                         <div id="secondary-one">
                             <input type="checkbox">
                             <p>5 - 7.9 MP</p>
@@ -944,6 +956,7 @@
                             <p>8 - 11.9 MP</p>
                         </div>
                     </div>
+                   
                     <div class="Sub-section1" id="processor-section">
                         <div class="secondary">
                             <p>Processor brand</p>
@@ -1048,7 +1061,7 @@
                                     fill="#878787" class="SV+H35"></path>
                             </svg>
                         </div>
-                        <div id="network" style="display: none;">  
+                        <div id="network" style="display: none;">
                             <div id="network-one">
                                 <input type="checkbox">
                                 <p>2G</p>
@@ -1209,7 +1222,7 @@
                                 <p>50% or more</p>
                             </div>
                         </div>
-                    </div> 
+                    </div>
                     <div class="Sub-section1" id="discount-section">
                         <div class="discount">
                             <p>Discount</p>
@@ -1222,8 +1235,8 @@
                         <div id="discount" style="display: none;">
                             <div id="discount-one">
                                 <input type="checkbox">
-                                <p>50% or more</p> 
-                            </div> 
+                                <p>50% or more</p>
+                            </div>
                             <div id="discount-one">
                                 <input type="checkbox">
                                 <p>40% or more</p>
@@ -1336,7 +1349,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                 </div>   
                 <div class="Sub-section2">
                     <a href="#">
                         <a href="#" class="need">Need Help?</a>

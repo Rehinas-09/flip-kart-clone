@@ -186,7 +186,7 @@ input::placeholder{
     text-decoration: none;    
     color: #fff;
     line-height: 20px;
-    font-size: 16px; 
+    font-size: 16px;   
     letter-spacing: .1px;                                                                                                                                                        
     font-weight: 500; 
     display: flex;  
@@ -356,11 +356,11 @@ nav ul li svg{
     transform: rotate(270deg);  
 } 
 main{  
-    max-width:1680; 
+    max-width:1680px; 
     margin: 0 auto;
-    margin-top: 96px;
-    padding: 8.5px;       
-}   
+    margin-top: 79px;
+    padding: 8px;       
+}      
 .entire-container{
     max-width: 1680px; 
     margin: 0 auto;      
@@ -375,16 +375,19 @@ main{
     flex-direction:row;    
 
 }
+.section_partition{
+     background-color: #fff;
+    color: black;
+
+}
 .section-one{ 
     display: flex;   
-    flex:0 0 270px;
-    max-width: 280px;
-    flex-direction: column; 
-    padding:0px 10px 0px 0px;
-    background-color: #fff;
-    color: black;
+    max-width: 270px;
+    flex: 0 0 270px;
+    flex-direction: column;
+   
     margin-right: 10px;     
-}  
+}    
 .section-two{
     display:flex;  
     flex-grow: 1;
@@ -2035,7 +2038,7 @@ footer .f2{
     display:flex;
     flex-direction: row;
     align-items: center;
-    padding: 7px 0;
+    
 }
 .clear-heading{
     display: inline-block;
