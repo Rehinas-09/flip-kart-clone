@@ -525,38 +525,35 @@ const  phonebrandName=document.getElementById("phonebrandName")
 const brandnameClear=document.getElementById("brandnameClear")
 const checkboxes=document.querySelectorAll("#brand-name input[type='checkbox']")
 console.log(checkboxes)  
-checkboxes.forEach(checkbox => {  
+checkboxes.forEach(checkbox => {   
   checkbox.addEventListener("change", () => {
-    const selectedBrands = Array.from(checkboxes)
-    .filter(cb => cb.checked)   
-      .map(cb => cb.value);  
-      console.log(selectedBrands)  
-      clearAll.style.display=selectedBrands?"block":"none"; 
-      brandClear.style.display=selectedBrands?"block":"none";  
-      filterClear.style.display=selectedBrands?"block":"none";
-      let r='x'
-          brandClear_Sub.innerHTML=`         
-             <div id="phoneBrandName">${selectedBrands}</div>  
-         `     
-    //    brandClear_Sub.innerHTML=`  
-    //          ${selectedBrands}       
-    //          `        
-        brandClear_Sub.style.fontSize="12px";  
-        brandClear_Sub.style.padding="8px";
-    if (selectedBrands.length === 0){      
-      displayProduct(allProducts);        
-      clearAll.style.display="none"  
-      brandClear.style.display="none"   
-    } else {  
-      const filtered = allProducts.filter(p => selectedBrands.includes(p.brand)); 
-       displayProduct(filtered)     
-    }     
-  });    
-});   
+    const selectedBrand=Array.from(checkboxes)
+        .filter(cb=>cb.checked)    
+        .map(cb=>cb.value)
+         clearAll.style.display=selectedBrand?"block":"none"
+         filterClear.style.display=selectedBrand?"block":"none"
+         brandClear_Sub.style.display=selectedBrand?"block":"none"
+         brandClear_Sub.innerHTML=" "
+         selectedBrand.forEach(brand=>{
+             const filter=document.createElement("div")
+             filter.className="filter-style"  
+             brandClear_Sub.appendChild(filter) 
+             filter.innerHTML=""       
+             filter.innerHTML=`  
+              <span>x</span><span class="title-space">${brand}</span>`
+  
+        }) 
+        if(selectedBrand==0){
+            displayProduct(allProducts)
+        }
+        else{
+            const filtered=allProducts.filter(brand=>selectedBrand.includes(brand.brand))
+            displayProduct(filtered)
+        }           
     
-checkboxes.forEach(cb=>{ 
-    checked=false?brandClear.style.display="none":brandClear.style.display="block"
+     })
 })
+
 clearAll.addEventListener("click",()=>{   
    checkboxes.forEach(cb=>cb.checked=false);  
    displayProduct(allProducts)  
@@ -577,153 +574,210 @@ clearAll.addEventListener("click",()=>{
 //  
 const clear_all=document.getElementById("clear_all")
 const ratingCheckbox=document.querySelectorAll("#rating-chart input[type=checkbox]")
-const ratingClear=document.getElementById("RatingClear") 
-console.log(ratingClear)
 const ratingClear_sub=document.getElementById("RatingClear-sub")
-console.log(ratingClear_sub)
-console.log(ratingCheckbox) 
-
 ratingCheckbox.forEach(checkbox=>{
-    checkbox.addEventListener("change",()=>{
-     const selectedRating=Array.from(ratingCheckbox)
-     .filter(cb=>cb.checked)
-     .map(cb=>cb.value) 
-      clear_all.style.display=selectedRating?"block":"none"; 
-      ratingClear.style.display=selectedRating?"block":"none";  
-      filterClear.style.display=selectedRating?"block":"none";
- 
-      ratingClear_sub.innerHTML=`   
-      ${selectedRating}`  
-      ratingClear_sub.style.cursor="pointer";  
-      ratingClear_sub.style.fontSize="12px";
-      ratingClear_sub.style.backgroundColor="#e0e0e0";
-      ratingClear_sub.style.boxShadow="0 2px 4px 0 hsla(0,0%,100%,.5)";
-      ratingClear_sub.style.borderRadius="3px";
-      ratingClear_sub.style.maxWidth="200px";
-      ratingClear_sub.style.padding="8px";
-    
-        if(selectedRating==0){ 
-            displayProduct(allProducts) 
-            clear_all.style.display="none";
-            ratingClear.style.display="none";  
-        } 
-        else{
-            const filterRating=allProducts.filter(p=>selectedRating.includes(String(p.rating_check)))
-            displayProduct(filterRating)
+     checkbox.addEventListener("change",()=>{
+        const selectedRating=Array.from(ratingCheckbox)
+        .filter(cb=>cb.checked)    
+        .map(cb=>cb.value)
+         clear_all.style.display=selectedRating?"block":"none"
+         filterClear.style.display=selectedRating?"block":"none"
+         ratingClear_sub.style.display=selectedRating?"block":"none"
+        console.log(selectedRating) 
+        ratingClear_sub.innerHTML=""
+        selectedRating.forEach(rating=>{
+             const filter=document.createElement("div")
+             filter.className="filter-style" 
+             ratingClear_sub.appendChild(filter) 
+             filter.innerHTML=""  
+             filter.innerHTML=`  
+              <span>x</span><span class="title-space">${rating}★ &amp; above</span>`
+  
+        })
+        const min=Math.min(...selectedRating)
+        console.log(min)
+        if(selectedRating.length==0){
+            displayProduct(allProducts)
         }  
-    })       
-}) 
+        else{
+            const filtered=allProducts.filter(p=>p.rating>=min)
+            displayProduct(filtered)
+            window.scroll({
+                top:0
+            })
+        }
+     })
+})
 clear_all.addEventListener("click",()=>{
     ratingCheckbox.forEach(checkbox=>checkbox.checked=false)
     displayProduct(allProducts)
-    if(!filterClear){
-        filterClear.style.display="none"     
-    }
-    ratingClear.style.display="none";
-    clear_all.style.display="none"; 
-    filterClear.style.display="none"  
-
+    clear_all.style.display="none"
+    filterClear.style.display="none"
+    ratingClear_sub.style.display="none"
+    window.scroll({
+        top:0
+    })
 
 })
  
 const assuredCheckbox=document.querySelectorAll(".assured-icon input[type=checkbox]")
 const assuredClear=document.getElementById("assuredClear");
-console.log(assuredClear)
 const assuredClear_sub=document.getElementById("assuredClear-sub")
-console.log(assuredClear_sub)
 assuredCheckbox.forEach(cb=>{
     cb.addEventListener("change",()=>{
         const selectedAssured=Array.from(assuredCheckbox)
-        .filter(cb=>cb.checked)
-        .map(cb=>cb.value)  
-        filterClear.style.display=selectedAssured?"block":"none"; 
-         assuredClear_sub.innerHTML=`
-         <div id="assured">${selectedAssured}`  
-        console.log(selectedAssured)
-        if(selectedAssured.length==0){
-            displayProduct(allProducts)
-            filterClear.style.display="none"
-        }
-        else{ 
-            const filteredAssured=allProducts.filter(p=>selectedAssured.includes(p.assured))
-            displayProduct(filteredAssured)
-        }
+        .filter(cb=>cb.checked)    
+        .map(cb=>cb.value)
+         console.log(selectedAssured)
+        filterClear.style.display=selectedAssured?"block":"none";
+        assuredClear_sub.style.display=selectedAssured?"block":"none";
+        assuredClear_sub.innerHTML=""
+        selectedAssured.forEach(assured=>{   
+             const filter=document.createElement("div")
+             filter.className="filter-style" 
+             assuredClear_sub.appendChild(filter) 
+             filter.innerHTML=""       
+             filter.innerHTML=`  
+              <span>x</span><span class="title-space">${assured}</span>`  
+        })
+       if(selectedAssured.length==0){
+        displayProduct(allProducts)
+       }
+       else{
+        const filtered=allProducts.filter(checkbox=>selectedAssured.includes(checkbox.assured))
+        allProducts(filtered)
+        window.scroll({
+            top:0
+        }) 
+       }
     }) 
 }) 
+const gstCheck=document.querySelectorAll("#gst-check input[type=checkbox]")
+const cleargst=document.getElementById("cleargst")
+const gstClear_sub=document.getElementById("gstClear-sub")
+gstCheck.forEach(checkbox=>{
+     checkbox.addEventListener("change",()=>{
+        const selectedGst=Array.from(gstCheck)
+        .filter(cb=>cb.checked)    
+        .map(cb=>cb.value)
+        
+        cleargst.style.display=selectedGst?"block":"none";
+        gstClear_sub.style.display=selectedGst?"block":"none";
+        gstClear_sub.innerHTML=""
+        selectedGst.forEach(gst=>{   
+             const filter=document.createElement("div")
+             filter.className="filter-style" 
+             gstClear_sub.appendChild(filter) 
+             filter.innerHTML=""  
+             filter.innerHTML=`  
+              <span>x</span><span class="title-space">${gst}</span>`  
+        })
+       if(selectedGst.length==0){
+        displayProduct(allProducts)
+       }
+       else{
+        const filtered=allProducts.filter(checkbox=>selectedGst.includes(checkbox.gst_invoice))
+        allProducts(filtered)
+        window.scroll({
+            top:0
+        }) 
+       }
+    }) 
+   
+}) 
+ 
+cleargst.addEventListener("click",()=>{
+   gstCheck.forEach(checkbox=>checkbox.checked=false)
+   displayProduct(allProducts) 
+    filterClear.style.display="none"       
+    cleargst.style.display="none";   
+    gstClear_sub.style.display="none"
+    window.scroll({
+        top:0 
+    })
+
+})
+
 const ramCheckbox=document.querySelectorAll("#ram-child input[type=checkbox]")
 const ramClear_sub=document.getElementById("ramClear-sub")
 const ramClear=document.getElementById("clearRam") 
-console.log(ramCheckbox)
-console.log(ramCheckbox) 
-let selectedRam;
-ramCheckbox.forEach(checkbox=>{ 
-    checkbox.addEventListener("change",()=>{   
-         selectedRam=Array.from(ramCheckbox)
-        .filter(cb=>cb.checked)    
-        .map(cb=>cb.value) 
-            filterClear.style.display=selectedRam?"block":"none"
-            ramClear.style.display=selectedRam?"block":"none"
-            console.log(selectedRam)
-             const span = document.createElement("span");
-            ramClear_sub.style.display="inline-block"
-            ramClear_sub.style.cursor="pointer";
-            ramClear_sub.style.fontSize="12px";
-            ramClear_sub.style.backgroundColor="#e0e0e0";
-            span.style.boxShadow="0 2px 4px 0 hsla(0,0%,100%,.5)";
-            span.style.borderRadius="3px";   
-            ramClear_sub.style.margin="2px 4px";
-            span.style.transition="background-color .1s";
-            span.style.maxWidth="200px",
-            span.style.padding="8px"   
-           ramClear_sub.appendChild(span);  
-            console.log(selectedRam)
-            ramClear_sub.innerText=`
-            ${String(selectedRam)}  ` 
-        }) 
-      
+ramCheckbox.forEach(checkbox=>{
+    checkbox.addEventListener("change",()=>{
+         const selectedRam=Array.from(ramCheckbox)
+         .filter(cb=>cb.checked)
+         .map(cb=>cb.value)
+         filterClear.style.display=selectedRam?"block":"none"
+         ramClear_sub.style.display=selectedRam?"block":"none"
+         ramClear.style.display=selectedRam?"block":"none"
+          ramClear_sub.innerHTML=""
+          selectedRam.forEach(ram=>{
+             const filter=document.createElement("div")
+             filter.className="filter-style" 
+             ramClear_sub.appendChild(filter) 
+             filter.innerHTML=""  
+             filter.innerHTML=`  
+              <span>x</span><span class="title-space">${ram}</span>`  
+          })
+          if(selectedRam.length==0){
+            displayProduct(allProducts)
+          }
+          else{
+            const filtered=allProducts.filter(checkbox=>selectedRam.includes(checkbox.ram_check))
+            displayProduct(filtered)   
+            window.scroll({ 
+                top:0      
+            })
+          }   
+           
+    })
 })
 ramClear.addEventListener("click",()=>{
    ramCheckbox.forEach(checkbox=>checkbox.checked=false)
    displayProduct(allProducts)
-   filterClear.style.display="none"     
-    ramClear.style.display="none";
+    filterClear.style.display="none"     
+    ramClear.style.display="none";   
     ramClear_sub.style.display="none"
-    
+    window.scroll({
+        top:0
+    })
 
 })
-
-  const internal_checkbox=document.querySelectorAll("#internal input[type='checkbox']")
+   const internal_checkbox=document.querySelectorAll("#internal input[type='checkbox']")
   const internalClear_sub=document.getElementById("internalClear-sub")
   const clearInternal=document.getElementById("clearInternal")
-  console.log(internal_checkbox)
-  internal_checkbox.forEach(checkbox=>{
+
+internal_checkbox.forEach(checkbox=>{
     checkbox.addEventListener("change",()=>{
-        const  internalStorage=Array.from(internal_checkbox)
-        .filter(cb=>cb.checked)
-        .map(cb=>cb.value)
-        filterClear.style.display=internalStorage?"block":"none"
-        clearInternal.style.display=internalStorage?"block":"none"
-         internalStorage.forEach(values=>{
-            internalClear_sub.innerHTML=`
-            ${values}`
-         })
-        console.log(internalStorage)  
-        if(internalStorage.length==0){  
-            displayProduct(allProducts) 
-        }
-        else{
-            const filtered=allProducts.filter(p=>internalStorage.includes(p.internal_storage))
-            displayProduct(filtered)  
-            window.scroll(
-                {
-                    top:0,
-                    behavior:"smooth" 
-                }     
-            )  
-        }  
-              
-       })
-  })
+         const selectedInternal=Array.from(internal_checkbox)
+         .filter(cb=>cb.checked)
+         .map(cb=>cb.value)
+       
+         filterClear.style.display=selectedInternal?"block":"none"
+         internalClear_sub.style.display=selectedInternal?"block":"none"
+         clearInternal.style.display=selectedInternal?"block":"none"
+          internalClear_sub.innerHTML=""
+          selectedInternal.forEach(internal=>{
+             const filter=document.createElement("div")
+             filter.className="filter-style" 
+             internalClear_sub.appendChild(filter)
+             filter.innerHTML=""  
+             filter.innerHTML=`  
+              <span>x</span><span class="title-space">${internal}</span>`  
+          })
+          if(selectedInternal.length==0){
+            displayProduct(allProducts)
+          }
+          else{
+            const filtered=allProducts.filter(checkbox=>selectedInternal.includes(checkbox.internal_storage))
+            console.log(filtered)
+            displayProduct(filtered)   
+            window.scroll({ 
+                top:0 
+            })
+          }   
+           
+    })
+})
   clearInternal.addEventListener("click",()=>{
     internal_checkbox.forEach(checkbox=>checkbox.checked=false)
     displayProduct(allProducts)
@@ -731,65 +785,80 @@ ramClear.addEventListener("click",()=>{
     internalClear_sub.style.display="none"
     clearInternal.style.display="none"
     window.scroll({      
-        top:0,  
+        top:0,   
         behavior:"smooth"
 
     })
   })
- const battery_checkbox=document.querySelectorAll("#battery input[type=checkbox") 
- console.log(battery_checkbox)
-  battery_checkbox.forEach(checkbox=>{
+const battery_checkbox=document.querySelectorAll("#battery input[type='checkbox']")
+const battery_clear=document.getElementById("batteryClear")
+const clearBattery=document.getElementById("clearBattery")
+battery_checkbox.forEach(checkbox=>{
     checkbox.addEventListener("change",()=>{
-        const  selectedBattery=Array.from(internal_checkbox)
-        .filter(cb=>cb.checked)
-        .map(cb=>cb.value)
-        filterClear.style.display=selectedBattery?"block":"none"
-        // clearInternal.style.display=internalStorage?"block":"none"
-        
-        if(selectedBattery.length==0){  
-            displayProduct(allProducts) 
-        }
-        else{
-            const filtered=allProducts.filter(p=>selectedBattery.includes(p.battery_capacity))
-            displayProduct(filtered)  
-            window.scroll(
-                {
-                    top:0,
-                    behavior:"smooth" 
-                }     
-            )  
-        }   
-              
-       })
-  })
+         const selectedBattey=Array.from(battery_checkbox)
+         .filter(cb=>cb.checked)
+         .map(cb=>cb.value)
+         filterClear.style.display=selectedBattey?"block":"none"
+         battery_clear.style.display=selectedBattey?"block":"none"
+         clearBattery.style.display=selectedBattey?"block":"none"
+          battery_clear.innerHTML=""
+          selectedBattey.forEach(battery=>{
+             const filter=document.createElement("div")
+             filter.className="filter-style" 
+             battery_clear.appendChild(filter)
+             filter.innerHTML=""  
+             filter.innerHTML=`  
+              <span>x</span><span class="title-space">${battery}</span>`  
+          })
+          if(selectedBattey.length==0){
+            displayProduct(allProducts)
+          }
+          else{
+            const filtered=allProducts.filter(checkbox=>selectedBattey.includes(checkbox.battery_capacity))
+            displayProduct(filtered)   
+            window.scroll({
+                top:0
+            })
+          }   
+           
+    })
+})
+clearBattery.addEventListener("click",()=>{
+   battery_checkbox.forEach(checkbox=>checkbox.checked=false)
+   displayProduct(allProducts)
+   filterClear.style.display="none"     
+   battery_clear.style.display="none";
+   clearBattery.style.display="none"
+   window.scroll({
+    top:0,
+    behavior:"smooth"
+   })    
+})  
+
   const screenClear_sub=document.getElementById("screenClear-sub")
   const screen_checkbox=document.querySelectorAll("#screen input[type='checkbox']")
   const screenClear=document.getElementById("screenClear-icon")
   console.log(screenClear)
    screen_checkbox.forEach(checkbox=>{ 
     checkbox.addEventListener("change",()=>{   
-         selectedScreen=Array.from(screen_checkbox)
+         selectedScreen=Array.from(screen_checkbox) 
         .filter(cb=>cb.checked)    
-        .map(cb=>cb.value) 
+        .map(cb=>cb.value)
+        screenClear_sub.innerHTML=""
+        selectedScreen.forEach(screen=>{
+            const filter=document.createElement("div")
+             filter.className="filter-style"
+             screenClear_sub.appendChild(filter)
+             filter.innerHTML=""  
+             filter.innerHTML=`  
+              <span>x</span><span class="title-space">${screen}</span>`     
+             
+        })   
+         
             filterClear.style.display=selectedScreen?"block":"none"
             screenClear.style.display=selectedScreen?"block":"none"
-            screenClear_sub.style.display=selectedScreen?"block":"none"
-              const span = document.createElement("span");
-            span.style.display="inline-block"
-            span.style.cursor="pointer";
-            span.style.fontSize="12px";
-            span.style.backgroundColor="#e0e0e0";
-            span.style.boxShadow="0 2px 4px 0 hsla(0,0%,100%,.5)";
-            span.style.borderRadius="3px";   
-            span.style.margin="2px 4px";
-            span.style.transition="background-color .1s";
-            span.style.maxWidth="200px",
-            span.style.padding="8px"   
-           screenClear_sub.appendChild(span);  
-            console.log(selectedScreen)
-            screenClear_sub.innerText=`
-            ${selectedScreen}  ` 
-            if(selectedScreen.length==0){
+            screenClear_sub.style.display=selectedScreen?"block":"none" 
+            if(selectedScreen.length==0){ 
              displayProduct(allProducts)
             }
             else{
@@ -813,11 +882,31 @@ screenClear.addEventListener("click",()=>{
     top:0,
     behavior:"smooth"
    })    
-   
- 
-})       
+})  
+const primaryCheckbox=document.querySelectorAll("#primary input[type=checkbox]")
+const clearPrimary=document.getElementById("clearPrimary")
+console.log(clearPrimary)
+primaryCheckbox.forEach(checkboxes=>{ 
+    checkboxes.addEventListener("change",()=>{
+         const selectedPrimary=Array.from(primaryCheckbox)
+         .filter(cb=>cb.checked) 
+         .map(cb=>cb.value)
+         clearPrimary.style.display=selectedPrimary?"block":"none"
+          if(selectedPrimary.length==0){
+            displayProduct(allProducts)
+          }     
+          else{
+             const filtered=allProducts.filter(primary=>{
+                 return selectedPrimary.some(range=>{
+                    const[min,max]=range.split( "-").map(Number)
 
-
+                   return primary.primary>=min && primary.primary<=max;
+                 })     
+             })
+             displayProduct(filtered) 
+          }  
+    })        
+})
     filterClear.addEventListener("click",()=>{
         window.location.reload()
     clear_all.style.display="none"   
@@ -847,7 +936,7 @@ popularityClick.addEventListener("clcik",()=>{
 price_high.addEventListener("click",()=>{
     const sortedPrice=[...allProducts].sort((a, b) => b.d_price - a.d_price)
     displayProduct(sortedPrice)
-})
+}) 
  const newest=document.getElementById("newest")
  console.log(newest)
  newest.addEventListener("click",()=>{

@@ -1,74 +1,22 @@
 [
-  {
-    "id": 1,
-    "name": "Apple iPhone 14",
-    "brand": "Apple",
-    "price": 79999,
-    "image": "https://via.placeholder.com/150x150?text=iPhone+14"
-  },
-  {
-    "id": 2,
-    "name": "Samsung Galaxy S23",
-    "brand": "Samsung",
-    "price": 69999,
-    "image": "https://via.placeholder.com/150x150?text=Galaxy+S23"
-  },
-  {
-    "id": 3,
-    "brand": "OnePlus",
-    "price": 59999,
-    "image": "https://via.placeholder.com/150x150?text=OnePlus+11"
-  },
-  {
-    "id": 4,
-    "name": "Apple iPhone 13",
-    "brand": "Apple",
-    "price": 59999,
-    "image": "https://via.placeholder.com/150x150?text=iPhone+13"
-  },
-  {
-    "id":5,
-    "name":"apple iphone 13",
-    "brand":"Apple",
-    "price":59999,
-    "image": "https://via.placeholder.com/150x150?text=iPhone+13"
-  },
-  {
-    "id":6,
-    "name":"apple iphone 14",
-    "brand":"Apple",
-    "price":45777,
-    "image":"https://via.placeholder.com/150x150?text=iPhone+13"
-  },
-  {
-    "id":7,
-    "name":"Oppo",
-    "brand":"Oppo",
-    "price":6534,
-    "image":"https://via.placeholder.com/150x150?text=Galaxy+S23"
-  },
-  {
-    "id":8,
-    "name":"OnePlus 11",
-  "brand":"onePlus",
-"image":"https://via.placeholder.com/150x150?text=Galaxy+S23"  
-  },
-  {
-    "id":9,
-    "name":"Samsung Galaxy S23",
-    "brand":"Samsung",
-    "image":"https://via.placeholder.com/150x150?text=OnePlus+11"
-  },
-  {
-    "id":10,
-    "name":"apple iphone 15",
-    "brand":"Apple",
-    "image":"https://via.placeholder.com/150x150?text=Galaxy+S23"
-  },{
-    "id":11,
-    "name":"apple iphone 16",
-    "brand":"Apple",
-    "image":"https://via.placeholder.com/150x150?text=Galaxy+S23"
-  }
-   
+    {
+        "id": 1,
+        "name": "Samsung Galaxy S24",
+        "price": 25
+    },
+    {
+        "id": 2,
+        "name": "iPhone 15",
+        "price": 55
+    },
+    {
+        "id": 3,
+        "name": "Redmi Note 14",
+        "price":25
+    },
+    { 
+        "id": 4,
+        "name": "Realme Narzo",
+        "price":70
+    }
 ]

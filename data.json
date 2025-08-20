@@ -24,6 +24,8 @@
         "internal_storage":"128-255.9 GB",
         "assuered":"F-assured",
         "screen_size":"6.4 inch above",
+        "gst_invoice":"gst incvoice available",
+        "primary":50,
         "image_assured":"https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/fa_9e47c1.png"
     
     },
@@ -50,8 +52,10 @@
         "ram_check":"4 GB",
         "battery_capacity":"5000-5999",
         "internal_storage":"128-255.9 GB",
-        "assuered":"F-assured",
+        "assuered":"F-assured", 
         "exchange":11750,
+        "primary":50,
+        "gst_invoice":"gst incvoice available",
         "image_assured":"https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/fa_9e47c1.png"
     },
           {   
@@ -69,17 +73,19 @@
         "rating":4.5,
         "rating_check":"4★ & above",
         "rating_count":"41,179",
-        "review_count":"2,356",
+        "review_count":"2,356", 
         "discount_price":"22,999",
         "actual_price":"25,999", 
         "offer":"11%",
         "d_price":22999,
-        "screen_size":"6.4 inch above",
+        "screen_size":"6.4 inch above", 
         "battery_capacity":"5000-5999",
         "ram_check":"8 GB and above",
         "assuered":"F-assured",
         "internal_storage":" ",
         "exchange":12500,
+        "primary":50,
+        "gst_invoice":"gst incvoice available",
         "image_assured":"https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/fa_9e47c1.png"
     },
           {
@@ -107,6 +113,8 @@
         "exchange":12500,
         "battery_capacity":"5000-5999",
         "assured":"F-assured",
+        "primary":50,
+        "gst_invoice":"gst incvoice available",
         "image_assured":"https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/fa_9e47c1.png"
     },      {
         "id":5,
@@ -132,6 +140,8 @@
         "internal_storage":"128-255.9 GB",
         "ram_check":"not defined",
         "assured":"F-assured",
+        "primary":48,
+        "gst_invoice":"gst incvoice available",
         "image_assured":"https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/fa_9e47c1.png"
     },
           {
@@ -159,6 +169,8 @@
         "ram_check":"4 GB", 
         "internal_storage":"128-255.9 GB",
         "assured":"F-assured",
+        "primary":50,
+        "gst_invoice":"gst incvoice available",
         "image_assured":"https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/fa_9e47c1.png"
     },
           {
@@ -185,7 +197,9 @@
        "battery_capacity":"5000-5999",
        "internal_storage":"128-255.9 GB",
        "ram_check":"8 GB and above",
-       "assured":"F-assured",
+       "assured":"F-assured", 
+       "primary":50,
+       "gst_invoice":"gst incvoice available",
        "image_assured":"https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/fa_9e47c1.png"
     },
       {
@@ -214,6 +228,8 @@
         "exchange":14780,
         "internal_storage":"128-255.9 GB",
         "assured":"F-assured",
+        "primary":50,
+        "gst_invoice":"gst incvoice available",
         "image_assured":"https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/fa_9e47c1.png"
     },
         {
@@ -227,7 +243,7 @@
         "battery":"6000 mAh Battery",
         "processor":"Dimensity 6400 Processor",
         "warrenty":"1 Year Manufacturer Warranty for Device and 6 Months Manufacturer Warrenty for Inbox Accessories",
-        "rating":4.4,
+        "rating":2,
         "rating_check":"4★ & above",
         "rating_count":"25,286",    
         "review_count":"883",
@@ -240,8 +256,11 @@
         "internal_storage":"128-255.9 GB",
         "exchange":14500,
         "ram_check":"6 GB",
+        "primary":50,
         "assured":"F-assured",
+        "gst_invoice":"gst incvoice available",
         "image_assured":"https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/fa_9e47c1.png"
+        
     },
           {
         "id":10,
@@ -254,7 +273,7 @@
         "battery":"5200 mAh Battery",
         "processor":"Unisoc T7250 Max clock speed: 2 x A75@1.8GHz 6 * A55@1.6GHz Processor ",
         "warrenty":"1 Year Manufacturer Warranty Phone and 6 Months  Warrenty In the Box Accessories",
-        "rating":3.5,
+        "rating":2,
         "rating_check":"3★ & above",
         "rating_count":"25,286",
         "review_count":"883", 
@@ -263,10 +282,12 @@
         "actual_price":"16,999",
         "offer":"23%",
         "battery_capacity":"5000-5999", 
-        "ram_check":"6 GB",
+        "ram_check":"6 GB", 
         "screen_size":"6.4 inch above",
         "exchange": 14300,
+        "primary":50, 
         "internal_storage":"128-255.9 GB",
-        "image_assured":"none" 
+        "image_assured":"none" ,
+        "gst_invoice":"gst incvoice available"
      }
 ]    
