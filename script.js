@@ -523,8 +523,7 @@ const brandClear=document.getElementById("brandClear")
 const brandClear_Sub=document.getElementById("brandClear-sub")
 const  phonebrandName=document.getElementById("phonebrandName")    
 const brandnameClear=document.getElementById("brandnameClear")
-const checkboxes=document.querySelectorAll("#brand-name input[type='checkbox']")
-console.log(checkboxes)  
+const checkboxes=document.querySelectorAll("#brand-name input[type='checkbox']") 
 checkboxes.forEach(checkbox => {   
   checkbox.addEventListener("change", () => {
     const selectedBrand=Array.from(checkboxes)
@@ -541,28 +540,52 @@ checkboxes.forEach(checkbox => {
              filter.innerHTML=""       
              filter.innerHTML=`  
               <span>x</span><span class="title-space">${brand}</span>`
+            filter.addEventListener("click",()=>{
+                const selectedCheckbox=Array.from(checkboxes).find(cb=>cb.value==brand)
+                console.log(selectedCheckbox) 
+                clearAll.style.display="none" 
+                if(selectedCheckbox){
+                    selectedCheckbox.checked=false    
+                }  
+                filter.remove()
+                const updatedCheckbox=Array.from(checkboxes)
+                .filter(cb=>cb.checked)
+                .map(cb=>cb.value)
+                console.log(updatedCheckbox)
+                if(updatedCheckbox.length==0){
+                    displayProduct(allProducts)
+                }
+                else{
+                    const filtered=allProducts.filter(brand=>updatedCheckbox.includes(brand.brand))
+                    displayProduct(filtered)
+                }
+            })       
   
         }) 
+        
+    
         if(selectedBrand==0){
             displayProduct(allProducts)
         }
         else{
             const filtered=allProducts.filter(brand=>selectedBrand.includes(brand.brand))
-            displayProduct(filtered)
+            displayProduct(filtered) 
         }           
     
      })
 })
+   
+    
+
 
 clearAll.addEventListener("click",()=>{   
    checkboxes.forEach(cb=>cb.checked=false);  
    displayProduct(allProducts)  
-   clearAll.style.display="none"  
+   clearAll.style.display="none"
    filterClear.style.display="none"
    brandClear.style.display="none"
-
+   brandClear_Sub.style.
 })   
-
 
 // const minimumPrice=document.getElementById("minimum_price")
 // console.log(minimumPrice)
@@ -583,36 +606,57 @@ ratingCheckbox.forEach(checkbox=>{
          clear_all.style.display=selectedRating?"block":"none"
          filterClear.style.display=selectedRating?"block":"none"
          ratingClear_sub.style.display=selectedRating?"block":"none"
-        console.log(selectedRating) 
+         console.log(selectedRating) 
         ratingClear_sub.innerHTML=""
         selectedRating.forEach(rating=>{
              const filter=document.createElement("div")
              filter.className="filter-style" 
-             ratingClear_sub.appendChild(filter) 
+             ratingClear_sub.appendChild(filter)  
              filter.innerHTML=""  
              filter.innerHTML=`  
               <span>x</span><span class="title-space">${rating}★ &amp; above</span>`
+              filter.addEventListener("click",()=>{
+                 const selectedCheckbox=Array.from(ratingCheckbox).find(cb=>cb.value==rating)
+                 if(selectedCheckbox){
+                    selectedCheckbox.checked=false
+                 }
+                 filter.remove()
+                 const updatedCheckbox=Array.from(ratingCheckbox) 
+                 .filter(cb=>cb.checked)
+                 .map(cb=>cb.value)
+                 const min=Math.min(...selectedRating)
+                 if(updatedCheckbox.length==0){
+                    displayProduct(allProducts) 
+                    clear_all.style.display="none" 
+                 } 
+                 else{
+                  const filtered=allProducts.filter(p=>p.rating>=min)
+                  displayProduct(filtered)
+                 }          
+              })        
   
         })
         const min=Math.min(...selectedRating)
-        console.log(min)
         if(selectedRating.length==0){
-            displayProduct(allProducts)
-        }  
+            displayProduct(allProducts) 
+            clear_all.style.display="none"
+        }   
         else{
             const filtered=allProducts.filter(p=>p.rating>=min)
             displayProduct(filtered)
             window.scroll({
                 top:0
             })
+            rating_chart.style.display="none";
+            svg2.style.transform = "rotate(-90deg)"
         }
      })
-})
+})  
 clear_all.addEventListener("click",()=>{
     ratingCheckbox.forEach(checkbox=>checkbox.checked=false)
     displayProduct(allProducts)
-    clear_all.style.display="none"
-    filterClear.style.display="none"
+    clear_all.style.display="none" 
+    filterClear.style.display="none" 
     ratingClear_sub.style.display="none"
     window.scroll({
         top:0
@@ -629,7 +673,7 @@ assuredCheckbox.forEach(cb=>{
         .filter(cb=>cb.checked)    
         .map(cb=>cb.value)
          console.log(selectedAssured)
-        filterClear.style.display=selectedAssured?"block":"none";
+        filterClear.style.display=selectedAssured?"block":"none"; 
         assuredClear_sub.style.display=selectedAssured?"block":"none";
         assuredClear_sub.innerHTML=""
         selectedAssured.forEach(assured=>{   
@@ -639,30 +683,47 @@ assuredCheckbox.forEach(cb=>{
              filter.innerHTML=""       
              filter.innerHTML=`  
               <span>x</span><span class="title-space">${assured}</span>`  
+            filter.addEventListener("click",()=>{
+                const selectedChekbox=Array.from(assuredCheckbox).find(cb=>cb.value==assured)
+                if(selectedAssured){
+                    selectedAssured.checked=false;
+                }
+                const updatedCheckbox=Array.from(assuredCheckbox)
+                .filter(cb=>cb.checked)
+                .map(cb=>cb.value)
+                if(updatedCheckbox.lngth==0){ 
+                    displayProduct(allProducts)
+                }
+                else{
+                    const filtered=allProducts.filter(checkbox=>updatedCheckbox.includes(checkbox.assured))
+                    displayProduct(filtered)
+                }
+           })  
         })
        if(selectedAssured.length==0){
         displayProduct(allProducts)
        }
        else{
         const filtered=allProducts.filter(checkbox=>selectedAssured.includes(checkbox.assured))
-        allProducts(filtered)
+        displayProduct(filtered)
         window.scroll({
             top:0
         }) 
        }
-    }) 
+    })   
 }) 
 const gstCheck=document.querySelectorAll("#gst-check input[type=checkbox]")
 const cleargst=document.getElementById("cleargst")
 const gstClear_sub=document.getElementById("gstClear-sub")
 gstCheck.forEach(checkbox=>{
      checkbox.addEventListener("change",()=>{
-        const selectedGst=Array.from(gstCheck)
+        const selectedGst=Array.from(gstCheck) 
         .filter(cb=>cb.checked)    
         .map(cb=>cb.value)
         
         cleargst.style.display=selectedGst?"block":"none";
         gstClear_sub.style.display=selectedGst?"block":"none";
+        filterClear.style.display=selectedGst?"block":"none";
         gstClear_sub.innerHTML=""
         selectedGst.forEach(gst=>{   
              const filter=document.createElement("div")
@@ -671,19 +732,38 @@ gstCheck.forEach(checkbox=>{
              filter.innerHTML=""  
              filter.innerHTML=`  
               <span>x</span><span class="title-space">${gst}</span>`  
-        })
-       if(selectedGst.length==0){
-        displayProduct(allProducts)
-       }
-       else{
+              filter.addEventListener("click",()=>{
+                 const selectedCheckbox=Array.from(gstCheck).find(cb=>cb.value==gst)
+                if(selectedCheckbox){
+                   selectedCheckbox.checked=false
+                }
+                filter.remove()
+               const updatedCheckbox=Array.from()
+                  .filter(cb=>cb.checked)
+                  .map(cb=>cb.value)
+                  console.log(updatedCheckbox)
+                  if(updatedCheckbox.length==0){
+                    displayProduct(allProducts)
+                    cleargst.style.display="none"
+                  }
+              }) 
+
+        })   
+       if(selectedGst.length==0){  
+        displayProduct(allProducts)  
+        cleargst.style.display="none"
+       }  
+       else{  
         const filtered=allProducts.filter(checkbox=>selectedGst.includes(checkbox.gst_invoice))
-        allProducts(filtered)
-        window.scroll({
+        displayProduct(filtered)
+        window.scroll({ 
             top:0
-        }) 
+        })   
+         gst_check.style.display="none";
+         svg3.style.transform = "rotate(-90deg)"
        }
     }) 
-   
+    
 }) 
  
 cleargst.addEventListener("click",()=>{
@@ -691,8 +771,8 @@ cleargst.addEventListener("click",()=>{
    displayProduct(allProducts) 
     filterClear.style.display="none"       
     cleargst.style.display="none";   
-    gstClear_sub.style.display="none"
-    window.scroll({
+    gstClear_sub.style.display="none" 
+    window.scroll({  
         top:0 
     })
 
@@ -717,9 +797,33 @@ ramCheckbox.forEach(checkbox=>{
              filter.innerHTML=""  
              filter.innerHTML=`  
               <span>x</span><span class="title-space">${ram}</span>`  
-          })
-          if(selectedRam.length==0){
+              filter.addEventListener("click",()=>{
+                const selectedCheckbox=Array.from(ramCheckbox).find(cb=>cb.value==ram)
+                if(selectedCheckbox){
+                    selectedCheckbox.checked=false
+                }
+                filter.remove()
+                const updatedCheckbox=Array.from(ramCheckbox)
+                .filter(cb=>cb.checked)
+                .map(cb=>cb.value)
+                 if(updatedCheckbox.length==0){
+                    displayProduct(allProducts)
+                    ramClear.style.display="none"
+                 }
+                 else{
+                    const filtered=allProducts.filter(checkbox=>updatedCheckbox.includes(checkbox.ram_check))
+                    displayProduct(filtered)
+                 }
+              })        
+          }) 
+          if(selectedRam.length==0){    
             displayProduct(allProducts)
+             ramClear.style.display="none" 
+            svg4.style.transform = "rotate(-90deg)"
+            window.scroll({
+                top:0
+            })
+ 
           }
           else{
             const filtered=allProducts.filter(checkbox=>selectedRam.includes(checkbox.ram_check))
@@ -727,6 +831,9 @@ ramCheckbox.forEach(checkbox=>{
             window.scroll({ 
                 top:0      
             })
+            ram_child.style.display="none";
+            svg4.style.transform = "rotate(-90deg)"
+            
           }   
            
     })
@@ -738,13 +845,13 @@ ramClear.addEventListener("click",()=>{
     ramClear.style.display="none";   
     ramClear_sub.style.display="none"
     window.scroll({
-        top:0
+        top:0 
     })
 
 })
-   const internal_checkbox=document.querySelectorAll("#internal input[type='checkbox']")
-  const internalClear_sub=document.getElementById("internalClear-sub")
-  const clearInternal=document.getElementById("clearInternal")
+const internal_checkbox=document.querySelectorAll("#internal input[type='checkbox']")
+const internalClear_sub=document.getElementById("internalClear-sub")
+const clearInternal=document.getElementById("clearInternal")
 
 internal_checkbox.forEach(checkbox=>{
     checkbox.addEventListener("change",()=>{
@@ -763,17 +870,53 @@ internal_checkbox.forEach(checkbox=>{
              filter.innerHTML=""  
              filter.innerHTML=`  
               <span>x</span><span class="title-space">${internal}</span>`  
-          })
+                filter.addEventListener("click",()=>{
+                const selectedChekbox=Array.from(internal_checkbox).find(cb=>cb.value==internal)
+                console.log(selectedChekbox)
+                if(selectedChekbox){
+                    selectedChekbox.checked=false;
+                } 
+                filter.remove()
+                 const updatedCheckbox=Array.from(internal_checkbox)
+                  .filter(cb=>cb.checked)
+                     .map(cb=>cb.value)
+                   if(updatedCheckbox.length==0){ 
+                      displayProduct(allProducts)
+                      clearInternal.style.display="none"
+                   }
+                   else{
+                      const filtered=allProducts.filter(checkbox=>{
+                           return updatedCheckbox.some(range=>{
+                            const [min,max]=range.split("-").map(Number)
+                            return checkbox.internal_storage>=min&&checkbox.internal_storage<=max
+                           })
+                      })
+                      displayProduct(filtered)
+                   }
+                
+           
+        })
+        })     
           if(selectedInternal.length==0){
             displayProduct(allProducts)
+            clearInternal.style.display="none" 
+            window.scroll({
+                top:0
+            })
           }
           else{
-            const filtered=allProducts.filter(checkbox=>selectedInternal.includes(checkbox.internal_storage))
-            console.log(filtered)
-            displayProduct(filtered)   
-            window.scroll({ 
-                top:0 
+            const filtered=allProducts.filter(checkbox=>{
+                 return selectedInternal.some(range=>{
+                    const[min,max]=range.split( "-").map(Number)
+                   return checkbox.internal_storage>=min && checkbox.internal_storage<=max;
+                 })
             })
+             displayProduct(filtered)  
+             internal_sub.style.display = "none"
+             svg5.style.transform = "rotate(-90deg)" 
+            window.scroll({  
+                top:0 
+            })  
           }   
            
     })
@@ -792,6 +935,8 @@ internal_checkbox.forEach(checkbox=>{
   })
 const battery_checkbox=document.querySelectorAll("#battery input[type='checkbox']")
 const battery_clear=document.getElementById("batteryClear")
+const batteryClear_sub=document.getElementById("batteryClear-sub")
+console.log(batteryClear_sub)
 const clearBattery=document.getElementById("clearBattery")
 battery_checkbox.forEach(checkbox=>{
     checkbox.addEventListener("change",()=>{
@@ -799,23 +944,61 @@ battery_checkbox.forEach(checkbox=>{
          .filter(cb=>cb.checked)
          .map(cb=>cb.value)
          filterClear.style.display=selectedBattey?"block":"none"
-         battery_clear.style.display=selectedBattey?"block":"none"
+
          clearBattery.style.display=selectedBattey?"block":"none"
-          battery_clear.innerHTML=""
+          batteryClear_sub.innerHTML=""
           selectedBattey.forEach(battery=>{
              const filter=document.createElement("div")
              filter.className="filter-style" 
-             battery_clear.appendChild(filter)
-             filter.innerHTML=""  
+             batteryClear_sub.appendChild(filter)
+             filter.innerHTML=""    
              filter.innerHTML=`  
-              <span>x</span><span class="title-space">${battery}</span>`  
+              <span>x</span><span class="title-space">${battery} mAh</span>` 
+              filter.addEventListener("click",()=>{
+                const selectedCheckbox=Array.from(battery_checkbox).find(cb=>cb.value==battery)
+                console.log(selectedCheckbox)
+                if(selectedCheckbox){
+                    selectedCheckbox.checked=false
+                }
+                filter.remove()
+                 const updatedCheckbox=Array.from(battery_checkbox)
+                 .filter(cb=>cb.checked)
+                 .map(cb=>cb.value)
+                 if(updatedCheckbox.length==0){
+                    displayProduct(allProducts)
+                    clearBattery.style.display="none"
+                 }
+                 else{
+                    const filtered=allProducts.filter(checkbox=>{
+                        return updatedCheckbox.some(range=>{
+                            const [min,max]=range.split("-").map(Number)
+                            return checkbox.battery_capacity>=min && checkbox.battery_capacity<=max
+                        })
+                    }) 
+                    displayProduct(filtered)
+                 }
+              }) 
+
           })
           if(selectedBattey.length==0){
-            displayProduct(allProducts)
+            displayProduct(allProducts) 
+            clearBattery.style.display="none"  
+            window.scroll({
+                top:0
+            })
+
           }
           else{
-            const filtered=allProducts.filter(checkbox=>selectedBattey.includes(checkbox.battery_capacity))
+            const filtered=allProducts.filter(battery=>{
+                return selectedBattey.some(checkbox=>{
+                    const [min,max]=checkbox.split("-").map(Number)
+                    console.log([min,max])
+                    return battery.battery_capacity>=min && battery.battery_capacity<=max
+                }) 
+            })
             displayProduct(filtered)   
+            battery_sub.style.display = "none"
+           svg6.style.transform = "rotate(-90deg)"
             window.scroll({
                 top:0
             })
@@ -827,7 +1010,7 @@ clearBattery.addEventListener("click",()=>{
    battery_checkbox.forEach(checkbox=>checkbox.checked=false)
    displayProduct(allProducts)
    filterClear.style.display="none"     
-   battery_clear.style.display="none";
+   batteryClear_sub.style.display="none";
    clearBattery.style.display="none"
    window.scroll({
     top:0,
@@ -851,7 +1034,25 @@ clearBattery.addEventListener("click",()=>{
              screenClear_sub.appendChild(filter)
              filter.innerHTML=""  
              filter.innerHTML=`  
-              <span>x</span><span class="title-space">${screen}</span>`     
+              <span>x</span><span class="title-space">${screen}</span>` 
+              filter.addEventListener("click",()=>{
+                 const selectedCheckbox=Array.from(screen_checkbox).find(cb=>cb.value==screen)
+                 if(selectedCheckbox){
+                    selectedCheckbox.checked=false
+                 }
+                 filter.remove()
+                 const updatedCheckbox=Array.from(screen_checkbox)
+                 .filter(cb=>cb.checked) 
+                 .map(cb=>cb.value)
+                 if(updatedCheckbox.length==0){
+                    displayProduct(allProducts)
+                    screenClear.style.display="none"
+                 }
+                 else{
+                    const filtered=allProducts.filter(checkbox=>updatedCheckbox.includes(checkbox.screen_size))
+                     displayProduct(filtered)
+                 }
+              })    
              
         })   
          
@@ -860,17 +1061,22 @@ clearBattery.addEventListener("click",()=>{
             screenClear_sub.style.display=selectedScreen?"block":"none" 
             if(selectedScreen.length==0){ 
              displayProduct(allProducts)
+             screenClear.style.display="none"
+             window.scroll({ 
+                top:0,
+             })
             }
             else{
                 const filtered=allProducts.filter(checkbox=>selectedScreen.includes(checkbox.screen_size))
                 displayProduct(filtered) 
+                screen_sub.style.display = "none"
+                svg7.style.transform = "rotate(-90deg)"
                 window.scroll({
                     top:0,
                     behavior:"smooth"
                 })
             }
-        }) 
-      
+        })  
 })
 screenClear.addEventListener("click",()=>{
    screen_checkbox.forEach(checkbox=>checkbox.checked=false)
@@ -881,19 +1087,58 @@ screenClear.addEventListener("click",()=>{
    window.scroll({
     top:0,
     behavior:"smooth"
-   })    
+   })  
 })  
 const primaryCheckbox=document.querySelectorAll("#primary input[type=checkbox]")
 const clearPrimary=document.getElementById("clearPrimary")
-console.log(clearPrimary)
+const primaryClear_sub=document.getElementById("primaryClear-sub")
+
 primaryCheckbox.forEach(checkboxes=>{ 
     checkboxes.addEventListener("change",()=>{
          const selectedPrimary=Array.from(primaryCheckbox)
          .filter(cb=>cb.checked) 
          .map(cb=>cb.value)
          clearPrimary.style.display=selectedPrimary?"block":"none"
+         filterClear.style.display=selectedPrimary?"block":"none";
+         primaryClear_sub.style.display=selectedPrimary?"block":"none";
+         primaryClear_sub.innerHTML=""
+         selectedPrimary.forEach(primary=>{  
+            const filter=document.createElement("div")
+             filter.className="filter-style"
+             primaryClear_sub.appendChild(filter)
+             filter.innerHTML=""  
+             filter.innerHTML=`  
+              <span>x</span><span class="title-space">${primary}</span>`  
+              filter.addEventListener("click",()=>{
+                const checkedCheckbox=Array.from(primaryCheckbox).find(cb=>cb.value==primary)
+                if(checkedCheckbox){
+                    checkedCheckbox.checked=false
+                }
+                filter.remove()
+                const updatedCheckbox=Array.from(primaryCheckbox)
+                .filter(cb=>cb.checked)
+                .map(cb=>cb.value)
+                if(updatedCheckbox.length==0){
+                     displayProduct(allProducts)
+                     clearPrimary.style.display="none"
+                } 
+                else{
+                    const filtered=allProducts.filter(checkbox=>{
+                        return updatedCheckbox.some(range=>{
+                            const [min,max]=range.split('-').map(Number)
+                            return checkbox.primary>=min && checkbox.primary<=max
+                        })
+                    })
+                    displayProduct(filtered)
+                }
+              })   
+        })    
           if(selectedPrimary.length==0){
-            displayProduct(allProducts)
+            displayProduct(allProducts) 
+            clearPrimary.style.display="none"
+            window.scroll({
+                top:0
+            })
           }     
           else{
              const filtered=allProducts.filter(primary=>{
@@ -904,9 +1149,29 @@ primaryCheckbox.forEach(checkboxes=>{
                  })     
              })
              displayProduct(filtered) 
+              primary_sub.style.display = "none"
+              svg8.style.transform = "rotate(-90deg)"
+             window.scroll({
+                top:0
+             })
+
           }  
     })        
 })
+clearPrimary.addEventListener("click",()=>{
+    primaryCheckbox.forEach(checkbox=>checkbox.checked=false)
+    displayProduct(allProducts)
+    filterClear.style.display="none";
+    clearPrimary.style.display="none";
+    primaryClear_sub.style.display="none"
+    window.scroll({
+        top:0
+    })   
+     
+})
+
+
+
     filterClear.addEventListener("click",()=>{
         window.location.reload()
     clear_all.style.display="none"   
@@ -945,4 +1210,3 @@ price_high.addEventListener("click",()=>{
  })
  
  
-   
