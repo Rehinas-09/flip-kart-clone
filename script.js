@@ -18,7 +18,7 @@ const discount_1 = document.getElementById("discount")
 console.log(discount_1)
 discount.addEventListener("click", () => {
     if (discount_1.style.display == "none") {
-        discount_1.style.display = "block"
+        discount_1.style.display = "block"  
     }
     else {
         discount_1.style.display = "none"
@@ -584,7 +584,7 @@ clearAll.addEventListener("click",()=>{
    clearAll.style.display="none"
    filterClear.style.display="none"
    brandClear.style.display="none"
-   brandClear_Sub.style.
+   brandClear_Sub.style.display="none" 
 })   
 
 // const minimumPrice=document.getElementById("minimum_price")
@@ -631,8 +631,8 @@ ratingCheckbox.forEach(checkbox=>{
                  } 
                  else{
                   const filtered=allProducts.filter(p=>p.rating>=min)
-                  displayProduct(filtered)
-                 }          
+                  displayProduct(filtered) 
+                 }  
               })        
   
         })
@@ -1208,5 +1208,15 @@ price_high.addEventListener("click",()=>{
     const sortedById=[...allProducts].sort((a,b) => a.id - b.id)
     displayProduct(sortedById)
  })
- 
- 
+ const min_price=document.getElementById("min-price")
+ const max_price=document.getElementById("max-price")
+ console.log(max_price)
+ function filterPrice(){
+    const min=parseInt(min_price.value)
+    const max=parseInt(max_price.value)
+    console.log(max)
+    const filtered=allProducts.filter(p=>p.d_price>=min && p.d_price<=max)
+    console.log(filtered)
+ } 
+max_price.addEventListener("change",filterPrice)
+min_price.addEventListener("change",filterPrice)  

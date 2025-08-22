@@ -448,35 +448,50 @@ main{
 }
 .veriation{    
     height: 25px;
-    position: relative;
-    bottom: -6px;
-    width: 100%; 
-    display: flex;
-     
+
+}
+.veriation-sub{
+   height: 100%; 
+   position: relative;
+   bottom: -6px;
+   display: flex; 
 }
 .price-veriation{  
       height: 25px;
       width: 47.362px; 
       display: inline-block;  
-      background-color: #e0e0e0;
+    background-color: #e0e0e0;
 }
-.line{
+.line-dot{
+    height: 13px;
+}
+.line{ 
     position: relative;
     cursor: pointer;
+} 
+.dot{
+    display:flex;
 }
+.dot #dots{
+    width: 47.362px; 
+    display: inline-block;
+    text-align: left;
+    font-size: 20px;
+    color: #c2c2c2;
+} bnnn
 .line .circle-one{
     width:13px; 
-    height:13px;
+    height:13px; 
     left:-12px; 
     position: absolute;
     cursor: pointer;
     border-radius: 50%;
     border: 1px solid #bababa;
-    background-color: #fff;
+    background-color: #fff; 
 }
-.line .circle-two{
+.line .circle-two{ 
     width:13px;
-    height:13px;
+    height:13px; 
     position: absolute;
     cursor: pointer;
     border-radius: 50%;
