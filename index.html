@@ -593,12 +593,13 @@
                             <div id="batteryClear-sub"></div>
                             <div id="screenClear-sub"></div>
                             <div id="primaryClear-sub"></div>
+                            <div id="price_range"></div>
                             <div></div>
                     </div>
                 </div> 
                 <div class="Sub-section1">
                     <p class="categories">Categories</p>
-                    <div class="mobile">
+                    <div class="mobile"> 
                         <svg width="10" height="10" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg"
                             class="IZmjtf">
                             <path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="gray"
@@ -613,30 +614,31 @@
                 <div class="Sub-section1">
                     <div class="price">
                         <p>Price</p>
+                        <p class="clear" id="priceClear">Clear</p>
                     </div>
                     <div class="veriation">
                         <div class="veriation-sub"> 
-                        <div class="price-veriation"></div>
-                        <div class="price-veriation"></div>
-                        <div class="price-veriation"></div>
-                        <div class="price-veriation"></div>
-                        <div class="price-veriation"></div>
+                        <div class="price-veriation" data-price="0"></div>
+                        <div class="price-veriation" data-price="10000"></div>
+                        <div class="price-veriation" data-price="15000"></div>
+                        <div class="price-veriation" data-price="20000"></div>
+                        <div class="price-veriation" data-price="30000"></div>
                        </div>
                     </div>
-                    <div>
+                    <div> 
                     <div class="line-dot"> 
-                        <div class="line">
-                            <div class="circle-one"></div>
-                            <div class="circle-two"> </div>
+                        <div class="line" id="priceLine">
+                            <div class="circle-one" id="circleOne"></div>
+                            <div class="circle-two" id="circleTwo"> </div>
                             <div class="thin-line"></div>
-                            <div class="thick-line"></div>
+                            <div class="thick-line" id="thickLine"></div>
                         </div>
                         <div class="dot">
-                            <div class="dot-one" id="dots">.</div>
-                            <div class="dot-two" id="dots">.</div>
-                            <div class="dot-three" id="dots">.</div>
-                            <div class="dot-four" id="dots">.</div>
-                            <div class="dot-five" id="dots">.</div>
+                            <div class="dot-one" id="dots" data-price="0">.</div>
+                            <div class="dot-two" id="dots" data-price="10000">.</div>
+                            <div class="dot-three" id="dots" data-price="15000">.</div>
+                            <div class="dot-four" id="dots" data-price="20000">.</div>
+                            <div class="dot-five" id="dots" data-price="3000">.</div>
                         </div>
                     </div>
                     </div>
@@ -669,12 +671,15 @@
                                 </option>
                                 <option value="15000">
                                       &#8377;15000 
-                                </option>
-                                <option value="20000"> 
+                                </option> 
+                                <option value="20000">  
                                     &#8377;20000
                                 </option>
                                 <option value="30000">
                                     &#8377;30000
+                                </option>
+                                <option value="30000">
+                                    &#8377;30000+
                                 </option>
                             </select>
                         </div> 
@@ -698,6 +703,10 @@
                         </div> 
                     </div>
                     <div id="brand-name">
+                        <div class="search-section">
+                            <svg width="20" height="20" viewBox="0 0 17 18" class="zmbstL" xmlns="http://www.w3.org/2000/svg"><g fill="#878787" fill-rule="evenodd"><path class="JVQyl9" d="m11.618 9.897l4.225 4.212c.092.092.101.232.02.313l-1.465 1.46c-.081.081-.221.072-.314-.02l-4.216-4.203"></path><path class="JVQyl9" d="m6.486 10.901c-2.42 0-4.381-1.956-4.381-4.368 0-2.413 1.961-4.369 4.381-4.369 2.42 0 4.381 1.956 4.381 4.369 0 2.413-1.961 4.368-4.381 4.368m0-10.835c-3.582 0-6.486 2.895-6.486 6.467 0 3.572 2.904 6.467 6.486 6.467 3.582 0 6.486-2.895 6.486-6.467 0-3.572-2.904-6.467-6.486-6.467"></path></g></svg>
+                            <input type="text" placeholder="Search Brand" id="Search">
+                        </div>
                         <label><input type="checkbox" class="brand-checkbox" value="Techno">
                             <p>Techno</p>
                         </label> 
@@ -731,7 +740,7 @@
                             <div class="mark">
                                 <p class="question-mark">?</p>
                             </div>
-                        </div>
+                        </div> 
                     </div>
                 </div>
                 <div class="Sub-section1" id="rating">
@@ -805,7 +814,7 @@
                         <input type="checkbox" value="3 GB">
                         <p>3 GB</p>
                     </div>
-                    <div id="ram-check">
+                    <div id="ram-check"> 
                         <input type="checkbox" value="6 GB">
                         <p>6 GB</p>
                     </div>

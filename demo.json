@@ -1,39 +1,11 @@
 [
-  {
-    "id": 1,
-    "name": "Samsung Galaxy S23",
-    "price": 45000,
-    "brand": "Samsung",
-    "image": "images/samsung-s23.jpg"
-  },
-  {
-    "id": 2,
-    "name": "iPhone 14 Pro",
-    "price": 120000,
-    "brand": "Apple",
-    "image": "images/iphone14pro.jpg"
-  },
-  {
-    "id": 3,
-    "name": "OnePlus 12",
-    "price": 65000,
-    "brand": "OnePlus",
-    "image": "images/oneplus12.jpg"
-  },
-  {
-    "id": 4,
-    "name": "Redmi Note 13",
-    "price": 18000,
-    "brand": "Xiaomi",
-    "image": "images/redmi13.jpg"
-  },
-  {
-    "id": 5,
-    "name": "Realme Narzo 60",
-    "price": 22000,
-    "brand": "Realme",
-    "image": "images/realme-narzo60.jpg"
-  }
+  { "id": 1, "name": "Samsung S21", "price": 15000, "brand": "Samsung" },
+  { "id": 2, "name": "Techno Spark", "price": 10000, "brand": "Techno" },
+  { "id": 3, "name": "Moto G52", "price": 12000, "brand": "Motrola" },
+  { "id": 4, "name": "Samsung A32", "price": 20000, "brand": "Samsung" },
+  { "id": 5, "name": "Techno Pova", "price": 8000, "brand": "Techno" }
 ]
+
+
 
 
